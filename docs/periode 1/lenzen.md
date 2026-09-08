@@ -107,9 +107,9 @@ Het invullen van verschillende waarden van *f* en het vervolgens tekenen van mee
     1. Maak een nieuwe grafiek waarbij je \(1/b\) uitzet tegen \(1/v\).
     2. Schrijf de lenzenformule om in de vorm
 
-       \[
+       \(
        \frac{1}{b} = f(v,f)
-       \]
+       \)
 
     3. Maak een nieuwe functie genaamd *lineair*, waarbij je de functie van de vorige deelopdracht invult.
     4. Wat valt je op aan de grafiek? Wat is de betekenis van het snijpunt met de y-as?

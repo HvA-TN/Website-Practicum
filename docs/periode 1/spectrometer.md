@@ -104,9 +104,16 @@ waarbij \(a\) en \(b\) fitparameters zijn.
 
     1. Ga aan de slag met het ijken van de spectrometer.
     2. Meet het spectrum van een bekende lamp. Zet deze in je labjournaal.
-    3. Bepaal van iedere emissielijn de centrale golflengte met behulp van het peak-detection-algoritme van SciPy.
+    3. Bepaal van iedere emissielijn de centrale golflengte met behulp van het peak-detection-algoritme van SciPy. Mocht dit te lastig zijn en kom je hier niet uit, probeer dan de locaties (x-pixels) op het oog te schatten.
     4. Houd je voortgang bij in het labjournaal.
 
+Als je de spectrometer hebt geijkt, kun je jouw spectrometer gebruiken om ook van een onbekende lamp het spectrum te analyseren. Misschien lukt het jullie om op basis van de gemeten golflengten én tabel [spectraallijnen](#table-spectraallijnen-na-he-ne-hg) de juiste lamp te vinden.
+
+!!! opdracht "Opdracht 1(c)"
+
+    1. Meet de golflengten van de nieuwe lamp.
+    2. Welke lamp(en) komen overeen met jouw gevonden golflengten?
+    3. Houd je voortgang bij in het labjournaal.
 !!! afronding "Afronding week 1"
 
     1. Zet de gemaakte figuren in je digitaal labjournaal en maak een duidelijk onderschrift.
