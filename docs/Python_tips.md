@@ -4,11 +4,6 @@ Op deze pagina staan veelgebruikte voorbeelden voor het verwerken, analyseren en
 
 De belangrijkste packages die we gebruiken zijn:
 
-* **NumPy** voor numerieke berekeningen en arrays;
-* **Matplotlib** voor het maken van figuren;
-* **SciPy** voor wetenschappelijke berekeningen, zoals het fitten van modellen;
-* **Pandas** voor het inlezen en verwerken van databestanden.
-
 | Package    | Veelgebruikt voor                      | Documentatie                                 |
 | ---------- | -------------------------------------- | -------------------------------------------- |
 | NumPy      | Arrays, rekenen en statistiek          | [NumPy](https://numpy.org/doc/stable/)       |
