@@ -4,7 +4,7 @@ Deze repository bevat het lesmateriaal voor de **practica van leerjaar 2 van Tec
 
 De practicumwebsite is hier te vinden:
 
-**[Practica Technische Natuurkunde – Jaar 2](https://hva-tn.github.io/Website-practicum/)**
+**[Practica Technische Natuurkunde – Jaar 2](https://hva-tn.github.io/Website-Practicum/)**
 
 ## Inhoud
 
