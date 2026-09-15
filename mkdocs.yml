@@ -48,13 +48,30 @@ nav:
       - Python: periode 1/python.md
       - Lenzen: periode 1/lenzen.md
       - Spectrometer: periode 1/spectrometer.md
-  - Periode 2:
-      - Overzicht: periode 2/index.md
-      # - SEM-EDX: periode 2/semedx.md
-      - Aeropendulum (open-loop): periode 2/aeropendulum-openloop.md
-      - Aeropendulum (PID): periode 2/aeropendulum-pid.md
-      # - UV-VIS: periode 2/uvvis.md
-      - Zonnecel: periode 2/zonnecel.md
+  # - Periode 2:
+  #     - Overzicht: periode 2/index.md
+  #     - Aeropendulum (open-loop): periode 2/aeropendulum-openloop.md
+  #     - Aeropendulum (PID): periode 2/aeropendulum-pid.md
+  #     - Zonnecel: periode 2/zonnecel.md
+  # - Periode 3:
+  #     - Overzicht: Periode 3/index.md
+  #     - SEM-EDX: Periode 3/semedx.md
+  #     - Elektronenbundel (e/m): Periode 3/elektronen-em.md
+  #     - Elektronendiffractie: Periode 3/elektronendiffractie.md
+  #     - Apparaatcommunicatie met Python: Periode 3/apparaatcommunicatie.md
+  # - Periode 4:
+  #     - Overzicht: Periode 4/index.md
+  #     - Trekbankproef I: Periode 4/trekbankproef-1.md
+  #     - Trekbankproef II: Periode 4/trekbankproef-2.md
+  #     - Hardheid en kerfslag: Periode 4/hardheid-kerfslag.md
+  #     - Kinematische viscositeit: Periode 4/kinematische-viscositeit.md
+  #     - Digitale viscositeit: Periode 4/digitale-viscositeit.md
+  # - Aanvullend materiaal:
+  #     - UV-VIS: periode 2/uvvis.md
+  #     - Dieetzout en bèta-afbuiging: Periode 3/dieetzout.md
+
+exclude_docs: |
+  periode 1/planck.md
 
 
 markdown_extensions:
@@ -79,7 +96,7 @@ markdown_extensions:
 extra_css:
   - stylesheets/practica.css
 extra_javascript:
-  - javascripts/mathjax.js
+  - javascript/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 

@@ -120,9 +120,9 @@ Door de belasting \(R\) systematisch te variëren kan de volledige I-V-curve exp
     3. Noteer de afstand tussen de zonnecel en de lamp.
     4. Controleer de lichtverdeling door de intensiteit op meerdere plaatsen te meten:
        
-       - in het midden;
-       - in de vier hoeken;
-       - langs de randen.
+        - in het midden;
+        - in de vier hoeken;
+        - langs de randen.
        
     5. Noteer de resultaten in je digitale labjournaal.
     6. Beoordeel op basis van je metingen of de zonnecel voldoende homogeen wordt belicht.
@@ -139,9 +139,9 @@ Door de belasting \(R\) systematisch te variëren kan de volledige I-V-curve exp
     5. Zorg ervoor dat je zowel het gebied rond de kortsluitstroom als het gebied rond de openklemspanning voldoende bemonstert.
     6. Registreer voor ieder meetpunt:
        
-       - de weerstand $R$;
-       - de spanning $V$;
-       - de stroom $I$.
+        - de weerstand $R$;
+        - de spanning $V$;
+        - de stroom $I$.
 
 
 ## Analyse
@@ -152,16 +152,16 @@ Door de belasting \(R\) systematisch te variëren kan de volledige I-V-curve exp
     2. Bepaal uit je meetgegevens de kortsluitstroom $I_{\mathrm{sc}}$ en de openklemspanning $V_{\mathrm{oc}}$, inclusief een schatting van de onzekerheid.
     3. Bereken voor ieder meetpunt het elektrische vermogen:
     
-       $$
-       P = IV.
-       $$
+        $$
+        P = IV.
+        $$
     
     4. Maak een **P-V-curve**.
     5. Bepaal het maximum power point en daarmee:
        
-       - $P_{\mathrm{mpp}}$;
-       - $V_{\mathrm{mpp}}$;
-       - $I_{\mathrm{mpp}}$.
+        - $P_{\mathrm{mpp}}$;
+        - $V_{\mathrm{mpp}}$;
+        - $I_{\mathrm{mpp}}$.
        
     6. Bereken de **fill factor** van de zonnecel.
     7. Bepaal de **efficiëntie** van de zonnecel.
@@ -190,11 +190,11 @@ Mogelijke voorbeelden zijn:
     2. Schrijf een kort **projectvoorstel/Plan van Aanpak** van maximaal 10 regels.
     3. Beschrijf hierin kort:
        
-       - wat je wilt onderzoeken;
-       - wat je verwacht;
-       - welke grootheid je varieert;
-       - welke grootheden je meet;
-       - hoe je de resultaten gaat analyseren.
+        - wat je wilt onderzoeken;
+        - wat je verwacht;
+        - welke grootheid je varieert;
+        - welke grootheden je meet;
+        - hoe je de resultaten gaat analyseren.
        
     4. Bespreek je voorstel met de practicumbegeleider.
     5. Voer na akkoord het experiment uit.

@@ -1,5 +1,12 @@
 # Practica Technische Natuurkunde
 
+## Practica 2026–2027
+
+- [Periode 1 — Optica](<periode 1/index.md>)
+- [Periode 2 — Aeropendulum en zonnecellen](<periode 2/index.md>)
+- [Periode 3 — Straling en detectietechnieken](<Periode 3/index.md>)
+- [Periode 4 — Materiaalkunde en stromingsleer](<Periode 4/index.md>)
+
 
 ## Introductie
 

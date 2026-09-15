@@ -48,6 +48,4 @@ De meetgegevens worden verwerkt en geanalyseerd met Python. Op basis daarvan bep
 
 !!! voorbereiding "Voorbereiding"
 
-```
-Bekijk vóór iedere practicumweek de bijbehorende pagina. Hier staat aangegeven welke voorbereiding je vóór aanvang van het practicum moet uitvoeren.
-```
+    Bekijk vóór iedere practicumweek de bijbehorende pagina. Hier staat aangegeven welke voorbereiding je vóór aanvang van het practicum moet uitvoeren.

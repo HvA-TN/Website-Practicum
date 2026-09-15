@@ -174,7 +174,7 @@ Jullie meten verschillende concentraties \(\mathrm{CuSO_4}\)-oplossingen en onde
 - Maak een schets van de stralengang.
 - Zorg dat de opstelling op een breadboard van \(45\times60\,\mathrm{cm}\) past.
 
-# Appendix 2: Spectraallijnen gasontladingslampen
+# Appendix 2: Spectraallijnen gasontladingslampen {#table-spectraallijnen-na-he-ne-hg}
 
 ![De sterke spectraallijnen van helium, neon, natrium en kwik.](../assets/periode 1/g4.svg)
 

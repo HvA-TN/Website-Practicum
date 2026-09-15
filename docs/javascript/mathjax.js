@@ -11,9 +11,14 @@ window.MathJax = {
     }
 };
 
+// De eerste weergave gebeurt door MathJax zelf na het laden.
+// Wacht bij latere navigatie op de asynchroon geladen MathJax-runtime.
 document$.subscribe(() => {
-    MathJax.startup.output.clearCache();
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typesetPromise();
+    if (window.MathJax.startup && window.MathJax.startup.promise) {
+        window.MathJax.startup.promise.then(() => {
+            window.MathJax.typesetClear();
+            window.MathJax.texReset();
+            return window.MathJax.typesetPromise();
+        });
+    }
 });
