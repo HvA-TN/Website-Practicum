@@ -1,0 +1,1317 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hva-tn.github.io/Practica_LJ2/Periode%203/apparaatcommunicatie/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practicum: apparaat communicatie met Python - Practica Technische Natuurkunde – Jaar 2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/practica.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practicum-apparaat-communicatie-met-python" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Practica Technische Natuurkunde – Jaar 2" class="md-header__button md-logo" aria-label="Practica Technische Natuurkunde – Jaar 2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Practica Technische Natuurkunde – Jaar 2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practicum: apparaat communicatie met Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Gebruik donkere modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Gebruik donkere modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Gebruik lichte modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Gebruik lichte modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Practica Technische Natuurkunde – Jaar 2" class="md-nav__button md-logo" aria-label="Practica Technische Natuurkunde – Jaar 2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Practica Technische Natuurkunde – Jaar 2
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regels Practicum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbereiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voorbereiding, digitaal labjournaal & afronding practicum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fraude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fraude & gebruik van AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../veiligheid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Veiligheid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meetplan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python-tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../periode%201/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Periode 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Periode 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../periode%201/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../periode%201/lenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lenzen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../periode%201/spectrometer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spectrometer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leerdoelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerdoelen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historische-ontwikkeling-van-apparaatuuraansturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historische ontwikkeling van apparaatuuraansturing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passieve-rc-filtersystemen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passieve RC-filtersystemen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practicum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practicum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-1-drivers-virtuele-omgeving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix 1: Drivers &amp; virtuele omgeving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-2-materialen-en-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix 2: Materialen en tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-3-schematische-tekeningen-schakelingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix 3: Schematische tekeningen schakelingen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-4-apparaataansturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix 4: apparaataansturing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practicum-apparaat-communicatie-met-python">Practicum: apparaat communicatie met Python</h1>
+<h2 id="leerdoelen">Leerdoelen</h2>
+<ul>
+<li>
+<p>Kan communiceren met basis labapparatuur via Python</p>
+</li>
+<li>
+<p>Kan uitleggen welke stappen nodig zijn voor communicatie met labapparatuur.</p>
+</li>
+<li>
+<p>Is bekend en kan overweg met de PyVisa-package van Python.</p>
+</li>
+<li>
+<p>De student kan een overzichtelijke map- en modulestuctuur gebruiken en opzetten voor instrumentcommunicatie, passend bij een groter Python-project.</p>
+</li>
+</ul>
+<div class="admonition veiligheid">
+<p class="admonition-title">Veiligheid</p>
+<ol>
+<li>We werken deze practicumreeks met elektrische schakelingen. Zorg ervoor dat je deze goed aansluit voordat je verder gaat met experimenteren. Anders kan er kortsluiting ontstaan in de apparatuur. Laat je werk checken vooraf.</li>
+</ol>
+</div>
+<h2 id="historische-ontwikkeling-van-apparaatuuraansturing">Historische ontwikkeling van apparaatuuraansturing</h2>
+<p>Het betrouwbaar uitvoeren en registreren van metingen vormt het hart van elk experiment. De manier waarop meetinstrumenten worden aangestuurd, heeft de afgelopen decennia een sterke ontwikkeling doorgemaakt. Aanvankelijk gebeurde dit volledig handmatig: instellingen werden aangepast met draaiknoppen en schakelaars, en resultaten werden afgelezen op analoge meters of oscilloscopen. De eerste automatiseringsstappen kwamen met seriële communicatieprotocollen zoals <strong>RS-232</strong> en later <strong>GPIB</strong> (General Purpose Interface Bus), waarmee instrumenten centraal vanaf een computer konden worden aangestuurd. Programmeertalen als <em>Fortran</em>, <em>C</em> en later <em>LabVIEW</em> werden gebruikt voor het verzenden van commando's en het uitlezen van data, meestal via relatief laag-niveau communicatie die gebruikers handmatig moesten programmeren.<br />
+Met de komst van microcontrollers veranderde de interne aansturing van apparaten ingrijpend. Deze compacte chips combineren processor, geheugen en I/O en voeren specifieke taken uit, zoals het regelen van spanningen of uitlezen van sensoren. Veel meetinstrumenten kregen interne microcontrollers, terwijl aan de buitenzijde seriële of GPIB-communicatie gehandhaafd bleef. Tegelijkertijd maakten goedkope ontwikkelplatforms zoals de <strong>Arduino</strong> en <strong>Raspberry-Pi</strong> het mogelijk om zelf eenvoudig meet- en regelsystemen te bouwen, wat vooral in onderwijs en kleinschalig onderzoek veel werd toegepast.<br />
+Tegenwoordig is apparaatuuraansturing grotendeels gestandaardiseerd via de <strong>VISA</strong>-standaard (Virtual Instrument Software Architecture), die zowel klassieke verbindingen (RS-232, GPIB) als moderne interfaces zoals <strong>USB</strong> en <strong>Ethernet</strong> ondersteunt. Hierdoor kan met één softwarelaag een breed scala aan instrumenten worden aangestuurd. Een belangrijke recente ontwikkeling is de opkomst van Python als universeel hulpmiddel. Met bibliotheken als <code>PyVISA</code> kunnen instrumenten direct via GPIB, USB of netwerk worden bestuurd. Waar vroeger dure propriëtaire software nodig was, volstaat nu vaak een korte Python-script en een standaardinterface. In deze practicumserie gaan we aan de slag met apparaat-communicatie via Python. De schakeling die wij gaan aansturen betreft een passief RC-filtersysteem.</p>
+<h2 id="passieve-rc-filtersystemen">Passieve RC-filtersystemen</h2>
+<p>Een <strong>passief RC-filter</strong> is een eenvoudig elektrisch netwerk van weerstanden en condensatoren waarmee de frequentierespons van een signaal kan worden aangepast, zonder actieve componenten zoals versterkers. Zulke filters worden veel toegepast om ongewenste frequenties te onderdrukken of juist door te laten, bijvoorbeeld om ruis te verwijderen of een meetsignaal te conditioneren voordat het naar een meetinstrument gaat. In figuur <a href="#figuur-1">1</a> staat een voorbeeld elektrische schakeling van een laagdoorlaatfilter.</p>
+<p><span id="figuur-1"></span></p>
+<p><img alt="Schema van het laagdoorlaatfilter." src="../../assets/periode%203/lowpass.svg" /></p>
+<p><em>Figuur 1: Schema van het laagdoorlaatfilter.</em></p>
+<p>Het gedrag van een RC-filter kan worden beschreven met behulp van de impedantie van een condensator,</p>
+<div class="arithmatex">\[
+Z_C(\omega) = \frac{1}{i \omega C},
+\]</div>
+<p>waarbij <span class="arithmatex">\(\omega = 2\pi f\)</span> de hoeksnelheid is en <span class="arithmatex">\(i\)</span> de imaginaire eenheid. Voor een eenvoudig <strong>laagdoorlaatfilter</strong>, bestaande uit een weerstand <span class="arithmatex">\(R\)</span> in serie en een condensator <span class="arithmatex">\(C\)</span> naar massa, volgt voor de overdrachtsfunctie</p>
+<div class="arithmatex">\[
+H(\omega) = \frac{V_\mathrm{uit}}{V_\mathrm{in}} 
+= \frac{1}{1 + i \omega R C}.
+\]</div>
+<p>Bij lage frequenties (<span class="arithmatex">\(\omega \ll 1/RC\)</span>) is <span class="arithmatex">\(|H| \approx 1\)</span> en wordt het signaal vrijwel ongehinderd doorgelaten. Bij hoge frequenties (<span class="arithmatex">\(\omega \gg 1/RC\)</span>) neemt de amplitude af als <span class="arithmatex">\(1/\omega\)</span>, zodat snelle variaties en ruis worden onderdrukt. De overgangsfrequentie, of <strong>afsnijfrequentie</strong>, wordt gegeven door</p>
+<div class="arithmatex">\[
+f_c = \frac{1}{2\pi R C}.
+\]</div>
+<p>Om van de overdrachtsfunctie naar een <strong>Bode-plot</strong> te gaan, splits je <span class="arithmatex">\(H(\omega)\)</span> op in een amplitude- en fasegedeelte. De amplitude wordt uitgedrukt in decibel,</p>
+<div class="arithmatex">\[
+|H(\omega)|_\mathrm{dB} = 20 \log_{10} |H(\omega)|,
+\]</div>
+<p>en de fase als</p>
+<div class="arithmatex">\[
+\phi(\omega) = \arg\!\left(H(\omega)\right).
+\]</div>
+<p>Voor het laagdoorlaatfilter hierboven volgt eenvoudig</p>
+<div class="arithmatex">\[
+|H(\omega)| = \frac{1}{\sqrt{1 + (\omega RC)^2}}, \qquad 
+\phi(\omega) = -\arctan(\omega RC).
+\]</div>
+<p>Door deze twee functies uit te zetten tegen de logaritme van de frequentie ontstaat de Bode-plot: een amplitude-grafiek die de verzwakking per frequentie laat zien en een fase-grafiek die aangeeft hoe sterk het signaal wordt vertraagd. Helaas kunnen wij de fase-verschuiving niet meten met een <strong>Digitale Multi Meter (DMM)</strong>, hiervoor zouden wij een oscilloscoop moeten gebruiken. Deze grafische weergave maakt het filtergedrag bij lage, overgangs- en hoge frequenties direct zichtbaar. Naast <strong>laagdoorlaatfilters</strong> bestaan er ook <strong>hoogdoorlaatfilters</strong> door de positie van weerstand en condensator om te wisselen. In dat geval worden juist lage frequenties onderdrukt en hoge frequenties doorgelaten. Met combinaties van meerdere RC-netwerken kunnen <strong>banddoorlaat- of bandstopfilters</strong> worden gerealiseerd.</p>
+<div class="admonition voorbereiding">
+<p class="admonition-title">Voorbereidingsopdracht 1</p>
+<ul>
+<li>
+<p>Installeer <strong>NI-Max</strong> op jouw laptop <a href="https://www.ni.com/en/support/downloads/drivers/download.ni-visa.html#575764">Link</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+</li>
+<li>
+<p>Maak een nieuwe virtuele omgeving in Anaconda en installeer hierop de volgende packages: <code>pyvisa</code>, <code>pyvisa-py</code>, <code>pyserial</code>, <code>numpy</code>, <code>matplotlib</code>, <code>scipy</code> en <code>ipykernel</code>, gebruik Python versie 3.11.</p>
+</li>
+<li>
+<p>Download (of clone) de github repository voor de aansturing van de apparaten via <a href="https://github.com/HvA-TN/Communicatie_Meetapparatuur/tree/main">Link</a>.</p>
+</li>
+<li>
+<p>Maak een schematische tekening van een zelfgekozen passief filterysteem.</p>
+</li>
+<li>
+<p>Schrijf een meetplan voor doormeten van een jouw filter (bode-plot).</p>
+</li>
+</ul>
+</div>
+<h2 id="practicum">Practicum</h2>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(a)</p>
+<p>In deze eerste opdracht gaan we de het filter bouwen en deze handmatig doormeten. Voordat we gaan automatiseren moeten we immers zeker weten dat onze apparatuur goed aangesloten staat.</p>
+<ol>
+<li>
+<p>Bouw op het breadboard jouw gekozen filter en sluit de functiegenerator en digitale multimeter aan. Controleer bij jouw practicumbegeleider of deze goed aangesloten staan.</p>
+</li>
+<li>
+<p>Meet, met de hand, bij enkele verschillende frequenties het in-en uitgangssignaal en bereken de overdrachtsfunctie <span class="arithmatex">\(|H(\omega)|\)</span> op deze frequenties. Gebruik hiervoor een (RMS) voltage van <span class="arithmatex">\(V_{rms} =  2\)</span> volt.</p>
+</li>
+<li>
+<p>Schrijf jouw resultaten op in je digitale labjournaal.</p>
+</li>
+</ol>
+</div>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(b)</p>
+<p>Nu we zeker weten dat het filtersysteem werkt gaan we deze aansturen via Python.</p>
+<ol>
+<li>
+<p>Sluit de digitale multimeter en de functiegenerator aan via de USB-B kabel.</p>
+</li>
+<li>
+<p>Open NI-MAX en zoek de bijbehorende apparaat ID'en van de apparatuur.</p>
+</li>
+<li>
+<p>Maak een nieuwe Jupyter Notebook met de naam <code>rc_filter.ipynb</code> en plaats deze op de juiste locatie binnen jouw projectstructuur (zie Figuur <a href="#figuur-2">2</a>).<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+</li>
+<li>
+<p>Controleer nu met onderstaande code of je kan communiceren met jouw apparatuur. <strong>Let op!</strong> De functiegenerator (fg) en de digitale multimeter (dmm) kunnen omgewisseld zijn.</p>
+</li>
+</ol>
+<p>Met deze code controleer je of je kan communiceren met je meetapparatuur. Daarnaast zorgt deze code ervoor dat de communicatiepoorten geopend zijn. Dit is een belangrijk details, want, na gebruik moeten wij ook de apparatuur weer sluiten.</p>
+</div>
+<p><strong>Test communicatie meetapparatuur</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pyvisa</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">rm</span> <span class="o">=</span> <span class="n">pyvisa</span><span class="o">.</span><span class="n">ResourceManager</span><span class="p">()</span>  
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">fg</span> <span class="o">=</span> <span class="n">rm</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="n">rm</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span> 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">dmm</span> <span class="o">=</span> <span class="n">rm</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="n">rm</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span> 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">#Controleer of de functiegenerator (fg) en de digitale multimeter (dmm) niet omgewisseld zijn.</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Instrument gevonden:"</span><span class="p">,</span> <span class="n">fg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"*IDN?"</span><span class="p">))</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Instrument gevonden:"</span><span class="p">,</span> <span class="n">dmm</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"*IDN?"</span><span class="p">))</span>
+</code></pre></div>
+Nu we zeker weten dat we kunnen communiceren met onze labapparatuur, is het belangrijk om de code duidelijk en onderhoudbaar te organiseren. Het doel is om niet telkens handmatig ieder instrument aan te sturen, maar gebruik te maken van herbruikbare functies en modules die dit voor ons afhandelen.<br />
+Een overzichtelijke manier om dit te structureren is met een <em>boomstructuur</em>, waarbij elke map een duidelijke rol binnen het project heeft. Bovenin bevinden zich de algemene modules en documentatie; dieper in de structuur staan de instrument-drivers, hulpfuncties en mappen voor data-opslag. Deze indeling maakt het eenvoudiger om de code te begrijpen, te testen en later uit te breiden. In figuur <a href="#figuur-2">2</a> is te zien hoe deze onderdelen logisch zijn gegroepeerd. De map <code>instruments</code> bevat bijvoorbeeld de drivers voor verschillende meetinstrumenten, terwijl <code>utils</code> de ondersteunende functies bundelt die in meerdere modules worden gebruikt. De map <code>data</code> is gereserveerd voor ruwe meetdata en gegenereerde plots. Deze indeling maakt het eenvoudiger om onderdelen te vinden, te testen en uit te breiden, en zorgt ervoor dat de communicatiecode voor verschillende instrumenten consistent blijft opgebouwd.</p>
+<p><span id="figuur-2"></span></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Communicatie/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── instruments/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── __init__.py
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── hardware.py
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   ├── rigol_dg1022.py
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   └── rigol_dm3058e.py
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├── utils/
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   ├── __init__.py
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   └── functions.py
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>├── data/
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   ├── raw/
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   └── plots/
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>├── rc_filter.ipynb
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>├── README.md
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>└── .gitignore
+</code></pre></div>
+<p><em>Figuur 2: Boomdiagram voor apparaatcommunicatie.</em></p>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(c)</p>
+<p>Nu we zeker weten dat we kunnen communiceren met onze labapparatuur via Python, kunnen we de eerste testmetingen gaan uitvoeren.</p>
+<ol>
+<li>
+<p>Stel <strong>via Python</strong> een voltage in van 2 Volt (Root Mean Squared) bij de functiegenerator met een frequentie van 100 Hz. Controleer op de display van de functiegenerator of deze correct staat ingesteld. Gebruik hiervoor de onderstaande code. Zie je niets gebeuren? Dan kan het zijn dat jouw de functiegenerator en digitale multimeter omgewisseld zijn!</p>
+</li>
+<li>
+<p>Leg uit wat iedere regel doet en schrijf dit op in je labjournaal.</p>
+</li>
+</ol>
+</div>
+<p><strong>Functiegenerator aansturen met Python</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">instruments.hardware</span><span class="w"> </span><span class="kn">import</span> <span class="n">open_instruments</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">instruments.rigol_dg1022</span><span class="w"> </span><span class="kn">import</span> <span class="n">set_fixed_sine</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">rm</span><span class="p">,</span> <span class="n">fg</span><span class="p">,</span> <span class="n">dmm</span> <span class="o">=</span> <span class="n">open_instruments</span><span class="p">(</span><span class="n">message</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">#Aansturing functigenerator</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">f</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#Hz</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">vrms_output</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="c1">#Volt</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">set_fixed_sine</span><span class="p">(</span><span class="n">fg</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">vrms</span><span class="o">=</span><span class="n">vrms_output</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(c)</p>
+<p>De volgende stap is het doen van een meting via Python. Hiervoor gebruiken wij de digitale multimeter.</p>
+<ol>
+<li>
+<p>Meet het ingangsvoltage en het uitgangsvoltage 5 keer. Gebruik hiervoor als inspiratie onderstaande code.</p>
+</li>
+<li>
+<p>Sla de data op in de dictionary <code>results</code>.</p>
+</li>
+</ol>
+</div>
+<p><strong>Digitale multimeter aansturen met Python</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">instruments.rigol_dm3058e</span><span class="w"> </span><span class="kn">import</span> <span class="n">measure_vrms</span><span class="p">,</span> <span class="n">measure_vrms_n</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">save_as_csv</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#Start meting digitale multimeter</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">vals</span> <span class="o">=</span> <span class="n">measure_vrms_n</span><span class="p">(</span><span class="n">dmm</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#opslaan in een nette structuur</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">results</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>            <span class="s2">"samples"</span><span class="p">:</span> <span class="n">vals</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>            <span class="s2">"mean"</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">vals</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>            <span class="s2">"std"</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">vals</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>            <span class="s2">"n"</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">save_as_csv</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="s2">"data/raw/input_voltage.csv"</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(c)</p>
+<p>De laatste stap nu de data weer inladen.</p>
+<ol>
+<li>
+<p>Laad de data in. Gebruik hiervoor als inspiratie onderstaande code.</p>
+</li>
+<li>
+<p>Schrijf de gemeten gemiddelde waarde en standaard fout in je labjournaal.</p>
+</li>
+</ol>
+</div>
+<p><strong>Uitlezen data</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_from_csv</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">data</span> <span class="o">=</span> <span class="n">load_from_csv</span><span class="p">(</span><span class="s2">"data/raw/input_voltage.csv"</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">freqs_in</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">V_mean</span>    <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s2">"mean"</span><span class="p">]</span>    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">V_std</span>     <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s2">"std"</span><span class="p">]</span>     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">samples</span>   <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s2">"samples"</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+</code></pre></div></p>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(c)</p>
+<ol>
+<li>Sluit de apparatuur nu weer af met Python. Zie onderstaande code.</li>
+</ol>
+</div>
+<p><strong>Afsluiten meetapparatuur</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">instruments.hardware</span><span class="w"> </span><span class="kn">import</span> <span class="n">close_instruments</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">close_instruments</span><span class="p">(</span><span class="n">rm</span><span class="p">,</span> <span class="n">fg</span><span class="p">,</span> <span class="n">dmm</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 1(d)</p>
+<ol>
+<li>
+<p>Maak een bode-plot van jouw gekozen filtersysteem.</p>
+</li>
+<li>
+<p>Bepaal de afsnijfrequentie aan de hand van jouw <strong>bode-plot</strong> en vergelijk deze met jouw gekozen waarde. Je hoeft hiervan alleen te kijken naar de amplitude en dus niet naar de fase<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
+</li>
+</ol>
+</div>
+<div class="admonition afronding">
+<p class="admonition-title">Afronding</p>
+<ol>
+<li>
+<p>Zet de gevonden figuren in je digitaal labjournaal en maak een duidelijk onderschrift waarin je uitlegt wat de figuren laten zien.</p>
+</li>
+<li>
+<p>Vul de <strong>Resultaat- en Discussie</strong>-sectie aan in je labjournaal. Hierin moet de uiteindelijke waarde van jouw experiment (met onzekerheid) staan en een korte discussie of deze waarde <strong>realistisch</strong> en <strong>betrouwbaar</strong> is.</p>
+</li>
+</ol>
+</div>
+<h2 id="appendix-1-drivers-virtuele-omgeving">Appendix 1: Drivers &amp; virtuele omgeving</h2>
+<p>Voor communicatie tussen Python en laboratoriumapparatuur (zoals oscilloscopen en functiegeneratoren) wordt gebruikgemaakt van de VISA-standaard (<em>Virtual Instrument Software Architecture</em>). Deze standaard definieert een uniforme interface voor het aanspreken van meetinstrumenten via verschillende fysieke verbindingen, zoals USB, GPIB en LAN.</p>
+<h3 id="visa-pyvisa-en-drivers">VISA, PyVISA en drivers</h3>
+<ul>
+<li>
+<p><strong>VISA-driver (bijv. NI-VISA, Keysight VISA, TekVISA, R&amp;S VISA):</strong> Dit is de onderliggende software die zorgt voor de fysieke communicatie met het instrument. Zie dit als de <em>postdienst</em> die weet hoe een bericht (via USB, LAN, GPIB) op de juiste plek komt.</p>
+</li>
+<li>
+<p><strong>PyVISA (Python package):</strong> Dit is een Python-interface naar de VISA-driver. PyVISA stuurt geen data rechtstreeks naar de hardware, maar gebruikt de geïnstalleerde VISA-library (bijv. <code>visa64.dll</code>) als tussenlaag.</p>
+</li>
+<li>
+<p><strong>SCPI (Standard Commands for Programmable Instruments):</strong> Dit is de <em>taal</em> waarin de instrumenten commando's ontvangen, zoals <code>MEAS:VOLT?</code> of <code>FREQ 1KHZ</code>. Vrijwel alle moderne meetinstrumenten ondersteunen SCPI.</p>
+</li>
+<li>
+<p><strong>NI-MAX:</strong> NI Measurement &amp; Automation Explorer is een hulpmiddel om apparaten te detecteren en resource strings (zoals <code>USB0::0x1AB1::...::INSTR</code>) te achterhalen. PyVISA kan ook zonder NI-MAX werken, mits het juiste adres van het instrument bekend is.</p>
+</li>
+</ul>
+<p>Naast NI-VISA kunnen ook andere VISA-implementaties worden gebruikt (Keysight, Tektronix, Rohde &amp; Schwarz, of Rigol UltraSigma).</p>
+<h3 id="ni-max">NI-MAX</h3>
+<p><strong>NI Measurement &amp; Automation Explorer (NI-MAX)</strong> is een hulpprogramma van National Instruments waarmee je:</p>
+<ul>
+<li>
+<p>Apparaten kunt detecteren en configureren die via GPIB, USB, LAN of andere bussen verbonden zijn.</p>
+</li>
+<li>
+<p>Resource strings kunt achterhalen die nodig zijn voor communicatie via <code>PyVISA</code>.</p>
+</li>
+<li>
+<p>Instrumenten kunt testen door eenvoudige SCPI-commando's te sturen.</p>
+</li>
+</ul>
+<p>NI-MAX wordt meestal geïnstalleerd samen met <a href="https://www.ni.com/en-us/support/downloads/drivers/download.ni-visa.html">NI-VISA</a>, de driver die <code>PyVISA</code> gebruikt om daadwerkelijk met het instrument te communiceren.</p>
+<p><strong>Tip:</strong> Na installatie kun je in NI-MAX je Rigol oscilloscoop vinden en de juiste USB-resource string kopiëren voor gebruik in Python.</p>
+<h3 id="installatie-en-virtuele-omgeving">Installatie en virtuele omgeving</h3>
+<p>Het is aan te raden om te werken in een virtuele Python-omgeving en de benodigde packages via <code>pip</code> of <code>conda-forge</code> te installeren:</p>
+<p><strong>Anaconda Prompt: virtuele omgeving en installatie</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>Practicum2_3<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>Practicum2_3
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyvisa<span class="w"> </span>pyvisa-py<span class="w"> </span>pyserial<span class="w"> </span>numpy<span class="w"> </span>matplotlib<span class="w"> </span>scipy<span class="w"> </span>ipykernel
+</code></pre></div></p>
+<h2 id="appendix-2-materialen-en-tips">Appendix 2: Materialen en tips</h2>
+<p><span id="figuur-3"></span></p>
+<p><img alt="Startscherm van NI-Max software. Apparaat ID start met &quot;USB&quot;." src="../../assets/periode%203/NIMAX.png" /></p>
+<p><em>Figuur 3: Startscherm van NI-Max software. Apparaat ID start met "USB".</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Doel</strong></th>
+<th style="text-align: left;"><strong>SCPI-commando</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Selecteer kanaal</td>
+<td style="text-align: left;"><code>SOUR1</code>, <code>SOUR2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Golfvorm kiezen</td>
+<td style="text-align: left;"><code>SOUR1:FUNC SIN</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Amplitude in Vpp</td>
+<td style="text-align: left;"><code>SOUR1:VOLT &lt;value&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Amplitude in Vrms</td>
+<td style="text-align: left;"><code>SOUR1:VOLT:UNIT VRMS</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Offset instellen</td>
+<td style="text-align: left;"><code>SOUR1:VOLT:OFFS &lt;value&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Frequentie instellen</td>
+<td style="text-align: left;"><code>SOUR1:FREQ &lt;value&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Fase instellen</td>
+<td style="text-align: left;"><code>SOUR1:PHAS &lt;deg&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Output aan</td>
+<td style="text-align: left;"><code>OUTP1 ON</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Output uit</td>
+<td style="text-align: left;"><code>OUTP1 OFF</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Output laden instellen</td>
+<td style="text-align: left;"><code>OUTP1:LOAD &lt;ohm&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Bestaande instellingen uitlezen</td>
+<td style="text-align: left;"><code>SOUR1:VOLT?</code>, <code>SOUR1:FREQ?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Burst-mode aan/uit</td>
+<td style="text-align: left;"><code>SOUR1:BURS:STAT ON</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Modulatie AM/FM/PWM</td>
+<td style="text-align: left;"><code>SOUR1:AM:STAT ON</code>, <code>SOUR1:FM:STAT ON</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Noise waveform</td>
+<td style="text-align: left;"><code>SOUR1:FUNC NOIS</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Square-wave duty cycle</td>
+<td style="text-align: left;"><code>SOUR1:PULS:DCYC &lt;percent&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ramp symmetry</td>
+<td style="text-align: left;"><code>SOUR1:FUNC:RAMP:SYMM &lt;0–100&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Systeem reset</td>
+<td style="text-align: left;"><code>*RST</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Identificatie opvragen</td>
+<td style="text-align: left;"><code>*IDN?</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Tabel: Veelgebruikte SCPI-commando's voor de Rigol DG1022 / DG1022Z functiegenerator.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Doel</strong></th>
+<th style="text-align: left;"><strong>SCPI-commando</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Identificatie opvragen</td>
+<td style="text-align: left;"><code>*IDN?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Reset instrument</td>
+<td style="text-align: left;"><code>*RST</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Foutenbuffer leegmaken</td>
+<td style="text-align: left;"><code>*CLS</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Stop lopende metingen</td>
+<td style="text-align: left;"><code>ABORt</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">AC-spanning meten (Vrms)</td>
+<td style="text-align: left;"><code>CONF:VOLT:AC</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">DC-spanning meten</td>
+<td style="text-align: left;"><code>CONF:VOLT:DC</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Wisselspanning uitlezen (ad-hoc)</td>
+<td style="text-align: left;"><code>MEAS:VOLT:AC?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Gespacificeerde meting uitlezen</td>
+<td style="text-align: left;"><code>READ?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Frequentie meten</td>
+<td style="text-align: left;"><code>CONF:FREQ</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Weerstand meten</td>
+<td style="text-align: left;"><code>CONF:RES</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Stroom meten (AC/DC)</td>
+<td style="text-align: left;"><code>CONF:CURR:AC</code>, <code>CONF:CURR:DC</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Triggerbron instellen</td>
+<td style="text-align: left;"><code>TRIG:SOUR IMM</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Aantal metingen per trigger</td>
+<td style="text-align: left;"><code>TRIG:COUN &lt;n&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Aantal samples instellen</td>
+<td style="text-align: left;"><code>SAMP:COUN &lt;n&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acquisitie starten</td>
+<td style="text-align: left;"><code>INIT</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Buffer uitlezen</td>
+<td style="text-align: left;"><code>FETCh?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">NPLC instellen (integratietijd)</td>
+<td style="text-align: left;"><code>VOLT:AC:NPLC &lt;x&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Automatische bereikkeuze uit</td>
+<td style="text-align: left;"><code>VOLT:AC:RANG:AUTO OFF</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Bereik instellen</td>
+<td style="text-align: left;"><code>VOLT:AC:RANG &lt;range&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Auto-zero uit</td>
+<td style="text-align: left;"><code>ZERO:AUTO OFF</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Detectieband AC</td>
+<td style="text-align: left;"><code>VOLT:AC:DET:BAND 20</code> / <code>100</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Display aan/uit</td>
+<td style="text-align: left;"><code>DISP:ENAB ON</code>, <code>DISP:ENAB OFF</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Status opvragen</td>
+<td style="text-align: left;"><code>STAT:OPER:COND?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Fouten opvragen</td>
+<td style="text-align: left;"><code>SYST:ERR?</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Tabel: Veelgebruikte SCPI-commando's voor de Rigol DM3058E digitale multimeter.</em></p>
+<h2 id="appendix-3-schematische-tekeningen-schakelingen">Appendix 3: Schematische tekeningen schakelingen</h2>
+<p><span id="figuur-4"></span></p>
+<p><img alt="Schema van het banddoorlaatfilter (bandpass)." src="../../assets/periode%203/bandpass.svg" /></p>
+<p><em>Figuur 4: Schema van het banddoorlaatfilter (bandpass).</em></p>
+<p><span id="figuur-5"></span></p>
+<p><img alt="Schema van het hoogdoorlaatfilter (highpass)." src="../../assets/periode%203/highpass.svg" /></p>
+<p><em>Figuur 5: Schema van het hoogdoorlaatfilter (highpass).</em></p>
+<h2 id="appendix-4-apparaataansturing">Appendix 4: apparaataansturing</h2>
+<p><strong>Voorbeeld: functiegenerator aansturen met Python</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">set_fixed_sine</span><span class="p">(</span><span class="n">gen</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">vrms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="sd">    Stel de functiegenerator in op een vaste sinusgolf.</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="sd">    Inclusief expliciet aan- en uitzetten van de uitgang.</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="sd">    """</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">chan</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"SOUR</span><span class="si">{</span><span class="n">channel</span><span class="si">}</span><span class="s2">"</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">gen</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">:FUNC SIN"</span><span class="p">)</span>           <span class="c1"># sinusgolf kiezen</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">gen</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">:VOLT:UNIT VRMS"</span><span class="p">)</span>     <span class="c1"># amplitude in Vrms</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">gen</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">:VOLT </span><span class="si">{</span><span class="n">vrms</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>        <span class="c1"># waarde instellen</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="n">gen</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">:FREQ </span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>        <span class="c1"># frequentie instellen</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="n">gen</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"OUTP</span><span class="si">{</span><span class="n">channel</span><span class="si">}</span><span class="s2"> ON"</span><span class="p">)</span>          <span class="c1"># uitgang inschakelen</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="c1"># Optioneel: gegevens teruggeven, maar NIET verplicht:</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="c1"># return {"freq": freq, "vrms": vrms, "channel": channel}</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="c1"># ------------------------------------------------------------</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="c1"># Voorbeeldgebruik:</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="c1"># ------------------------------------------------------------</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pyvisa</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="n">rm</span> <span class="o">=</span> <span class="n">pyvisa</span><span class="o">.</span><span class="n">ResourceManager</span><span class="p">()</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="n">gen</span> <span class="o">=</span> <span class="n">rm</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="s2">"USB0::0x1AB1::0x0642::DG1ZAxxxxxxx::INSTR"</span><span class="p">)</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="n">set_fixed_sine</span><span class="p">(</span><span class="n">gen</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">vrms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="n">gen</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Je zult hiervoor een account moeten aanmaken. Dit is helaas de harde realiteit dat niet alles écht open-source is.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>In professionele software-engineering wordt doorgaans niet met notebooks gewerkt, maar uitsluitend met <code>.py</code>-modules. Voor dit practicum maken we een uitzondering, omdat we zowel de meetcode als de gegenereerde data en visualisaties in één bestand willen kunnen bekijken.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Dat kan ook niet in dit geval, daarvoor hebben we een oscilloscoop nodig.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.tracking", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascript/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

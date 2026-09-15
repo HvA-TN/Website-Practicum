@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://hva-tn.github.io/Practica_LJ2/periode%202/aeropendulum-openloop/">
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../aeropendulum-pid/">
       
       
         
@@ -25,7 +21,7 @@
     
     
       
-        <title>Aeropendulum (open-loop) - Practica Technische Natuurkunde – Jaar 2</title>
+        <title>Practicum: Open-loop regeling van een aeropendulum - Practica Technische Natuurkunde – Jaar 2</title>
       
     
     
@@ -77,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#practicum-open-loop-regeling-van-een-aeropendulum" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aeropendulum (open-loop)
+              Practicum: Open-loop regeling van een aeropendulum
             
           </span>
         </div>
@@ -577,180 +578,6 @@
   
 
     
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Periode 2
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Periode 2
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Aeropendulum (open-loop)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../aeropendulum-pid/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Aeropendulum (PID)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../zonnecel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Zonnecel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -768,6 +595,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leerdoelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerdoelen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introductie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introductie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componenten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componenten
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -784,9 +665,342 @@
 
 
 
-  <h1>Aeropendulum (open-loop)</h1>
-
-
+<h1 id="practicum-open-loop-regeling-van-een-aeropendulum">Practicum: Open-loop regeling van een aeropendulum</h1>
+<p><a href="../../downloads/aeropendulum-arduino.zip">Download de Arduino-sketches en instructies</a></p>
+<h2 id="leerdoelen">Leerdoelen</h2>
+<ul>
+<li>
+<p>Je kunt de dynamische respons van een simpel open-loop systeem experimenteel bepalen.</p>
+</li>
+<li>
+<p>Je kunt meetgegevens in Python inlezen, verwerken en visualiseren.</p>
+</li>
+<li>
+<p>Je kunt een eenvoudig fysisch model vergelijken met experimentele meetresultaten.</p>
+</li>
+</ul>
+<div class="admonition veiligheid">
+<p class="admonition-title">Veiligheid</p>
+<ol>
+<li>
+<p>Houd tijdens de metingen voldoende afstand van de draaiende propeller en raak deze nooit aan wanneer de voeding is ingeschakeld.</p>
+</li>
+<li>
+<p>Controleer vóór iedere meting of het aeropendulum vrij kan bewegen en of zich geen objecten binnen het bewegingsbereik bevinden.</p>
+</li>
+<li>
+<p>Twijfel je over een handeling of apparaat? Vraag dit altijd aan de practicumbegeleider.</p>
+</li>
+</ol>
+</div>
+<h2 id="introductie">Introductie</h2>
+<p>Regeltechniek speelt een belangrijke rol binnen de technische natuurkunde. Veel technische systemen, zoals drones, robots, satellieten, productieprocessen en autonome voertuigen, moeten automatisch bestuurd worden om een gewenste positie of toestand te bereiken. Voordat een regelsysteem ontworpen kan worden, is het belangrijk om eerst het gedrag van het systeem zelf goed te begrijpen. Dit gebeurt vaak door het systeem in open-loop te bestuderen.<br />
+Bij een open-loop systeem wordt een ingangssignaal aangeboden zonder dat de uitgang wordt teruggekoppeld naar de regeling. De besturing corrigeert dus niet voor verstoringen of afwijkingen. Hoewel deze manier van regelen relatief eenvoudig is, vormt zij de basis voor vrijwel alle moderne regelsystemen. Door de respons van een systeem op verschillende ingangssignalen te meten, kunnen eigenschappen zoals de gevoeligheid, tijdconstante, demping en niet-lineariteiten worden bepaald.<br />
+Een eenvoudig voorbeeld van open-loop regeling is een magnetron. Je stelt bijvoorbeeld een vermogen van 800 W en een tijd van 2 minuten in. De magnetron voert deze instelling uit, maar meet niet of het eten daadwerkelijk de gewenste temperatuur heeft bereikt.<br />
+Is het eten na 2 minuten nog te koud? Dan corrigeert de magnetron dit niet automatisch. De uitgang (temperatuur van het eten) wordt namelijk niet teruggekoppeld naar de ingang (vermogen en verwarmingstijd).<br />
+In dit practicum onderzoek je het dynamische gedrag van een aeropendulum. Dit systeem bestaat uit een arm die om een draaipunt kan roteren en wordt aangedreven door een elektrische propeller. De propeller levert een stuwkracht die de arm omhoog beweegt, terwijl de zwaartekracht de arm terug naar beneden probeert te brengen. Door de motorspanning stapsgewijs te variëren ontstaat een evenwicht tussen deze twee krachten, waardoor verschillende stationaire hoeken en dynamische responsen kunnen worden bestudeerd.<br />
+Tijdens het practicum meet je de hoek van het aeropendulum als functie van de tijd voor verschillende motorspanningen. De meetgegevens worden vervolgens in geanalyseerd om de dynamische eigenschappen van het systeem te bepalen en te vergelijken met een eenvoudig fysisch model. De kennis die in dit practicum wordt opgedaan vormt de basis voor een vervolgpracticum, waarin hetzelfde systeem met behulp van terugkoppeling (<em>closed-loop control</em>) automatisch zal worden geregeld.</p>
+<h2 id="theorie">Theorie</h2>
+<p>Een aeropendulum bestaat uit een draaibare arm met aan het uiteinde een elektromotor en propeller. De propeller levert een stuwkracht waardoor de arm omhoog beweegt. De zwaartekracht werkt deze beweging tegen. Door het vermogen van de motor te variëren kan de positie van het aeropendulum worden beïnvloed.</p>
+<p>In dit practicum wordt het systeem in <strong>open-loop</strong> onderzocht. Dit betekent dat het vermogen van de motor vooraf wordt ingesteld en niet automatisch wordt aangepast op basis van de gemeten hoek. Voor iedere instelling wordt vervolgens onderzocht hoe het aeropendulum reageert.</p>
+<p>De propeller levert een stuwkracht <span class="arithmatex">\(F_T\)</span> op een afstand <span class="arithmatex">\(l_T\)</span> van het draaipunt. Het bijbehorende moment is</p>
+<p><span id="vergelijking-1"></span></p>
+<div class="arithmatex">\[
+M_T = l_T F_T.
+\tag{1}
+\]</div>
+<p>Tegelijkertijd oefent de zwaartekracht een moment uit op het systeem. Wanneer het zwaartepunt zich op een afstand <span class="arithmatex">\(l\)</span> van het draaipunt bevindt, is dit moment</p>
+<p><span id="vergelijking-2"></span></p>
+<div class="arithmatex">\[
+M_g = mgl\sin\theta,
+\tag{2}
+\]</div>
+<p>waarbij <span class="arithmatex">\(m\)</span> de massa van het bewegende systeem is, <span class="arithmatex">\(g\)</span> de zwaartekrachtsversnelling en <span class="arithmatex">\(\theta\)</span> de hoek van de arm.</p>
+<p>Volgens de tweede wet van Newton voor rotatie wordt de beweging bepaald door de som van deze momenten:</p>
+<p><span id="vergelijking-3"></span></p>
+<div class="arithmatex">\[
+J\ddot{\theta}
+    =
+    l_TF_T-mgl\sin\theta,
+\tag{3}
+\]</div>
+<p>waarbij <span class="arithmatex">\(J\)</span> het massatraagheidsmoment van het aeropendulum rond het draaipunt is.</p>
+<p><span id="figuur-1"></span></p>
+<p><img alt="Schematische weergave van het aeropendulum en de relevante krachten." src="../../assets/periode%202/aeropendulum.png" /></p>
+<p><em>Figuur 1: Schematische weergave van het aeropendulum en de relevante krachten.</em></p>
+<p>De stuwkracht van de propeller wordt bepaald door het vermogen dat aan de motor wordt geleverd. Het elektrisch ingangsvermogen is</p>
+<p><span id="vergelijking-4"></span></p>
+<div class="arithmatex">\[
+P_\mathrm{el}=UI,
+\tag{4}
+\]</div>
+<p>met <span class="arithmatex">\(U\)</span> de spanning over de motor en <span class="arithmatex">\(I\)</span> de stroom door de motor. Slechts een deel van dit vermogen wordt door de motor en propeller omgezet in mechanisch vermogen. Met een rendement <span class="arithmatex">\(\eta\)</span> kan dit worden geschreven als</p>
+<p><span id="vergelijking-5"></span></p>
+<div class="arithmatex">\[
+P_\mathrm{motor}=\eta UI.
+\tag{5}
+\]</div>
+<p>De stuwkracht kan daarom worden beschouwd als een functie van het geleverde vermogen,</p>
+<p><span id="vergelijking-6"></span></p>
+<div class="arithmatex">\[
+F_T = f(P_\mathrm{motor}).
+\tag{6}
+\]</div>
+<p>De precieze vorm van deze relatie hangt af van onder andere de motor en de propeller en hoeft niet lineair te zijn.</p>
+<p>Wanneer het aeropendulum uiteindelijk tot stilstand komt, is de hoekversnelling nul. Het moment van de propeller is dan gelijk aan het moment van de zwaartekracht:</p>
+<p><span id="vergelijking-7"></span></p>
+<div class="arithmatex">\[
+l_TF_T=mgl\sin\theta.
+\tag{7}
+\]</div>
+<p>Hieruit volgt</p>
+<p><span id="vergelijking-8"></span></p>
+<div class="arithmatex">\[
+\theta =
+    \arcsin\left(
+    \frac{l_TF_T}{mgl}
+    \right).
+\tag{8}
+\]</div>
+<p>Een groter motorvermogen leidt in het algemeen tot een grotere stuwkracht en daarmee tot een grotere evenwichtshoek. Tijdens het practicum wordt deze relatie experimenteel onderzocht door het motorvermogen te variëren en de resulterende hoek van het aeropendulum te meten.</p>
+<h2 id="componenten">Componenten</h2>
+<p>Het aeropendulum bestaat uit verschillende elektronische en mechanische componenten. De Arduino stuurt de motor aan via een H-brug en leest tegelijkertijd de hoek van het pendulum uit met een magnetische hoeksensor. Figuur <a href="#figuur-3">3</a> geeft een overzicht van de gebruikte aansluitingen.</p>
+<h3 id="arduino-uno-r4-minima">Arduino Uno R4 Minima</h3>
+<p>Een Arduino is een programmeerbaar microcontrollerbord waarmee elektronische componenten kunnen worden aangestuurd en sensoren kunnen worden uitgelezen. In dit practicum wordt een <strong>Arduino Uno R4 Minima</strong> gebruikt.</p>
+<p>De Arduino voert continu een programma uit waarin twee taken centraal staan: het aansturen van de elektromotor en het meten van de hoek van het aeropendulum. Hiervoor beschikt de Arduino onder andere over digitale aansluitingen, analoge ingangen en verschillende communicatieprotocollen.</p>
+<p>In deze opstelling worden de digitale pinnen D9, D10 en D11 gebruikt voor de aansturing van de motor. De AS5600-hoeksensor communiceert via de pinnen A4 en A5 met de Arduino.</p>
+<h3 id="h-brug">H-brug</h3>
+<p>Een elektromotor kan niet rechtstreeks vanuit een digitale uitgang van de Arduino worden gevoed. De motor vraagt aanzienlijk meer stroom dan een uitgang van de microcontroller kan leveren. De Arduino levert daarom alleen het <em>stuursignaal</em>; het elektrische vermogen voor de motor wordt geleverd door de externe voeding.</p>
+<p>Tussen de Arduino en de motor bevindt zich daarom een <strong>L298N H-brug</strong>. Deze schakeling kan de externe voedingsspanning naar de motor schakelen. De naam H-brug komt van de configuratie van de interne schakelaars, die schematisch de vorm van de letter H heeft.</p>
+<p>Door verschillende schakelaars te openen en sluiten kan de stroom door de motor in beide richtingen lopen. Daarmee kan ook de draairichting van de motor worden veranderd. Hiervoor gebruikt de L298N de ingangen IN1 en IN2. In onze opstelling worden deze aangestuurd door D10 en D11 van de Arduino.</p>
+<h3 id="pulse-width-modulation">Pulse Width Modulation</h3>
+<p>Naast de draairichting willen we ook kunnen regelen hoeveel vermogen de motor ontvangt. Hiervoor wordt <strong>Pulse Width Modulation (PWM)</strong> gebruikt.</p>
+<p>Bij PWM wordt de voedingsspanning niet continu veranderd. In plaats daarvan wordt de spanning snel aan- en uitgeschakeld. De verhouding tussen de tijd dat het signaal aan staat en de totale periodetijd noemen we de <em>duty cycle</em> <span class="arithmatex">\(D\)</span>:</p>
+<p><span id="vergelijking-9"></span></p>
+<div class="arithmatex">\[
+D = \frac{t_{\mathrm{aan}}}{T}.
+\tag{9}
+\]</div>
+<p>Een duty cycle van <span class="arithmatex">\(100\%\)</span> betekent dat de motor continu wordt aangestuurd. Bij <span class="arithmatex">\(50\%\)</span> staat de spanning gedurende de helft van iedere periode aan en bij <span class="arithmatex">\(0\%\)</span> staat de motor volledig uit.</p>
+<p>Voor een ideale PWM-schakeling is de gemiddelde spanning over één periode</p>
+<p><span id="vergelijking-10"></span></p>
+<div class="arithmatex">\[
+U_{\mathrm{gem}} = D\,U_{\mathrm{voeding}}.
+\tag{10}
+\]</div>
+<p>De motor reageert door zijn mechanische en elektrische traagheid niet afzonderlijk op iedere snelle puls. Daardoor kan met de duty cycle het gedrag van de motor worden geregeld.</p>
+<p>In onze opstelling genereert pin D9 van de Arduino het PWM-signaal. Dit signaal wordt aangesloten op de <strong>ENA</strong>-ingang van de L298N. De Arduino bepaalt dus wanneer de H-brug de motor inschakelt, terwijl het daadwerkelijke motorvermogen uit de externe voeding komt.</p>
+<p><span id="figuur-2"></span></p>
+<p><img alt="Voorbeeld van PWM-signalen met verschillende duty cycles. De amplitude blijft gelijk, maar de verhouding tussen de aan- en uittijd verandert." src="../../assets/periode%202/PWM.png" /></p>
+<p><em>Figuur 2: Voorbeeld van PWM-signalen met verschillende duty cycles. De amplitude blijft gelijk, maar de verhouding tussen de aan- en uittijd verandert.</em></p>
+<h3 id="as5600-hoeksensor">AS5600-hoeksensor</h3>
+<p>De hoek van het aeropendulum wordt gemeten met een <strong>AS5600 magnetische hoeksensor</strong>. Op de draaiende as van het aeropendulum wordt een magneet geplaatst. De sensor meet de richting van het magnetische veld en kan daaruit de hoek van de as bepalen. Omdat er geen mechanisch contact nodig is tussen de sensor en de draaiende as, treedt hierbij vrijwel geen extra mechanische weerstand op.</p>
+<p>De AS5600 heeft een resolutie van 12 bit. Eén volledige omwenteling wordt daardoor verdeeld in</p>
+<p><span id="vergelijking-11"></span></p>
+<div class="arithmatex">\[
+2^{12}=4096
+\tag{11}
+\]</div>
+<p>mogelijke waarden. Een ruwe sensorwaarde kan worden omgerekend naar een hoek volgens</p>
+<p><span id="vergelijking-12"></span></p>
+<div class="arithmatex">\[
+\theta =
+    \frac{\text{sensorwaarde}}{4096}\,360^\circ.
+\tag{12}
+\]</div>
+<p>De sensor wordt digitaal uitgelezen via het <strong>I^2^C-protocol</strong>. Hiervoor zijn twee verbindingen nodig: SDA (<em>Serial Data</em>) voor het versturen van gegevens en SCL (<em>Serial Clock</em>) voor het kloksignaal. In deze opstelling is SDA aangesloten op A4 en SCL op A5 van de Arduino.</p>
+<p>De positie van de magneet ten opzichte van de sensor is belangrijk. Wanneer de magneet te ver van de sensor staat of niet goed boven het midden van de sensor is geplaatst, kan de hoekmeting onbetrouwbaar worden. Controleer daarom voor iedere meting of de sensor correct functioneert. Wanneer de arm langzaam met de hand wordt bewogen, moet de gemeten hoek vloeiend veranderen. Een constante waarde, grote sprongen of een foutmelding kan betekenen dat de magneet niet correct ten opzichte van de sensor staat.</p>
+<p><span id="figuur-3"></span></p>
+<p><img alt="Aansluitschema van de Arduino Uno R4 Minima, L298N H-brug, AS5600-hoeksensor, motor en externe voeding." src="../../assets/periode%202/aeropendulum_aansluitschema.png" /></p>
+<p><em>Figuur 3: Aansluitschema van de Arduino Uno R4 Minima, L298N H-brug, AS5600-hoeksensor, motor en externe voeding.</em></p>
+<div class="admonition voorbereiding">
+<p class="admonition-title">Voorbereiding</p>
+<ol>
+<li>
+<p>Bekijk de geometrie van het aeropendulum. Onder welke voorwaarde geldt <span class="arithmatex">\(l=l_T\)</span>? Leg in woorden uit wat deze aanname fysisch betekent.</p>
+</li>
+<li>
+<p>In de stationaire toestand staat de arm stil en zijn de momenten rond het draaipunt in evenwicht. Laat zien dat dan geldt:</p>
+<p><span id="vergelijking-13"></span></p>
+<div class="arithmatex">\[
+l_TF_T = mgl\sin\theta.
+\tag{13}
+\]</div>
+</li>
+<li>
+<p>De motor zet niet al het opgenomen elektrische vermogen om in mechanisch vermogen. Neem een rendement van <span class="arithmatex">\(\eta=0.70\)</span> aan:</p>
+<p><span id="vergelijking-14"></span></p>
+<div class="arithmatex">\[
+P_{\mathrm{mech}} = \eta UI.
+\tag{14}
+\]</div>
+<p>Bereken bij een voedingsspanning van <span class="arithmatex">\(U=4\)</span> V het mechanisch vermogen voor een aantal verschillende motorstromen.</p>
+</li>
+<li>
+<p>Neem aan dat de stuwkracht van de propeller evenredig is met het mechanisch vermogen:</p>
+<p><span id="vergelijking-15"></span></p>
+<div class="arithmatex">\[
+F_T = k_P P_{\mathrm{mech}},
+\tag{15}
+\]</div>
+<p>waarbij <span class="arithmatex">\(k_P\)</span> een constante is die de eigenschappen van de motor en propeller beschrijft. Combineer de bovenstaande vergelijkingen en leid een uitdrukking af voor de stationaire hoek <span class="arithmatex">\(\theta\)</span> als functie van de motorstroom <span class="arithmatex">\(I\)</span>.</p>
+</li>
+<li>
+<p>Kies realistische waarden voor <span class="arithmatex">\(m\)</span>, <span class="arithmatex">\(l\)</span>, <span class="arithmatex">\(l_T\)</span> en <span class="arithmatex">\(k_P\)</span>. Licht kort toe waarom je deze waarden hebt gekozen. Maak vervolgens in Desmos een grafiek van <span class="arithmatex">\(\theta\)</span> als functie van <span class="arithmatex">\(I\)</span>.</p>
+</li>
+<li>
+<p>Voorspel op basis van je grafiek wat er gebeurt wanneer de motorstroom wordt verhoogd. Verwacht je dat het eenvoudige model voor alle motorstromen even goed werkt? Leg kort uit.</p>
+</li>
+</ol>
+</div>
+<h3 id="meten-vanuit-de-arduino-ide">Meten vanuit de Arduino IDE</h3>
+<p>Gebruik de CSV-sketch voor dit practicum in <code>Practicum/Na2.2/Arduino/Openloop</code> of <code>Practicum/Na2.2/Arduino/PID</code>. Open voor open-loopmetingen <code>Aero_pendulum_OL_CSV.ino</code> en voor PID-metingen <code>Aero_pendulum_PID_CSV.ino</code>, ieder in zijn eigen gelijknamige map. Het programma draait volledig op de Arduino. Python wordt pas achteraf gebruikt voor de analyse.</p>
+<ol>
+<li>
+<p>Selecteer in de Arduino IDE de Arduino Uno R4 Minima en de juiste poort. Installeer <code>AS5600</code> van Rob Tillaart. Alleen de PID-sketch heeft daarnaast de bibliotheek <code>PID</code> van Brett Beauregard nodig.</p>
+</li>
+<li>
+<p>Controleer met de motorvoeding uit de bedrading en hoekconversie. Stel met de begeleider <code>MAX_PWM</code>, <code>MIN_ANGLE_DEG</code> en <code>MAX_ANGLE_DEG</code> vast. De meegeleverde waarden zijn voorlopig.</p>
+</li>
+<li>
+<p>Wijzig voor open-loop <code>OPEN_LOOP_PWM</code>; wijzig voor PID <code>setpoint</code>, <code>kp</code>, <code>ki</code> en <code>kd</code>. De proefduur staat in <code>MEASUREMENT_MS</code> en is standaard 30000 ms. Upload met uitgeschakelde motorvoeding.</p>
+</li>
+<li>
+<p>Open Serial Monitor en kies 115200 baud. Schakel de weergave van extra tijdstempels uit: de sketch levert zelf de tijd. Sluit Serial Plotter en andere programma's op dezelfde poort.</p>
+</li>
+<li>
+<p>Verstuur de hoofdletter <code>C</code> voor tien seconden sensorcontrole zonder motoraansturing. Controleer de hoek met alleen USB aangesloten. De uitvoer stopt daarna vanzelf. Een ongeldige sensorstatus of werkhoek levert een foutregel en beëindigt de opname.</p>
+</li>
+<li>
+<p>Maak Serial Monitor leeg vóór de echte meting. Schakel de gecontroleerde motorvoeding in terwijl de sketch wacht. Houd afstand van arm en propeller en verstuur <code>S</code>. De Arduino start de motor en verstuurt een CSV-kop gevolgd door meetregels. Een eventuele regeleinde-instelling mag blijven staan; CR en LF worden genegeerd.</p>
+</li>
+<li>
+<p>Na de ingestelde proefduur stopt de Arduino de motor en de uitvoer automatisch. Verstuur <code>X</code> om eerder te stoppen. Bij een sensorfout of een hoek buiten het ingestelde bereik stopt de motor eveneens. Schakel na afloop de motorvoeding uit.</p>
+</li>
+</ol>
+<p>Het sluiten van Serial Monitor is geen stopcommando. Gebruik <code>X</code> of schakel de motorvoeding uit. Houd de fysieke uitschakeling bereikbaar: de softwarematige stop werkt alleen zolang de microcontroller zijn programma blijft uitvoeren.</p>
+<h3 id="csv-bestand-bewaren">CSV-bestand bewaren</h3>
+<p>De Arduino verstuurt CSV-tekst via USB; zonder opslagmodule schrijft hij geen bestand op de computer. Bewaar de meetgegevens als volgt:</p>
+<ol>
+<li>
+<p>Wacht totdat de uitvoer is gestopt. Selecteer en kopieer de volledige opname uit Serial Monitor, vanaf de regel die begint met <code>t_ms,setpoint_deg</code> tot en met de laatste volledige meetregel.</p>
+</li>
+<li>
+<p>Plak deze tekst in een leeg tekstbestand, bijvoorbeeld in Kladblok. Sla op als <code>pid_run1.csv</code> of <code>ol_pwm60_run1.csv</code>. Kies bij opslaan zo nodig "Alle bestanden", zodat de naam niet eindigt op <code>.csv.txt</code>.</p>
+</li>
+<li>
+<p>Gebruik een nieuwe bestandsnaam per proef. Neem geen meldingen van de IDE, geweigerde startmeldingen of een tweede CSV-kop op in hetzelfde bestand. Controleer bij langere proeven of het begin van de uitvoer nog aanwezig is; verkort de proef als de monitor oude regels niet bewaart.</p>
+</li>
+</ol>
+<p>De belangrijkste kolommen zijn <code>t_ms</code> (tijd sinds het startcommando), <code>angle_deg</code> (hoek), <code>pwm</code> (werkelijke PWM-telwaarde), <code>setpoint_deg</code> (leeg bij OL), <code>running</code> en <code>sensor_ok</code>. Noteer de gekozen PWM- of PID-instellingen en de maximale PWM zelf in het labjournaal. Een ongeldige hoek blijft leeg. Het scheidingsteken is een komma en het decimaalteken een punt. Noteer voedingsinstellingen en kalibratie apart in het labjournaal.</p>
+<p>Meten, regelen en CSV-uitvoer gebeuren in dezelfde ronde, nominaal iedere 20 ms (50 Hz). Gebruik de tijdstempels voor de tijdas, met <span class="arithmatex">\(t=0\)</span> bij het startcommando. De eerste meetregel volgt enkele milliseconden later. Controleer de werkelijke intervallen door opeenvolgende tijdstempels van elkaar af te trekken. Er is geen nulmeting vóór de motoraansturing; bepaal de beginhoek vooraf met <code>C</code>. Verdere instructies staan in <code>Arduino/README.md</code>.</p>
+<div class="admonition methode">
+<p class="admonition-title">Methode</p>
+<ul>
+<li>
+<p>Gebruik de nieuwe sketch <code>Aero_pendulum_OL_CSV.ino</code> in de gelijknamige map onder <code>Arduino/Openloop</code>.</p>
+</li>
+<li>
+<p>Houd de voedingsspanning en stroomlimiet gelijk tijdens de metingen. Varieer <code>OPEN_LOOP_PWM</code> in vooraf afgesproken stappen binnen <code>MAX_PWM</code>.</p>
+</li>
+<li>
+<p>Schakel de motorvoeding uit voordat je een gewijzigde instelling uploadt. Voer daarna de start- en opslagprocedure hierboven uit.</p>
+</li>
+<li>
+<p>Wacht per instelling tot de arm een stationaire positie bereikt, of noteer dat dit binnen de meetduur niet gebeurt.</p>
+</li>
+<li>
+<p>Herhaal iedere instelling minimaal drie keer. Registreer per proef een apart CSV-bestand en noteer voedingsspanning en motorstroom voor de vergelijking met het fysische model.</p>
+</li>
+</ul>
+</div>
+<div class="admonition opdracht">
+<p class="admonition-title">Uitvoering</p>
+<ol>
+<li>
+<p>Maak een meettabel met de ingestelde PWM-telwaarde en de gemeten stationaire hoek.</p>
+</li>
+<li>
+<p>Meet de stationaire hoek voor alle ingestelde PWM-waarden.</p>
+</li>
+<li>
+<p>Herhaal iedere meting minimaal drie keer.</p>
+</li>
+<li>
+<p>Noteer eventuele bijzonderheden, zoals een dode zone, oscillaties of verzadiging van de motor.</p>
+</li>
+</ol>
+</div>
+<div class="admonition opdracht">
+<p class="admonition-title">Verwerking</p>
+<ol>
+<li>
+<p>Laad de meetgegevens in met Python.</p>
+</li>
+<li>
+<p>Controleer de CSV-kop: het scheidingsteken is een komma en het decimaalteken een punt. Analyseer alleen regels met <code>running=1</code> en <code>sensor_ok=1</code>.</p>
+</li>
+<li>
+<p>Print de kolomnamen met <code>df.keys()</code>.</p>
+</li>
+<li>
+<p>Bereken voor iedere PWM-instelling de gemiddelde stationaire hoek en de standaarddeviatie.</p>
+</li>
+<li>
+<p>Maak een grafiek van de stationaire hoek als functie van de ingestelde PWM-telwaarde, inclusief foutbalken.</p>
+</li>
+<li>
+<p>Vergelijk de gemeten relatie met de theoretische voorspelling uit de voorbereiding en bespreek eventuele afwijkingen.</p>
+</li>
+</ol>
+</div>
+<p><strong>Importeer data</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'ol_pwm60_run1.csv'</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">'running'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'sensor_ok'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Geen geldige actieve meetpunten'</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">df</span><span class="p">[</span><span class="s1">'t_s'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'t_ms'</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</code></pre></div></p>
+<div class="admonition opdracht">
+<p class="admonition-title">Verwerking</p>
+<ol>
+<li>
+<p>Plot de stationaire hoek als functie van de ingestelde PWM-telwaarde. Voeg foutbalken toe indien meerdere metingen zijn uitgevoerd.</p>
+</li>
+<li>
+<p>Vergelijk de theoretische hoek als functie van stroom met de apart gemeten motorstroom en stationaire hoek. Een PWM-telwaarde is geen gemeten spanning of stroom; zet deze niet rechtstreeks op de stroomas van het model.</p>
+</li>
+<li>
+<p>Bepaal voor welke uitgang de propeller de arm voor het eerst in beweging brengt (de dode zone).</p>
+</li>
+<li>
+<p>Onderzoek of de relatie tussen de Arduino-uitgang en de stationaire hoek lineair is. Licht je antwoord toe.</p>
+</li>
+<li>
+<p>Bespreek mogelijke oorzaken van afwijkingen tussen het theoretische model en de metingen, zoals wrijving, niet-lineair motorgedrag, luchtweerstand en meetonzekerheid.</p>
+</li>
+</ol>
+</div>
+<div class="admonition afronding">
+<p class="admonition-title">Afronding</p>
+<ol>
+<li>
+<p>Laat de meetresultaten controleren door de practicumbegeleider.</p>
+</li>
+<li>
+<p>Voeg alle grafieken toe aan je digitale labjournaal en geef iedere figuur een duidelijk onderschrift.</p>
+</li>
+<li>
+<p>Vul de sectie <strong>Resultaten en Discussie</strong> aan. Beschrijf hierin de relatie tussen de Arduino-uitgang en de stationaire hoek en vergelijk de experimentele resultaten met het theoretische model.</p>
+</li>
+<li>
+<p>Reflecteer op de beperkingen van een open-loop systeem en beschrijf waarom terugkoppeling in veel technische toepassingen gewenst is.</p>
+</li>
+</ol>
+</div>
 
 
 
@@ -847,7 +1061,7 @@
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../javascript/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
