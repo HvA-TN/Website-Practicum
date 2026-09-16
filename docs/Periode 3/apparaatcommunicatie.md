@@ -28,7 +28,7 @@ Een **passief RC-filter** is een eenvoudig elektrisch netwerk van weerstanden en
 
 ![Schema van het laagdoorlaatfilter.](../assets/periode%203/lowpass.svg)
 
-*Figuur 1: Schema van het laagdoorlaatfilter.*
+*Figuur 1: Laagdoorlaatfilter: R in serie, C naar massa; de uitgangsspanning wordt over C gemeten.*
 
 Het gedrag van een RC-filter kan worden beschreven met behulp van de impedantie van een condensator,
 
@@ -36,7 +36,7 @@ $$
 Z_C(\omega) = \frac{1}{i \omega C},
 $$
 
-waarbij $\omega = 2\pi f$ de hoeksnelheid is en $i$ de imaginaire eenheid. Voor een eenvoudig **laagdoorlaatfilter**, bestaande uit een weerstand $R$ in serie en een condensator $C$ naar massa, volgt voor de overdrachtsfunctie
+waarbij $\omega = 2\pi f$ de hoekfrequentie is en $i$ de imaginaire eenheid. Voor een eenvoudig **laagdoorlaatfilter**, bestaande uit een weerstand $R$ in serie en een condensator $C$ naar massa, volgt voor de overdrachtsfunctie
 
 $$
 H(\omega) = \frac{V_\mathrm{uit}}{V_\mathrm{in}} 
@@ -69,6 +69,27 @@ $$
 $$
 
 Door deze twee functies uit te zetten tegen de logaritme van de frequentie ontstaat de Bode-plot: een amplitude-grafiek die de verzwakking per frequentie laat zien en een fase-grafiek die aangeeft hoe sterk het signaal wordt vertraagd. Helaas kunnen wij de fase-verschuiving niet meten met een **Digitale Multi Meter (DMM)**, hiervoor zouden wij een oscilloscoop moeten gebruiken. Deze grafische weergave maakt het filtergedrag bij lage, overgangs- en hoge frequenties direct zichtbaar. Naast **laagdoorlaatfilters** bestaan er ook **hoogdoorlaatfilters** door de positie van weerstand en condensator om te wisselen. In dat geval worden juist lage frequenties onderdrukt en hoge frequenties doorgelaten. Met combinaties van meerdere RC-netwerken kunnen **banddoorlaat- of bandstopfilters** worden gerealiseerd.
+
+### Laagdoorlaat en hoogdoorlaat onderscheiden
+
+Meet de uitgangsspanning steeds tussen het knooppunt van R en C en massa.
+
+| Filter | Component in serie met de ingang | Component naar massa | Uitgang gemeten over |
+| --- | --- | --- | --- |
+| Laagdoorlaat | Weerstand R | Condensator C | Condensator C |
+| Hoogdoorlaat | Condensator C | Weerstand R | Weerstand R |
+
+Voor het hoogdoorlaatfilter geldt:
+
+$$
+H_{\mathrm{hoog}}(\omega)=\frac{i\omega RC}{1+i\omega RC}.
+$$
+
+Lage frequenties worden onderdrukt; hoge frequenties worden doorgelaten.
+Beide filters hebben een afsnijfrequentie $f_c=1/(2\pi RC)$, waar de
+amplitudeverhouding $1/\sqrt{2}$ is (ongeveer -3 dB).
+Deze formules veronderstellen een ideale spanningsbron en een uitgang die
+niet merkbaar wordt belast door het meetinstrument.
 
 !!! voorbereiding "Voorbereidingsopdracht 1"
 
@@ -343,7 +364,7 @@ python -m pip install pyvisa pyvisa-py pyserial numpy matplotlib scipy ipykernel
 
 ![Schema van het hoogdoorlaatfilter (highpass).](../assets/periode%203/highpass.svg)
 
-*Figuur 5: Schema van het hoogdoorlaatfilter (highpass).*
+*Figuur 5: Hoogdoorlaatfilter: C in serie, R naar massa; de uitgangsspanning wordt over R gemeten.*
 
 ## Appendix 4: apparaataansturing
 

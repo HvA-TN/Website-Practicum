@@ -98,9 +98,11 @@ def beeldafstand(v, f):
 
 ```python title="Lineaire span"
 v_fit = np.linspace(0, 1, 101)  # in meters
+# Selecteer voor elke gekozen f alleen v_fit > f voor een reëel beeld.
+# Bij v = f is de beeldafstand niet eindig.
 ```
 
-Het invullen van verschillende waarden van *f* en het vervolgens tekenen van meerdere lijnen werkt niet erg efficiënt. Vaak levert dit alleen een ruwe schatting van de parameter op.[^eyeballing] Daarnaast wordt de onzekerheid in de datapunten niet meegenomen, terwijl de metingen bij grote beeld- en voorwerpsafstanden juist preciezer zijn. Er bestaan complexe methoden waarmee via de omgeschreven formule *f* direct kan worden bepaald, inclusief foutanalyse. Echter, deze zijn voor dit moment te complex en hierin gaan we bij wiskunde 2.1 verder. Om toch een betere schatting te maken, maken we ditmaal gebruik van een slimme truc: *linearizeren*. Hierbij schrijven we een niet-lineaire functie om tot een lineaire vorm. Deze truc is bij veel wiskundige functies toepasbaar en staat bekend als *inverteerbaarheid*.
+Het tekenen van verschillende waarden van *f* levert een eerste schatting op,[^eyeballing] maar houdt geen rekening met meetonzekerheden. Grotere afstanden betekenen niet automatisch nauwkeurigere metingen: schat de onzekerheid per meting. We gebruiken hier *lineariseren*: door zowel de beeldafstand als de voorwerpsafstand te inverteren, ontstaat een lineair verband tussen de nieuwe variabelen. Lineariseren is niet hetzelfde als inverteerbaarheid. Bij deze transformatie moeten ook de onzekerheden worden omgerekend.
 
 !!! opdracht "Opdracht 1(e)"
 
@@ -108,15 +110,15 @@ Het invullen van verschillende waarden van *f* en het vervolgens tekenen van mee
     2. Schrijf de lenzenformule om in de vorm
 
        \(
-       \frac{1}{b} = f(v,f)
+       y = ax+c,\qquad y=\frac{1}{b},\quad x=\frac{1}{v}.
        \)
 
-    3. Maak een nieuwe functie genaamd *lineair*, waarbij je de functie van de vorige deelopdracht invult.
+    3. Maak een nieuwe functie genaamd *lineair*, met als invoer `inverse_v = 1/v` en parameter `f`. De uitvoer is `1/b`.
     4. Wat valt je op aan de grafiek? Wat is de betekenis van het snijpunt met de y-as?
     5. Voeg nu enkele lijnen toe met verschillende waarden van de brandpuntsafstand \(f\).
 
 ```python title="Functie maken"
-def lineair(v, f):
+def lineair(inverse_v, f):
     return (...)
 ```
 
@@ -131,16 +133,16 @@ from scipy.optimize import curve_fit
 p0 = [1]  # eerste schatting van f, 1 meter
 
 # aanroepen fit
-popt, pcov = curve_fit(lineair, 1/v, 1/b, sigma=(...), p0=p0)
+popt, pcov = curve_fit(lineair, 1/v, 1/b, sigma=(...), p0=p0, absolute_sigma=True)
 
 # resultaat printen
-print("$f$ =", popt, "+-", np.sqrt(pcov))
+print("$f$ =", popt, "+-", np.sqrt(np.diag(pcov)))
 ```
 
 !!! opdracht "Opdracht 1(f)"
 
     1. Bereken de fout op \(\frac{1}{b}\), gebruik hiervoor de relatieve fout van \(b\). Als dit niet lukt, sla deze stap dan over.
-    2. Bepaal \(f\) door middel van een fit, gebruik hiervoor de *scipy*-module. Mocht het bepalen van de fout in de vorige opdracht niet gelukt zijn, verwijder dan de regel `sigma = (...)`.
+    2. Bepaal \(f\) door middel van een fit, gebruik hiervoor de *scipy*-module. Mocht het bepalen van de fout in de vorige opdracht niet gelukt zijn, verwijder dan de argumenten `sigma=(...)` en `absolute_sigma=True`. De onzekerheid wordt dan geschat uit de residuen, onder de aanname van gelijke spreiding in `1/b`.
     3. Wat is de gevonden waarde voor *f*, en welke onzekerheid hoort hierop?
 
 !!! afronding "Afronding"
@@ -165,7 +167,7 @@ Het idee van een least squares-fit is dat je de afwijkingen tussen model en meti
 Als de individuele meetonzekerheden \(\sigma_i\) niet bekend zijn, minimaliseer je de som van de kwadraten van de residuen:
 
 \[
-R^2(\theta) = \sum_i \epsilon_i^2.
+S(\theta) = \sum_i \epsilon_i^2.
 \]
 
 Dit heet een ordinary least squares-fit (OLS): alle meetpunten wegen even zwaar mee.
@@ -178,7 +180,7 @@ Als de onzekerheden \(\sigma_i\) wel bekend zijn, deel je de residuen door de fo
 \chi^2(\theta) = \sum_i \left( \frac{\epsilon_i}{\sigma_i} \right)^2.
 \]
 
-Dit heet een weighted least squares-fit (WLS) of \(\chi^2\)-fit. Het resultaat is statistisch optimaal bij normaal verdeelde meetfouten.
+Dit heet een weighted least squares-fit (WLS) of \(\chi^2\)-fit. Bij onafhankelijke, normaal verdeelde meetfouten met bekende standaardafwijkingen komt dit overeen met maximum-likelihoodschatting, als het model correct is en de onzekerheid in x verwaarloosbaar is.
 
 ### Uitkomst
 
@@ -195,7 +197,7 @@ De standaardfout van parameter \(\theta_j\) volgt uit
 
 In Python komt dit overeen met:
 
-- geen `sigma` meegeven \(\to\) ordinary least squares (\(R^2\));
+- geen `sigma` meegeven \(\to\) ordinary least squares (som van gekwadrateerde residuen);
 - wel `sigma` meegeven \(\to\) weighted least squares (\(\chi^2\)).
 
 ### Interpretatie
@@ -206,7 +208,7 @@ De kwaliteit van de fit hangt af van:
 - de spreiding van de meetpunten en hun onzekerheden \(\sigma_i\);
 - de initiële schatting \(p_0\) voor de parameters: bij een niet-lineaire fit kan een slechte start leiden tot lokale minima.
 
-In vergelijking met een linearisatie heeft een directe least squares-fit als voordeel dat alle beschikbare informatie wordt gebruikt en dat er geen systematische fouten ontstaan door transformaties. Daarom is `curve_fit` de meest robuuste methode, zeker bij fysische modellen die niet-lineair zijn in de parameters.
+Een directe fit aan de oorspronkelijke meetwaarden voorkomt dat je de data en hun onzekerheidsverdeling hoeft te transformeren. Ook een directe fit vereist een geschikt model, realistische onzekerheden en een bruikbare startschatting; `curve_fit` garandeert geen globaal optimum. Bij de linearisatie geldt voor kleine relatieve onzekerheden: `sigma_inverse_b = b_err / b**2`. De fit hieronder behandelt de x-waarden als exact.
 
 
 ### Voorbeeld figuur \& fit:
@@ -227,7 +229,7 @@ yerr  = np.array([0.1]*5)
 p0 = [1, 0]
 
 # Fit aanroepen
-popt, pcov = curve_fit(linear, xdata, ydata, sigma=yerr, p0=p0)
+popt, pcov = curve_fit(linear, xdata, ydata, sigma=yerr, p0=p0, absolute_sigma=True)
 
 # Resultaten
 perr = np.sqrt(np.diag(pcov))

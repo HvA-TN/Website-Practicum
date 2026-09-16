@@ -43,7 +43,7 @@ Om wit licht te ontleden in zijn afzonderlijke golflengtes maken we gebruik van 
 \sin(\theta)=\frac{n\lambda}{d},
 \]
 
-waarbij \(n\) de orde van diffractie is.
+Hier is \(n\) de orde van diffractie en \(d\) de afstand tussen twee tralielijnen. Deze vorm geldt bij loodrechte inval; \(\theta\) wordt gemeten ten opzichte van de normaal op het tralie.
 
 In de spectrometer wordt het uitgespreide licht door de tralie op een camera geprojecteerd. Door posities op de detector te koppelen aan bekende golflengtes (ijking), kan de gemeten intensiteit worden weergegeven als functie van de golflengte: \(I(\lambda)\).
 
@@ -92,7 +92,7 @@ Spectraallampen worden ook gebruikt om spectrometers te ijken. Met bekende refer
 | 900 | 706.5 |
 | ... | ... |
 
-Met deze tabel kunnen we een kalibratielijn opstellen:
+Deze tabel is een fictief rekenvoorbeeld; gebruik voor de ijking je eigen gemeten pixelposities en bekende lijnen van de referentielamp. Een lineaire kalibratie is een benadering: controleer met meerdere lijnen of deze in het gebruikte bereik voldoende nauwkeurig is. Het model is:
 
 \[
 \text{Golflengte (nm)}=a\,\text{x-pixel}+b,
@@ -104,7 +104,7 @@ waarbij \(a\) en \(b\) fitparameters zijn.
 
     1. Ga aan de slag met het ijken van de spectrometer.
     2. Meet het spectrum van een bekende lamp. Zet deze in je labjournaal.
-    3. Bepaal van iedere emissielijn de centrale golflengte met behulp van het peak-detection-algoritme van SciPy. Mocht dit te lastig zijn en kom je hier niet uit, probeer dan de locaties (x-pixels) op het oog te schatten.
+    3. Bepaal van iedere emissielijn de pixelpositie van de piek met behulp van het peak-detection-algoritme van SciPy. Koppel deze posities aan bekende referentiegolflengten om de ijklijn te bepalen. Mocht dit te lastig zijn en kom je hier niet uit, probeer dan de locaties (x-pixels) op het oog te schatten.
     4. Houd je voortgang bij in het labjournaal.
 
 Als je de spectrometer hebt geijkt, kun je jouw spectrometer gebruiken om ook van een onbekende lamp het spectrum te analyseren. Misschien lukt het jullie om op basis van de gemeten golflengten én tabel [spectraallijnen](#table-spectraallijnen-na-he-ne-hg) de juiste lamp te vinden.
@@ -131,13 +131,15 @@ De transmissie \(T\) is:
 T=\frac{I}{I_0}.
 \]
 
-De absorptie \(A\) wordt gedefinieerd als:
+De absorbantie \(A\) wordt gedefinieerd met de logaritme met grondtal 10:
 
 \[
-A=-\log(T)=-\log\left(\frac{I}{I_0}\right).
+A=-\log_{10}(T)=-\log_{10}\left(\frac{I}{I_0}\right).
 \]
 
-Jullie meten verschillende concentraties \(\mathrm{CuSO_4}\)-oplossingen en onderzoeken het verband tussen concentratie en absorptie. Met een ijklijn bepalen jullie uiteindelijk de concentratie van een onbekende oplossing.
+Meet \(I_0\) met een blanco (dezelfde cuvet met oplosmiddel) en \(I\) met de oplossing, bij dezelfde golflengte en instellingen. Corrigeer beide signalen voor de donkerachtergrond. Volgens de [wet van Beer–Lambert](https://goldbook.iupac.org/terms/view/B00626) is de absorbantie bij een vaste golflengte en weglengte evenredig met de concentratie, zolang de wet toepasbaar is.
+
+Jullie meten verschillende concentraties \(\mathrm{CuSO_4}\)-oplossingen en onderzoeken het verband tussen concentratie en absorbantie. Met een ijklijn bepalen jullie uiteindelijk de concentratie van een onbekende oplossing.
 
 !!! voorbereiding "Voorbereidingsopdracht week 2"
 
@@ -210,7 +212,7 @@ yerr = np.array([0.1] * 5)
 
 p0 = [1, 0]
 
-popt, pcov = curve_fit(linear, xdata, ydata, sigma=yerr, p0=p0)
+popt, pcov = curve_fit(linear, xdata, ydata, sigma=yerr, p0=p0, absolute_sigma=True)
 
 perr = np.sqrt(np.diag(pcov))
 print("a =", popt[0], "+-", perr[0])

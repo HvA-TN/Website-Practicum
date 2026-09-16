@@ -22,7 +22,7 @@ De practica zijn gericht op het steeds zelfstandiger uitvoeren van experimenteel
 
 De website is gebouwd met **MkDocs Material**. Na installatie van de benodigde packages kan de website lokaal worden gestart met:
 
-Voer vanuit de map `Website` uit:
+Voer vanuit de hoofdmap van deze repository uit:
 
 ```powershell
 python -m pip install -r requirements.txt
@@ -30,6 +30,25 @@ python -m mkdocs serve
 ```
 
 De lokale versie is vervolgens standaard beschikbaar via `http://127.0.0.1:8000/`.
+
+## Afbeeldingen en gegenereerde website
+
+`docs/assets/` bevat de originele afbeeldingen. MkDocs kopieert die tijdens
+`mkdocs build` naar `site/assets/`, zodat de gebouwde website zelfstandig kan
+worden gepubliceerd. Dit is dus bronmateriaal plus bouwresultaat. Bewerk alleen
+de afbeeldingen in `docs/assets/`; wijzigingen in `site/` worden bij een volgende
+build overschreven.
+
+`site/` staat in `.gitignore`, maar er zijn al eerder gegenereerde bestanden in
+Git opgenomen. Een ignore-regel verwijdert bestaande bestanden niet uit Git.
+Die bestaande bestanden zijn hier behouden; controleer vóór verwijdering of de
+publicatie-inrichting ervan afhankelijk is. Nieuwe builds hoeven niet als
+bronmateriaal te worden gecommit.
+
+Alle hyperlinks openen een nieuw tabblad (of venster, afhankelijk van de browser),
+ook interne navigatie en ankerlinks. Dit is centraal ingesteld in
+`overrides/main.html` en `docs/javascript/links.js`, inclusief zoekresultaten.
+De pagina `docs/code-snippets.md` bevat zelfstandig uitvoerbare Python-voorbeelden.
 
 Controleer vóór publicatie de volledige website:
 
@@ -51,8 +70,12 @@ bewerken Markdown; wijzigingen in de LaTeX-bronnen worden niet automatisch
 gesynchroniseerd. Behoud bij wijzigingen ook de veiligheidsinstructies,
 voorbereiding, opdrachten, figuurverwijzingen en codevoorbeelden.
 
-Bij de omzetting zijn de verwisselde laag- en hoogdoorlaatschema's uit de
-bron gecorrigeerd. PDF-figuren zijn omgezet naar PNG; TikZ-schema's naar SVG.
+De verwisselde laag- en hoogdoorlaatschema's zijn gecorrigeerd in zowel de
+LaTeX-bronnen als de website. De SVG's `lowpass.svg` en `highpass.svg` zijn
+opnieuw opgebouwd uit de bijbehorende bestanden `Lowpass.tex` en `Highpass.tex`
+in `../Natuurkunde-practicum-2026-2027/Practicum/Na2.3/Figuren/`.
+Laagdoorlaat: R in serie, uitgang over C naar massa. Hoogdoorlaat: C in serie,
+uitgang over R naar massa. PDF-figuren zijn omgezet naar PNG; TikZ-schema's naar SVG.
 De figuur- en vergelijkingsnummers gelden per webpagina.
 
 ## Publiceren

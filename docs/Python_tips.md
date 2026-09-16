@@ -1,6 +1,8 @@
-# Python tips
+# Python-tips
 
 Op deze pagina staan veelgebruikte voorbeelden voor het verwerken, analyseren en visualiseren van meetgegevens met Python. De voorbeelden zijn bedoeld als naslag tijdens de practica.
+
+Wil je direct beginnen? Bij [Code snippets](code-snippets.md) staan volledige, zelfstandig uitvoerbare voorbeelden. Op deze pagina bouwen de korte codefragmenten binnen een onderwerp op elkaar voort.
 
 De belangrijkste packages die we gebruiken zijn:
 
@@ -156,7 +158,7 @@ Bij NumPy-arrays kun je daarnaast het datatype van de **elementen** bekijken:
 print(spanning.dtype)
 ```
 
-!!! tips "Efficiente nummerieke berekeningen"
+!!! tips "Efficiënte numerieke berekeningen"
     Gebruik voor numerieke meetgegevens bij voorkeur NumPy-arrays. Hiermee kun je berekeningen direct op volledige datasets uitvoeren zonder voor iedere bewerking een `for`-loop te schrijven.
 
 ---
@@ -384,7 +386,7 @@ print("Standaardfout:", standaardfout)
 ```
 
 
-Bij experimentele meetreeksen gebruiken we voor de standaardafwijking meestal `ddof=1`. De standaardfout geeft de statistische onzekerheid in het gemiddelde en wordt berekend met
+Bij experimentele meetreeksen gebruiken we voor de standaardafwijking meestal `ddof=1`, met minimaal twee metingen. Voor onafhankelijke herhaalde metingen onder dezelfde omstandigheden geeft de standaardfout de statistische onzekerheid in het gemiddelde. Systematische onzekerheden, zoals een kalibratiefout, zijn hierin niet opgenomen. De standaardfout wordt berekend met
 
 \[
 s_{\bar{x}} = \frac{s}{\sqrt{N}}.
@@ -660,7 +662,7 @@ Een goede figuur bevat in ieder geval:
 6. geen onnodige visuele elementen.
 
 !!! tips "Titels, legenda's en onderschriften"
-    Vaak worden er onnodig extra elementen toegevoegd aan een figuur, denk aan Titels & legenda's. Heel erg is dit niet, maar het is niet netjes. Het is de bedoeling dat alle informatie van het figuur in het onderschrift staat. Dit is de natuurkundige consensus, echter, andere disciplines wijken hier soms van af.
+    Gebruik een onderschrift om de meting, het model en de betekenis van de foutbalken toe te lichten. Een titel is vaak overbodig wanneer het onderschrift dezelfde informatie geeft. Een legenda is wel nuttig om meerdere datasets of modellen te onderscheiden. Houd assenlabels en eenheden in de figuur zelf.
 
 ## Een model fitten
 
@@ -707,7 +709,7 @@ ydata = np.array([1.1, 1.9, 3.2, 3.9, 5.1])
 yerr = np.array([0.1] * 5)
 ```
 
-Hier bevat `yerr` de onzekerheid van iedere gemeten \(y\)-waarde.
+Hier bevat `yerr` de positieve standaardonzekerheid (één sigma) van iedere gemeten \(y\)-waarde. We nemen onafhankelijke meetfouten aan. `curve_fit` neemt onzekerheden in de \(x\)-waarden niet mee: ook het tekenen van `xerr` verandert dat niet.
 
 ### Stap 3 — De fit uitvoeren
 
@@ -752,6 +754,8 @@ b = popt[1]
 ```
 
 `pcov` is de covariantiematrix van de fitparameters. Hieruit kunnen we de onzekerheden van \(a\) en \(b\) bepalen.
+
+Bij een niet-lineair model is deze onzekerheidsschatting gebaseerd op een lokale lineaire benadering. Zonder `absolute_sigma=True` schaalt SciPy de covariantiematrix met de gereduceerde chi-kwadraat. Zie de [documentatie van curve_fit](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html).
 
 !!! tips "Volgorde van de parameters"
 
@@ -983,7 +987,7 @@ Voor de voorbeelddata vinden we ongeveer:
 | Vrijheidsgraden \(N-p\)   |               \(3\) |
 | \(\chi^2_{\mathrm{red}}\) |            \(2.40\) |
 
-Als de opgegeven meetonzekerheden realistisch zijn en het gekozen model geschikt is, verwachten we vaak een waarde van \(\chi^2_{\mathrm{red}}\) van **orde 1**.
+Bij onafhankelijke, normaal verdeelde meetfouten met correct opgegeven standaardonzekerheden en een geschikt model verwachten we een waarde van \(\chi^2_{\mathrm{red}}\) van **orde 1**. Hiervoor moet \(N>p\) gelden. Bij weinig vrijheidsgraden kan de waarde sterk fluctueren; voor een lineair model is de standaardafwijking van deze grootheid \(\sqrt{2/(N-p)}\).
 
 Een veel grotere waarde kan bijvoorbeeld betekenen dat:
 
@@ -1208,7 +1212,9 @@ Controleer:
 * of het bestand in de juiste map staat;
 * of het juiste bestandspad is opgegeven.
 
-Staat het bestand in dezelfde map:
+Een relatief bestandspad wordt geïnterpreteerd ten opzichte van de **huidige werkmap**, niet automatisch de map van je script. Bekijk deze met `from pathlib import Path` en `print(Path.cwd())`.
+
+Staat het bestand in de huidige werkmap:
 
 ```python
 data = pd.read_csv("metingen.csv")
@@ -1345,13 +1351,15 @@ print(len(ydata))
 
 Voor iedere \(x\)-waarde moet er een bijbehorende \(y\)-waarde zijn.
 
-Hetzelfde geldt voor foutbalken:
+Als je per meetpunt een foutbalk opgeeft, controleer dan ook:
 
 ```python
 print(len(xdata))
 print(len(ydata))
 print(len(yerr))
 ```
+
+Voor gelijke foutbalken mag `yerr` ook één getal zijn, bijvoorbeeld `yerr=0.1`. In dat geval is `len(yerr)` niet van toepassing.
 
 ---
 

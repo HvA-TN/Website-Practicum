@@ -114,7 +114,7 @@ In periode 1 staan **Python, experimentele vaardigheden, optica en spectroscopie
           <td>19 okt</td>
           <td>19 okt</td>
           <td>23 okt</td>
-          <td colspan="2">Groep 1: Constante van Planck*</td>
+          <td colspan="2">-</td>
           <td>—</td>
         </tr>
 
@@ -124,7 +124,7 @@ In periode 1 staan **Python, experimentele vaardigheden, optica en spectroscopie
           <td>26 okt</td>
           <td>26 okt</td>
           <td>30 okt</td>
-          <td colspan="2">Groep 2: Constante van Planck*</td>
+          <td colspan="2">-</td>
           <td>—</td>
         </tr>
 

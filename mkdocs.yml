@@ -1,8 +1,9 @@
 site_name: Practica Technische Natuurkunde – Jaar 2
-site_url: https://hva-tn.github.io/Practica_LJ2/
+site_url: https://hva-tn.github.io/Website-Practicum/
 
 theme:
   name: material
+  custom_dir: overrides
   language: nl
   highlightjs: true
 
@@ -43,6 +44,7 @@ nav:
   - Veiligheid: veiligheid.md
   - Meetplan: meetplan.md
   - Python-tips: Python_tips.md
+  - Code snippets: code-snippets.md
   - Periode 1:
       - Overzicht: periode 1/index.md
       - Python: periode 1/python.md
@@ -96,6 +98,7 @@ markdown_extensions:
 extra_css:
   - stylesheets/practica.css
 extra_javascript:
+  - javascript/links.js
   - javascript/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
