@@ -769,12 +769,12 @@ Tegenwoordig is apparaatuuraansturing grotendeels gestandaardiseerd via de <stro
 <p>Een <strong>passief RC-filter</strong> is een eenvoudig elektrisch netwerk van weerstanden en condensatoren waarmee de frequentierespons van een signaal kan worden aangepast, zonder actieve componenten zoals versterkers. Zulke filters worden veel toegepast om ongewenste frequenties te onderdrukken of juist door te laten, bijvoorbeeld om ruis te verwijderen of een meetsignaal te conditioneren voordat het naar een meetinstrument gaat. In figuur <a href="#figuur-1">1</a> staat een voorbeeld elektrische schakeling van een laagdoorlaatfilter.</p>
 <p><span id="figuur-1"></span></p>
 <p><img alt="Schema van het laagdoorlaatfilter." src="../../assets/periode%203/lowpass.svg" /></p>
-<p><em>Figuur 1: Schema van het laagdoorlaatfilter.</em></p>
+<p><em>Figuur 1: Laagdoorlaatfilter: R in serie, C naar massa; de uitgangsspanning wordt over C gemeten.</em></p>
 <p>Het gedrag van een RC-filter kan worden beschreven met behulp van de impedantie van een condensator,</p>
 <div class="arithmatex">\[
 Z_C(\omega) = \frac{1}{i \omega C},
 \]</div>
-<p>waarbij <span class="arithmatex">\(\omega = 2\pi f\)</span> de hoeksnelheid is en <span class="arithmatex">\(i\)</span> de imaginaire eenheid. Voor een eenvoudig <strong>laagdoorlaatfilter</strong>, bestaande uit een weerstand <span class="arithmatex">\(R\)</span> in serie en een condensator <span class="arithmatex">\(C\)</span> naar massa, volgt voor de overdrachtsfunctie</p>
+<p>waarbij <span class="arithmatex">\(\omega = 2\pi f\)</span> de hoekfrequentie is en <span class="arithmatex">\(i\)</span> de imaginaire eenheid. Voor een eenvoudig <strong>laagdoorlaatfilter</strong>, bestaande uit een weerstand <span class="arithmatex">\(R\)</span> in serie en een condensator <span class="arithmatex">\(C\)</span> naar massa, volgt voor de overdrachtsfunctie</p>
 <div class="arithmatex">\[
 H(\omega) = \frac{V_\mathrm{uit}}{V_\mathrm{in}} 
 = \frac{1}{1 + i \omega R C}.
@@ -797,6 +797,41 @@ f_c = \frac{1}{2\pi R C}.
 \phi(\omega) = -\arctan(\omega RC).
 \]</div>
 <p>Door deze twee functies uit te zetten tegen de logaritme van de frequentie ontstaat de Bode-plot: een amplitude-grafiek die de verzwakking per frequentie laat zien en een fase-grafiek die aangeeft hoe sterk het signaal wordt vertraagd. Helaas kunnen wij de fase-verschuiving niet meten met een <strong>Digitale Multi Meter (DMM)</strong>, hiervoor zouden wij een oscilloscoop moeten gebruiken. Deze grafische weergave maakt het filtergedrag bij lage, overgangs- en hoge frequenties direct zichtbaar. Naast <strong>laagdoorlaatfilters</strong> bestaan er ook <strong>hoogdoorlaatfilters</strong> door de positie van weerstand en condensator om te wisselen. In dat geval worden juist lage frequenties onderdrukt en hoge frequenties doorgelaten. Met combinaties van meerdere RC-netwerken kunnen <strong>banddoorlaat- of bandstopfilters</strong> worden gerealiseerd.</p>
+<h3 id="laagdoorlaat-en-hoogdoorlaat-onderscheiden">Laagdoorlaat en hoogdoorlaat onderscheiden</h3>
+<p>Meet de uitgangsspanning steeds tussen het knooppunt van R en C en massa.</p>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Component in serie met de ingang</th>
+<th>Component naar massa</th>
+<th>Uitgang gemeten over</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laagdoorlaat</td>
+<td>Weerstand R</td>
+<td>Condensator C</td>
+<td>Condensator C</td>
+</tr>
+<tr>
+<td>Hoogdoorlaat</td>
+<td>Condensator C</td>
+<td>Weerstand R</td>
+<td>Weerstand R</td>
+</tr>
+</tbody>
+</table>
+<p>Voor het hoogdoorlaatfilter geldt:</p>
+<div class="arithmatex">\[
+H_{\mathrm{hoog}}(\omega)=\frac{i\omega RC}{1+i\omega RC}.
+\]</div>
+<p>Lage frequenties worden onderdrukt; hoge frequenties worden doorgelaten.
+Beide filters hebben een afsnijfrequentie <span class="arithmatex">\(f_c=1/(2\pi RC)\)</span>, waar de
+amplitudeverhouding <span class="arithmatex">\(1/\sqrt{2}\)</span> is (ongeveer -3 dB).
+Deze formules veronderstellen een ideale spanningsbron en een uitgang die
+niet merkbaar wordt belast door het meetinstrument.</p>
 <div class="admonition voorbereiding">
 <p class="admonition-title">Voorbereidingsopdracht 1</p>
 <ul>
@@ -1228,7 +1263,7 @@ Een overzichtelijke manier om dit te structureren is met een <em>boomstructuur</
 <p><em>Figuur 4: Schema van het banddoorlaatfilter (bandpass).</em></p>
 <p><span id="figuur-5"></span></p>
 <p><img alt="Schema van het hoogdoorlaatfilter (highpass)." src="../../assets/periode%203/highpass.svg" /></p>
-<p><em>Figuur 5: Schema van het hoogdoorlaatfilter (highpass).</em></p>
+<p><em>Figuur 5: Hoogdoorlaatfilter: C in serie, R naar massa; de uitgangsspanning wordt over R gemeten.</em></p>
 <h2 id="appendix-4-apparaataansturing">Appendix 4: apparaataansturing</h2>
 <p><strong>Voorbeeld: functiegenerator aansturen met Python</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">set_fixed_sine</span><span class="p">(</span><span class="n">gen</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">vrms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
