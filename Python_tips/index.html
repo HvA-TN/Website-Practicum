@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://hva-tn.github.io/Practica_LJ2/Python_tips/">
+        <link rel="canonical" href="https://hva-tn.github.io/Website-Practicum/Python_tips/">
       
       
         <link rel="prev" href="../meetplan/">
       
       
-        <link rel="next" href="../periode%201/">
+        <link rel="next" href="../code-snippets/">
       
       
         
@@ -59,6 +59,9 @@
 
     
     
+  
+  <base target="_blank">
+
   </head>
   
   
@@ -581,6 +584,33 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../code-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code snippets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
       
@@ -607,7 +637,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -629,14 +659,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -892,8 +922,9 @@
 
 
 
-<h1 id="python-tips">Python tips</h1>
+<h1 id="python-tips">Python-tips</h1>
 <p>Op deze pagina staan veelgebruikte voorbeelden voor het verwerken, analyseren en visualiseren van meetgegevens met Python. De voorbeelden zijn bedoeld als naslag tijdens de practica.</p>
+<p>Wil je direct beginnen? Bij <a href="../code-snippets/">Code snippets</a> staan volledige, zelfstandig uitvoerbare voorbeelden. Op deze pagina bouwen de korte codefragmenten binnen een onderwerp op elkaar voort.</p>
 <p>De belangrijkste packages die we gebruiken zijn:</p>
 <table>
 <thead>
@@ -1049,7 +1080,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">spanning</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition tips">
-<p class="admonition-title">Efficiente nummerieke berekeningen</p>
+<p class="admonition-title">Efficiënte numerieke berekeningen</p>
 <p>Gebruik voor numerieke meetgegevens bij voorkeur NumPy-arrays. Hiermee kun je berekeningen direct op volledige datasets uitvoeren zonder voor iedere bewerking een <code>for</code>-loop te schrijven.</p>
 </div>
 <hr />
@@ -1343,7 +1374,7 @@ NumPy bevat daarnaast veel wiskundige functies die op dezelfde manier direct op 
 <a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Standaardafwijking:"</span><span class="p">,</span> <span class="n">standaardafwijking</span><span class="p">)</span>
 <a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Standaardfout:"</span><span class="p">,</span> <span class="n">standaardfout</span><span class="p">)</span>
 </code></pre></div>
-<p>Bij experimentele meetreeksen gebruiken we voor de standaardafwijking meestal <code>ddof=1</code>. De standaardfout geeft de statistische onzekerheid in het gemiddelde en wordt berekend met</p>
+<p>Bij experimentele meetreeksen gebruiken we voor de standaardafwijking meestal <code>ddof=1</code>, met minimaal twee metingen. Voor onafhankelijke herhaalde metingen onder dezelfde omstandigheden geeft de standaardfout de statistische onzekerheid in het gemiddelde. Systematische onzekerheden, zoals een kalibratiefout, zijn hierin niet opgenomen. De standaardfout wordt berekend met</p>
 <div class="arithmatex">\[
 s_{\bar{x}} = \frac{s}{\sqrt{N}}.
 \]</div>
@@ -1761,7 +1792,7 @@ s_{\bar{x}} = \frac{s}{\sqrt{N}}.
 </ol>
 <div class="admonition tips">
 <p class="admonition-title">Titels, legenda's en onderschriften</p>
-<p>Vaak worden er onnodig extra elementen toegevoegd aan een figuur, denk aan Titels &amp; legenda's. Heel erg is dit niet, maar het is niet netjes. Het is de bedoeling dat alle informatie van het figuur in het onderschrift staat. Dit is de natuurkundige consensus, echter, andere disciplines wijken hier soms van af.</p>
+<p>Gebruik een onderschrift om de meting, het model en de betekenis van de foutbalken toe te lichten. Een titel is vaak overbodig wanneer het onderschrift dezelfde informatie geeft. Een legenda is wel nuttig om meerdere datasets of modellen te onderscheiden. Houd assenlabels en eenheden in de figuur zelf.</p>
 </div>
 <h2 id="een-model-fitten">Een model fitten</h2>
 <p>Wanneer uit de theorie een wiskundig model volgt voor het verband tussen twee grootheden, kunnen we de onbekende parameters van dat model bepalen door het model aan de meetdata te <strong>fitten</strong>.</p>
@@ -1793,7 +1824,7 @@ y=ax+b.
 <a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>
 <a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="n">yerr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
-<p>Hier bevat <code>yerr</code> de onzekerheid van iedere gemeten <span class="arithmatex">\(y\)</span>-waarde.</p>
+<p>Hier bevat <code>yerr</code> de positieve standaardonzekerheid (één sigma) van iedere gemeten <span class="arithmatex">\(y\)</span>-waarde. We nemen onafhankelijke meetfouten aan. <code>curve_fit</code> neemt onzekerheden in de <span class="arithmatex">\(x\)</span>-waarden niet mee: ook het tekenen van <code>xerr</code> verandert dat niet.</p>
 <h3 id="stap-3-de-fit-uitvoeren">Stap 3 — De fit uitvoeren</h3>
 <p>De fit voeren we uit met <code>curve_fit()</code> uit SciPy:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
@@ -1851,6 +1882,7 @@ y=ax+b.
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 <p><code>pcov</code> is de covariantiematrix van de fitparameters. Hieruit kunnen we de onzekerheden van <span class="arithmatex">\(a\)</span> en <span class="arithmatex">\(b\)</span> bepalen.</p>
+<p>Bij een niet-lineair model is deze onzekerheidsschatting gebaseerd op een lokale lineaire benadering. Zonder <code>absolute_sigma=True</code> schaalt SciPy de covariantiematrix met de gereduceerde chi-kwadraat. Zie de <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html">documentatie van curve_fit</a>.</p>
 <div class="admonition tips">
 <p class="admonition-title">Volgorde van de parameters</p>
 <p>De volgorde in <code>popt</code> is dezelfde als de volgorde van de parameters in de modeldefinitie.</p>
@@ -2049,7 +2081,7 @@ N-p=5-2=3.
 </tr>
 </tbody>
 </table>
-<p>Als de opgegeven meetonzekerheden realistisch zijn en het gekozen model geschikt is, verwachten we vaak een waarde van <span class="arithmatex">\(\chi^2_{\mathrm{red}}\)</span> van <strong>orde 1</strong>.</p>
+<p>Bij onafhankelijke, normaal verdeelde meetfouten met correct opgegeven standaardonzekerheden en een geschikt model verwachten we een waarde van <span class="arithmatex">\(\chi^2_{\mathrm{red}}\)</span> van <strong>orde 1</strong>. Hiervoor moet <span class="arithmatex">\(N&gt;p\)</span> gelden. Bij weinig vrijheidsgraden kan de waarde sterk fluctueren; voor een lineair model is de standaardafwijking van deze grootheid <span class="arithmatex">\(\sqrt{2/(N-p)}\)</span>.</p>
 <p>Een veel grotere waarde kan bijvoorbeeld betekenen dat:</p>
 <ul>
 <li>het gekozen model de meetdata niet goed beschrijft;</li>
@@ -2248,7 +2280,8 @@ y_i-y_{\mathrm{model},i}.
 <li>of het bestand in de juiste map staat;</li>
 <li>of het juiste bestandspad is opgegeven.</li>
 </ul>
-<p>Staat het bestand in dezelfde map:</p>
+<p>Een relatief bestandspad wordt geïnterpreteerd ten opzichte van de <strong>huidige werkmap</strong>, niet automatisch de map van je script. Bekijk deze met <code>from pathlib import Path</code> en <code>print(Path.cwd())</code>.</p>
+<p>Staat het bestand in de huidige werkmap:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"metingen.csv"</span><span class="p">)</span>
 </code></pre></div>
 <p>Staat het bestand in een submap <code>data</code>:</p>
@@ -2320,11 +2353,12 @@ y_i-y_{\mathrm{model},i}.
 <a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ydata</span><span class="p">))</span>
 </code></pre></div>
 <p>Voor iedere <span class="arithmatex">\(x\)</span>-waarde moet er een bijbehorende <span class="arithmatex">\(y\)</span>-waarde zijn.</p>
-<p>Hetzelfde geldt voor foutbalken:</p>
+<p>Als je per meetpunt een foutbalk opgeeft, controleer dan ook:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xdata</span><span class="p">))</span>
 <a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ydata</span><span class="p">))</span>
 <a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yerr</span><span class="p">))</span>
 </code></pre></div>
+<p>Voor gelijke foutbalken mag <code>yerr</code> ook één getal zijn, bijvoorbeeld <code>yerr=0.1</code>. In dat geval is <code>len(yerr)</code> niet van toepassing.</p>
 <hr />
 <h3 id="syntaxerror"><code>SyntaxError</code></h3>
 <p>Bijvoorbeeld:</p>
@@ -2406,6 +2440,8 @@ y_i-y_{\mathrm{model},i}.
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascript/links.js"></script>
       
         <script src="../javascript/mathjax.js"></script>
       

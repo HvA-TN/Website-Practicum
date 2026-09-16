@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://hva-tn.github.io/Practica_LJ2/periode%201/spectrometer/">
+        <link rel="canonical" href="https://hva-tn.github.io/Website-Practicum/periode%201/spectrometer/">
       
       
         <link rel="prev" href="../lenzen/">
@@ -57,6 +57,9 @@
 
     
     
+  
+  <base target="_blank">
+
   </head>
   
   
@@ -420,6 +423,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code snippets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -450,7 +480,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -472,14 +502,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -731,7 +761,7 @@
 <div class="arithmatex">\[
 \sin(\theta)=\frac{n\lambda}{d},
 \]</div>
-<p>waarbij <span class="arithmatex">\(n\)</span> de orde van diffractie is.</p>
+<p>Hier is <span class="arithmatex">\(n\)</span> de orde van diffractie en <span class="arithmatex">\(d\)</span> de afstand tussen twee tralielijnen. Deze vorm geldt bij loodrechte inval; <span class="arithmatex">\(\theta\)</span> wordt gemeten ten opzichte van de normaal op het tralie.</p>
 <p>In de spectrometer wordt het uitgespreide licht door de tralie op een camera geprojecteerd. Door posities op de detector te koppelen aan bekende golflengtes (ijking), kan de gemeten intensiteit worden weergegeven als functie van de golflengte: <span class="arithmatex">\(I(\lambda)\)</span>.</p>
 <div class="admonition opdracht">
 <p class="admonition-title">Opdracht 1(a)</p>
@@ -789,7 +819,7 @@ I(\lambda)=I_0\frac{\gamma^2}{(\lambda-\lambda_0)^2+\gamma^2}.
 </tr>
 </tbody>
 </table>
-<p>Met deze tabel kunnen we een kalibratielijn opstellen:</p>
+<p>Deze tabel is een fictief rekenvoorbeeld; gebruik voor de ijking je eigen gemeten pixelposities en bekende lijnen van de referentielamp. Een lineaire kalibratie is een benadering: controleer met meerdere lijnen of deze in het gebruikte bereik voldoende nauwkeurig is. Het model is:</p>
 <div class="arithmatex">\[
 \text{Golflengte (nm)}=a\,\text{x-pixel}+b,
 \]</div>
@@ -799,7 +829,7 @@ I(\lambda)=I_0\frac{\gamma^2}{(\lambda-\lambda_0)^2+\gamma^2}.
 <ol>
 <li>Ga aan de slag met het ijken van de spectrometer.</li>
 <li>Meet het spectrum van een bekende lamp. Zet deze in je labjournaal.</li>
-<li>Bepaal van iedere emissielijn de centrale golflengte met behulp van het peak-detection-algoritme van SciPy. Mocht dit te lastig zijn en kom je hier niet uit, probeer dan de locaties (x-pixels) op het oog te schatten.</li>
+<li>Bepaal van iedere emissielijn de pixelpositie van de piek met behulp van het peak-detection-algoritme van SciPy. Koppel deze posities aan bekende referentiegolflengten om de ijklijn te bepalen. Mocht dit te lastig zijn en kom je hier niet uit, probeer dan de locaties (x-pixels) op het oog te schatten.</li>
 <li>Houd je voortgang bij in het labjournaal.</li>
 </ol>
 </div>
@@ -826,11 +856,12 @@ I(\lambda)=I_0\frac{\gamma^2}{(\lambda-\lambda_0)^2+\gamma^2}.
 <div class="arithmatex">\[
 T=\frac{I}{I_0}.
 \]</div>
-<p>De absorptie <span class="arithmatex">\(A\)</span> wordt gedefinieerd als:</p>
+<p>De absorbantie <span class="arithmatex">\(A\)</span> wordt gedefinieerd met de logaritme met grondtal 10:</p>
 <div class="arithmatex">\[
-A=-\log(T)=-\log\left(\frac{I}{I_0}\right).
+A=-\log_{10}(T)=-\log_{10}\left(\frac{I}{I_0}\right).
 \]</div>
-<p>Jullie meten verschillende concentraties <span class="arithmatex">\(\mathrm{CuSO_4}\)</span>-oplossingen en onderzoeken het verband tussen concentratie en absorptie. Met een ijklijn bepalen jullie uiteindelijk de concentratie van een onbekende oplossing.</p>
+<p>Meet <span class="arithmatex">\(I_0\)</span> met een blanco (dezelfde cuvet met oplosmiddel) en <span class="arithmatex">\(I\)</span> met de oplossing, bij dezelfde golflengte en instellingen. Corrigeer beide signalen voor de donkerachtergrond. Volgens de <a href="https://goldbook.iupac.org/terms/view/B00626">wet van Beer–Lambert</a> is de absorbantie bij een vaste golflengte en weglengte evenredig met de concentratie, zolang de wet toepasbaar is.</p>
+<p>Jullie meten verschillende concentraties <span class="arithmatex">\(\mathrm{CuSO_4}\)</span>-oplossingen en onderzoeken het verband tussen concentratie en absorbantie. Met een ijklijn bepalen jullie uiteindelijk de concentratie van een onbekende oplossing.</p>
 <div class="admonition voorbereiding">
 <p class="admonition-title">Voorbereidingsopdracht week 2</p>
 <ol>
@@ -982,7 +1013,7 @@ A=-\log(T)=-\log\left(\frac{I}{I_0}\right).
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">linear</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">yerr</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">linear</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">yerr</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">,</span> <span class="n">absolute_sigma</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">perr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"a ="</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">"+-"</span><span class="p">,</span> <span class="n">perr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1128,6 +1159,8 @@ A=-\log(T)=-\log\left(\frac{I}{I_0}\right).
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascript/links.js"></script>
       
         <script src="../../javascript/mathjax.js"></script>
       

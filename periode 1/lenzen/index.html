@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://hva-tn.github.io/Practica_LJ2/periode%201/lenzen/">
+        <link rel="canonical" href="https://hva-tn.github.io/Website-Practicum/periode%201/lenzen/">
       
       
         <link rel="prev" href="../python/">
@@ -59,6 +59,9 @@
 
     
     
+  
+  <base target="_blank">
+
   </head>
   
   
@@ -422,6 +425,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code snippets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -452,7 +482,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -474,14 +504,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -849,8 +879,10 @@
 </ol>
 </div>
 <div class="highlight"><span class="filename">Lineaire span</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">v_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>  <span class="c1"># in meters</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># Selecteer voor elke gekozen f alleen v_fit &gt; f voor een reëel beeld.</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Bij v = f is de beeldafstand niet eindig.</span>
 </code></pre></div>
-<p>Het invullen van verschillende waarden van <em>f</em> en het vervolgens tekenen van meerdere lijnen werkt niet erg efficiënt. Vaak levert dit alleen een ruwe schatting van de parameter op.<sup id="fnref:eyeballing"><a class="footnote-ref" href="#fn:eyeballing">2</a></sup> Daarnaast wordt de onzekerheid in de datapunten niet meegenomen, terwijl de metingen bij grote beeld- en voorwerpsafstanden juist preciezer zijn. Er bestaan complexe methoden waarmee via de omgeschreven formule <em>f</em> direct kan worden bepaald, inclusief foutanalyse. Echter, deze zijn voor dit moment te complex en hierin gaan we bij wiskunde 2.1 verder. Om toch een betere schatting te maken, maken we ditmaal gebruik van een slimme truc: <em>linearizeren</em>. Hierbij schrijven we een niet-lineaire functie om tot een lineaire vorm. Deze truc is bij veel wiskundige functies toepasbaar en staat bekend als <em>inverteerbaarheid</em>.</p>
+<p>Het tekenen van verschillende waarden van <em>f</em> levert een eerste schatting op,<sup id="fnref:eyeballing"><a class="footnote-ref" href="#fn:eyeballing">2</a></sup> maar houdt geen rekening met meetonzekerheden. Grotere afstanden betekenen niet automatisch nauwkeurigere metingen: schat de onzekerheid per meting. We gebruiken hier <em>lineariseren</em>: door zowel de beeldafstand als de voorwerpsafstand te inverteren, ontstaat een lineair verband tussen de nieuwe variabelen. Lineariseren is niet hetzelfde als inverteerbaarheid. Bij deze transformatie moeten ook de onzekerheden worden omgerekend.</p>
 <div class="admonition opdracht">
 <p class="admonition-title">Opdracht 1(e)</p>
 <ol>
@@ -858,15 +890,15 @@
 <li>Schrijf de lenzenformule om in de vorm</li>
 </ol>
 <p><span class="arithmatex">\(
-   \frac{1}{b} = f(v,f)
+   y = ax+c,\qquad y=\frac{1}{b},\quad x=\frac{1}{v}.
    \)</span></p>
 <ol>
-<li>Maak een nieuwe functie genaamd <em>lineair</em>, waarbij je de functie van de vorige deelopdracht invult.</li>
+<li>Maak een nieuwe functie genaamd <em>lineair</em>, met als invoer <code>inverse_v = 1/v</code> en parameter <code>f</code>. De uitvoer is <code>1/b</code>.</li>
 <li>Wat valt je op aan de grafiek? Wat is de betekenis van het snijpunt met de y-as?</li>
 <li>Voeg nu enkele lijnen toe met verschillende waarden van de brandpuntsafstand <span class="arithmatex">\(f\)</span>.</li>
 </ol>
 </div>
-<div class="highlight"><span class="filename">Functie maken</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">lineair</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+<div class="highlight"><span class="filename">Functie maken</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">lineair</span><span class="p">(</span><span class="n">inverse_v</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">return</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </code></pre></div>
 <p>Zoals je misschien hebt opgemerkt, ziet de grafiek er nu aanzienlijk beter uit. De vraag blijft echter wat het snijpunt met de y-as betekent en welke waarde hier precies bij hoort. Om dit op een natuurkundig correcte manier uit te werken, gebruiken natuurkundigen vaak modellen. In dit geval is dat natuurlijk de functie <code>lineair</code>.</p>
@@ -877,16 +909,16 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># eerste schatting van f, 1 meter</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># aanroepen fit</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">lineair</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">v</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">b</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="p">(</span><span class="o">...</span><span class="p">),</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">lineair</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">v</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">b</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="p">(</span><span class="o">...</span><span class="p">),</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">,</span> <span class="n">absolute_sigma</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># resultaat printen</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"$f$ ="</span><span class="p">,</span> <span class="n">popt</span><span class="p">,</span> <span class="s2">"+-"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"$f$ ="</span><span class="p">,</span> <span class="n">popt</span><span class="p">,</span> <span class="s2">"+-"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">)))</span>
 </code></pre></div>
 <div class="admonition opdracht">
 <p class="admonition-title">Opdracht 1(f)</p>
 <ol>
 <li>Bereken de fout op <span class="arithmatex">\(\frac{1}{b}\)</span>, gebruik hiervoor de relatieve fout van <span class="arithmatex">\(b\)</span>. Als dit niet lukt, sla deze stap dan over.</li>
-<li>Bepaal <span class="arithmatex">\(f\)</span> door middel van een fit, gebruik hiervoor de <em>scipy</em>-module. Mocht het bepalen van de fout in de vorige opdracht niet gelukt zijn, verwijder dan de regel <code>sigma = (...)</code>.</li>
+<li>Bepaal <span class="arithmatex">\(f\)</span> door middel van een fit, gebruik hiervoor de <em>scipy</em>-module. Mocht het bepalen van de fout in de vorige opdracht niet gelukt zijn, verwijder dan de argumenten <code>sigma=(...)</code> en <code>absolute_sigma=True</code>. De onzekerheid wordt dan geschat uit de residuen, onder de aanname van gelijke spreiding in <code>1/b</code>.</li>
 <li>Wat is de gevonden waarde voor <em>f</em>, en welke onzekerheid hoort hierop?</li>
 </ol>
 </div>
@@ -907,7 +939,7 @@
 <h3 id="zonder-meetfouten">Zonder meetfouten</h3>
 <p>Als de individuele meetonzekerheden <span class="arithmatex">\(\sigma_i\)</span> niet bekend zijn, minimaliseer je de som van de kwadraten van de residuen:</p>
 <div class="arithmatex">\[
-R^2(\theta) = \sum_i \epsilon_i^2.
+S(\theta) = \sum_i \epsilon_i^2.
 \]</div>
 <p>Dit heet een ordinary least squares-fit (OLS): alle meetpunten wegen even zwaar mee.</p>
 <h3 id="met-meetfouten">Met meetfouten</h3>
@@ -915,7 +947,7 @@ R^2(\theta) = \sum_i \epsilon_i^2.
 <div class="arithmatex">\[
 \chi^2(\theta) = \sum_i \left( \frac{\epsilon_i}{\sigma_i} \right)^2.
 \]</div>
-<p>Dit heet een weighted least squares-fit (WLS) of <span class="arithmatex">\(\chi^2\)</span>-fit. Het resultaat is statistisch optimaal bij normaal verdeelde meetfouten.</p>
+<p>Dit heet een weighted least squares-fit (WLS) of <span class="arithmatex">\(\chi^2\)</span>-fit. Bij onafhankelijke, normaal verdeelde meetfouten met bekende standaardafwijkingen komt dit overeen met maximum-likelihoodschatting, als het model correct is en de onzekerheid in x verwaarloosbaar is.</p>
 <h3 id="uitkomst">Uitkomst</h3>
 <p>De functie <code>curve_fit</code> levert:</p>
 <ul>
@@ -928,7 +960,7 @@ R^2(\theta) = \sum_i \epsilon_i^2.
 \]</div>
 <p>In Python komt dit overeen met:</p>
 <ul>
-<li>geen <code>sigma</code> meegeven <span class="arithmatex">\(\to\)</span> ordinary least squares (<span class="arithmatex">\(R^2\)</span>);</li>
+<li>geen <code>sigma</code> meegeven <span class="arithmatex">\(\to\)</span> ordinary least squares (som van gekwadrateerde residuen);</li>
 <li>wel <code>sigma</code> meegeven <span class="arithmatex">\(\to\)</span> weighted least squares (<span class="arithmatex">\(\chi^2\)</span>).</li>
 </ul>
 <h3 id="interpretatie">Interpretatie</h3>
@@ -938,7 +970,7 @@ R^2(\theta) = \sum_i \epsilon_i^2.
 <li>de spreiding van de meetpunten en hun onzekerheden <span class="arithmatex">\(\sigma_i\)</span>;</li>
 <li>de initiële schatting <span class="arithmatex">\(p_0\)</span> voor de parameters: bij een niet-lineaire fit kan een slechte start leiden tot lokale minima.</li>
 </ul>
-<p>In vergelijking met een linearisatie heeft een directe least squares-fit als voordeel dat alle beschikbare informatie wordt gebruikt en dat er geen systematische fouten ontstaan door transformaties. Daarom is <code>curve_fit</code> de meest robuuste methode, zeker bij fysische modellen die niet-lineair zijn in de parameters.</p>
+<p>Een directe fit aan de oorspronkelijke meetwaarden voorkomt dat je de data en hun onzekerheidsverdeling hoeft te transformeren. Ook een directe fit vereist een geschikt model, realistische onzekerheden en een bruikbare startschatting; <code>curve_fit</code> garandeert geen globaal optimum. Bij de linearisatie geldt voor kleine relatieve onzekerheden: <code>sigma_inverse_b = b_err / b**2</code>. De fit hieronder behandelt de x-waarden als exact.</p>
 <h3 id="voorbeeld-figuur-fit">Voorbeeld figuur \&amp; fit:</h3>
 <div class="highlight"><span class="filename">Voorbeeld: fitten met curve_fit</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">curve_fit</span>
@@ -956,7 +988,7 @@ R^2(\theta) = \sum_i \epsilon_i^2.
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
 <a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="c1"># Fit aanroepen</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">linear</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">yerr</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">linear</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">yerr</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">,</span> <span class="n">absolute_sigma</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
 <a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="c1"># Resultaten</span>
 <a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="n">perr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
@@ -1046,6 +1078,8 @@ R^2(\theta) = \sum_i \epsilon_i^2.
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascript/links.js"></script>
       
         <script src="../../javascript/mathjax.js"></script>
       
