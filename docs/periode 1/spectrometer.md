@@ -169,6 +169,14 @@ Jullie meten verschillende concentraties \(\mathrm{CuSO_4}\)-oplossingen en onde
 - 1× camera (fotodetector)
 - 1× lichtbron (LED of spectraallamp)
 
+Stockoplossing koper(II)sulfaat: **0,1 M (0,1 mol/L)**.
+
+| Cuvet nummer | 1 | 2 | 3 | 4 |
+| --- | ---: | ---: | ---: | ---: |
+| Stockoplossing koper(II)sulfaat (mL) | 0 | 20 | 40 | 60 |
+| Demiwater (mL) | 100 | 80 | 60 | 40 |
+| Concentratie (zelf uitrekenen in mol/L) | | | | |
+
 ## Tips
 
 - Bepaal de onderlinge afstanden van alle componenten, beginnend bij de entreespleet en de eerste concave spiegel.
@@ -235,6 +243,6 @@ print("b =", popt[1], "+-", perr[1])
 
 [^meetplan]: Zie Brightspace voor een korte uitleg over een meetplan.
 
-[^inkscape]: Inkscape is bijzonder geschikt voor optische opstellingen. Zie de [GW Optics ComponentLibrary](https://www.gwoptics.org/ComponentLibrary/).
+[^inkscape]: Inkscape is bijzonder geschikt voor optische opstellingen. Zie de [GW Optics ComponentLibrary](https://www.gwoptics.org/ComponentLibrary/). Je moet deze bibliotheek download en openen, niet importeren.
 
 [^lorentz]: Een Lorentz-profiel verschijnt bij resonanties doordat een aangeslagen toestand een beperkte levensduur heeft. Meer informatie staat bij [LibreTexts](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Fundamentals_of_Spectroscopy/Lineshape_Functions).
