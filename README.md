@@ -31,6 +31,26 @@ python -m mkdocs serve
 
 De lokale versie is vervolgens standaard beschikbaar via `http://127.0.0.1:8000/`.
 
+## Practicumteksten aanpassen
+
+Bewerk de Markdown-bestanden in `docs/`. De HTML-bestanden in `site/` worden
+automatisch gemaakt door MkDocs en bevatten ook alle navigatie en vormgeving.
+Daarom zijn die veel langer en bevatten ze veel lege regels. Je hoeft deze
+HTML niet zelf te onderhouden.
+
+Voor periode 1 zijn dit de bronbestanden:
+
+| Pagina | Bestand om te bewerken |
+| --- | --- |
+| Overzicht en rooster | [docs/periode 1/index.md](docs/periode%201/index.md) |
+| Python | [docs/periode 1/python.md](docs/periode%201/python.md) |
+| Lenzen | [docs/periode 1/lenzen.md](docs/periode%201/lenzen.md) |
+| Spectrometer | [docs/periode 1/spectrometer.md](docs/periode%201/spectrometer.md) |
+
+Gebruik `#` voor een titel, `##` voor een tussenkop, `-` voor een opsomming
+en `**tekst**` voor vetgedrukte tekst. Met `python -m mkdocs serve` zie je
+wijzigingen direct in de lokale website.
+
 ## Afbeeldingen en gegenereerde website
 
 `docs/assets/` bevat de originele afbeeldingen. MkDocs kopieert die tijdens

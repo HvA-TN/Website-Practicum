@@ -31,7 +31,7 @@ In deze practicumreeks gaan jullie aan de slag met het opbouwen van een **transm
 
     1. Maak een meetplan voor het bouwen van een **transmissiespectrometer** van maximaal 1 pagina.[^meetplan] Formuleer een hoofddoel voor deze week en geef een korte theoretische onderbouwing over hoe je controleert of deze spectrometer dient te werken.
     2. Maak een schets van de **transmissiespectrometer** in PowerPoint of Inkscape.[^inkscape] Zet deze in jouw labjournaal.
-    3. Maak een Jupyter notebook waarin het Python-script van de video-analyse klaarstaat. Je kunt de code van [deze GitHub-pagina](https://github.com/HvA-TN/natuurkunde_2.2) gebruiken.
+    3. Maak een Jupyter notebook waarin het Python-script van de video-analyse klaarstaat. Je kunt de code van [deze GitHub-pagina](https://github.com/HvA-TN/Practica/tree/main/Practicum2_1) gebruiken.
 
 ## Theoretische achtergrond
 
@@ -57,7 +57,7 @@ In de spectrometer wordt het uitgespreide licht door de tralie op een camera gep
 
 Bij het analyseren van lichtbronnen wordt vaak gebruikgemaakt van spectraallampen. Elke spectraallijn correspondeert met een specifieke elektronische overgang in het atoom of molecuul van het gebruikte gas.
 
-![Het Bohrmodel.](../assets/periode%201/Borh.png)
+![Het Bohrmodel.](<../assets/periode%201/Borh.png>)
 
 *Figuur: Het Bohrmodel. Bij transitie van een elektron naar een andere baan komt er een specifieke kleur licht vrij: de spectraallijn.*
 
@@ -69,7 +69,7 @@ I(\lambda)=I_0\frac{\gamma^2}{(\lambda-\lambda_0)^2+\gamma^2}.
 
 Hierbij is \(\lambda_0\) de centrale golflengte, \(\gamma\) de halve breedte op halve hoogte en \(I_0\) de maximale intensiteit. Een eenvoudigere methode om pieken te vinden is het peak-detection-algoritme van SciPy.
 
-```python title="Eenvoudige piekdetectie"
+```python
 import numpy as np
 from scipy.signal import find_peaks
 
@@ -86,11 +86,11 @@ for xi, yi in zip(peak_x, peak_y):
 Spectraallampen worden ook gebruikt om spectrometers te ijken. Met bekende referentielijnen kunnen posities op de detector worden gekoppeld aan golflengtes.
 
 | x-pixel | Golflengte (nm) |
-| ---: | ---: |
-| 100 | 430.3 |
-| 500 | 589.0 |
-| 900 | 706.5 |
-| ... | ... |
+| ------: | --------------: |
+|     100 |           430.3 |
+|     500 |           589.0 |
+|     900 |           706.5 |
+|     ... |             ... |
 
 Deze tabel is een fictief rekenvoorbeeld; gebruik voor de ijking je eigen gemeten pixelposities en bekende lijnen van de referentielamp. Een lineaire kalibratie is een benadering: controleer met meerdere lijnen of deze in het gebruikte bereik voldoende nauwkeurig is. Het model is:
 
@@ -181,25 +181,25 @@ Jullie meten verschillende concentraties \(\mathrm{CuSO_4}\)-oplossingen en onde
 ![De sterke spectraallijnen van helium, neon, natrium en kwik.](../assets/periode 1/g4.svg)
 
 | Na (nm) | He (nm) | Ne (nm) | Hg (nm) |
-| ---: | ---: | ---: | ---: |
-| 497.7 | 388.9 | 585.2 | 404.7 |
-| 568.8 | 447.1 | 588.2 | 435.8 |
-| 589.0 | 471.3 | 603.0 | 546.1 |
-| 589.6 | 492.2 | 614.3 | 577.0 |
-| 615.4 | 501.6 | 640.2 | 579.1 |
-| 819.5 | 587.6 | 650.7 | 623.4 |
-|  | 667.8 | 659.9 | 690.8 |
-|  | 706.5 | 703.2 | 706.5 |
-|  |  | 717.4 |  |
-|  |  | 724.5 |  |
-|  |  | 743.9 |  |
-|  |  | 748.9 |  |
-|  |  | 753.6 |  |
-|  |  | 837.8 |  |
+| ------: | ------: | ------: | ------: |
+|   497.7 |   388.9 |   585.2 |   404.7 |
+|   568.8 |   447.1 |   588.2 |   435.8 |
+|   589.0 |   471.3 |   603.0 |   546.1 |
+|   589.6 |   492.2 |   614.3 |   577.0 |
+|   615.4 |   501.6 |   640.2 |   579.1 |
+|   819.5 |   587.6 |   650.7 |   623.4 |
+|         |   667.8 |   659.9 |   690.8 |
+|         |   706.5 |   703.2 |   706.5 |
+|         |         |   717.4 |         |
+|         |         |   724.5 |         |
+|         |         |   743.9 |         |
+|         |         |   748.9 |         |
+|         |         |   753.6 |         |
+|         |         |   837.8 |         |
 
 # Appendix 3: Data fitten
 
-```python title="Voorbeeld: fitten met curve_fit"
+```python
 import numpy as np
 from scipy.optimize import curve_fit
 
@@ -222,17 +222,19 @@ print("b =", popt[1], "+-", perr[1])
 # Appendix 4: Complementaire kleuren
 
 | \(\lambda\) geabsorbeerd | \(E\) (eV) | Geabsorbeerde kleur | Waargenomen kleur |
-| --- | ---: | --- | --- |
-| \(>700\,\mathrm{nm}\) | \(<1.77\) | Infrarood | Niet waarneembaar |
-| 700–635 nm | 1.77–1.95 | Rood | Groen |
-| 635–590 nm | 1.95–2.10 | Oranje | Blauw |
-| 590–560 nm | 2.10–2.21 | Geel | Violet |
-| 560–520 nm | 2.21–2.38 | Groen | Rood |
-| 520–490 nm | 2.38–2.53 | Cyaan | Rood–oranje |
-| 490–450 nm | 2.53–2.76 | Blauw | Oranje |
-| 450–400 nm | 2.76–3.10 | Violet | Geel |
-| \(<400\,\mathrm{nm}\) | \(>3.10\) | Ultraviolet (UV) | Niet waarneembaar |
+| ------------------------ | ---------: | ------------------- | ----------------- |
+| \(>700\,\mathrm{nm}\)    |  \(<1.77\) | Infrarood           | Niet waarneembaar |
+| 700–635 nm              | 1.77–1.95 | Rood                | Groen             |
+| 635–590 nm              | 1.95–2.10 | Oranje              | Blauw             |
+| 590–560 nm              | 2.10–2.21 | Geel                | Violet            |
+| 560–520 nm              | 2.21–2.38 | Groen               | Rood              |
+| 520–490 nm              | 2.38–2.53 | Cyaan               | Rood–oranje      |
+| 490–450 nm              | 2.53–2.76 | Blauw               | Oranje            |
+| 450–400 nm              | 2.76–3.10 | Violet              | Geel              |
+| \(<400\,\mathrm{nm}\)    |  \(>3.10\) | Ultraviolet (UV)    | Niet waarneembaar |
 
 [^meetplan]: Zie Brightspace voor een korte uitleg over een meetplan.
+
 [^inkscape]: Inkscape is bijzonder geschikt voor optische opstellingen. Zie de [GW Optics ComponentLibrary](https://www.gwoptics.org/ComponentLibrary/).
+
 [^lorentz]: Een Lorentz-profiel verschijnt bij resonanties doordat een aangeslagen toestand een beperkte levensduur heeft. Meer informatie staat bij [LibreTexts](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Fundamentals_of_Spectroscopy/Lineshape_Functions).
