@@ -74,6 +74,8 @@ nav:
 
 exclude_docs: |
   periode 1/planck.md
+  periode 1/spectrometer_W1.md
+  periode 1/spectrometer_W2.md
 
 
 markdown_extensions:

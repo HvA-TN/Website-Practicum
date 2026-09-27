@@ -752,7 +752,7 @@
 <ol>
 <li>Maak een meetplan voor het bouwen van een <strong>transmissiespectrometer</strong> van maximaal 1 pagina.<sup id="fnref:meetplan"><a class="footnote-ref" href="#fn:meetplan">1</a></sup> Formuleer een hoofddoel voor deze week en geef een korte theoretische onderbouwing over hoe je controleert of deze spectrometer dient te werken.</li>
 <li>Maak een schets van de <strong>transmissiespectrometer</strong> in PowerPoint of Inkscape.<sup id="fnref:inkscape"><a class="footnote-ref" href="#fn:inkscape">2</a></sup> Zet deze in jouw labjournaal.</li>
-<li>Maak een Jupyter notebook waarin het Python-script van de video-analyse klaarstaat. Je kunt de code van <a href="https://github.com/HvA-TN/natuurkunde_2.2">deze GitHub-pagina</a> gebruiken.</li>
+<li>Maak een Jupyter notebook waarin het Python-script van de video-analyse klaarstaat. Je kunt de code van <a href="https://github.com/HvA-TN/Practica/tree/main/Practicum2_1">deze GitHub-pagina</a> gebruiken.</li>
 </ol>
 </div>
 <h2 id="theoretische-achtergrond">Theoretische achtergrond</h2>
@@ -780,7 +780,7 @@
 I(\lambda)=I_0\frac{\gamma^2}{(\lambda-\lambda_0)^2+\gamma^2}.
 \]</div>
 <p>Hierbij is <span class="arithmatex">\(\lambda_0\)</span> de centrale golflengte, <span class="arithmatex">\(\gamma\)</span> de halve breedte op halve hoogte en <span class="arithmatex">\(I_0\)</span> de maximale intensiteit. Een eenvoudigere methode om pieken te vinden is het peak-detection-algoritme van SciPy.</p>
-<div class="highlight"><span class="filename">Eenvoudige piekdetectie</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.signal</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_peaks</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># x en y zijn numpy arrays</span>
@@ -895,6 +895,41 @@ A=-\log_{10}(T)=-\log_{10}\left(\frac{I}{I_0}\right).
 <li>1× camera (fotodetector)</li>
 <li>1× lichtbron (LED of spectraallamp)</li>
 </ul>
+<p>Stockoplossing koper(II)sulfaat: <strong>0,1 M (0,1 mol/L)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Cuvet nummer</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stockoplossing koper(II)sulfaat (mL)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td>Demiwater (mL)</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td>Concentratie (zelf uitrekenen in mol/L)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
 <h2 id="tips">Tips</h2>
 <ul>
 <li>Bepaal de onderlinge afstanden van alle componenten, beginnend bij de entreespleet en de eerste concave spiegel.</li>
@@ -1001,7 +1036,7 @@ A=-\log_{10}(T)=-\log_{10}\left(\frac{I}{I_0}\right).
 </tbody>
 </table>
 <h1 id="appendix-3-data-fitten">Appendix 3: Data fitten</h1>
-<div class="highlight"><span class="filename">Voorbeeld: fitten met curve_fit</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">curve_fit</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -1093,7 +1128,7 @@ A=-\log_{10}(T)=-\log_{10}\left(\frac{I}{I_0}\right).
 <p>Zie Brightspace voor een korte uitleg over een meetplan.&#160;<a class="footnote-backref" href="#fnref:meetplan" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:meetplan" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:inkscape">
-<p>Inkscape is bijzonder geschikt voor optische opstellingen. Zie de <a href="https://www.gwoptics.org/ComponentLibrary/">GW Optics ComponentLibrary</a>.&#160;<a class="footnote-backref" href="#fnref:inkscape" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Inkscape is bijzonder geschikt voor optische opstellingen. Zie de <a href="https://www.gwoptics.org/ComponentLibrary/">GW Optics ComponentLibrary</a>. Je moet deze bibliotheek download en openen, niet importeren.&#160;<a class="footnote-backref" href="#fnref:inkscape" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:lorentz">
 <p>Een Lorentz-profiel verschijnt bij resonanties doordat een aangeslagen toestand een beperkte levensduur heeft. Meer informatie staat bij <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Fundamentals_of_Spectroscopy/Lineshape_Functions">LibreTexts</a>.&#160;<a class="footnote-backref" href="#fnref:lorentz" title="Jump back to footnote 3 in the text">&#8617;</a></p>
