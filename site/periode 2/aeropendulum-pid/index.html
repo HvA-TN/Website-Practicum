@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://hva-tn.github.io/Website-Practicum/periode%202/aeropendulum-pid/">
       
       
+        <link rel="prev" href="../aeropendulum-openloop/">
+      
+      
+        <link rel="next" href="../zonnecel/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Practicum: PID-regeling van een aeropendulum - Practica Technische Natuurkunde – Jaar 2</title>
+        <title>Aeropendulum (PID) - Practica Technische Natuurkunde – Jaar 2</title>
       
     
     
@@ -77,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practicum-pid-regeling-van-een-aeropendulum" class="md-skip">
+        <a href="#pid-regeling-van-een-aeropendulum" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -113,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Practicum: PID-regeling van een aeropendulum
+              Aeropendulum (PID)
             
           </span>
         </div>
@@ -608,6 +612,318 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Periode 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Periode 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aeropendulum-openloop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aeropendulum (open-loop)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aeropendulum (PID)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aeropendulum (PID)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leerdoelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerdoelen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introductie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introductie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veiligheid-bij-pid-regeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veiligheid bij PID-regeling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-arduino-aanpassen-met-platformio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra: Arduino aanpassen met PlatformIO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-materialenlijst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Materialenlijst
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-python-aansturing-en-meetdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Python-aansturing en meetdata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-afleiding-bewegingsvergelijking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Afleiding bewegingsvergelijking
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zonnecel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zonnecel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -668,10 +984,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opstelling-en-arduino-programma" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opstelling en Arduino-programma
+        Experiment
       
     </span>
   </a>
@@ -679,10 +995,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uitvoering" class="md-nav__link">
+  <a href="#veiligheid-bij-pid-regeling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uitvoering
+        Veiligheid bij PID-regeling
       
     </span>
   </a>
@@ -690,10 +1006,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verwerking-in-python" class="md-nav__link">
+  <a href="#extra-arduino-aanpassen-met-platformio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verwerking in Python
+        Extra: Arduino aanpassen met PlatformIO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-materialenlijst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Materialenlijst
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-python-aansturing-en-meetdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Python-aansturing en meetdata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-afleiding-bewegingsvergelijking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Afleiding bewegingsvergelijking
       
     </span>
   </a>
@@ -717,367 +1066,277 @@
 
 
 
-<h1 id="practicum-pid-regeling-van-een-aeropendulum">Practicum: PID-regeling van een aeropendulum</h1>
-<p><a href="../../downloads/aeropendulum-arduino.zip">Download de Arduino-sketches en instructies</a></p>
+<h1 id="pid-regeling-van-een-aeropendulum">PID-regeling van een aeropendulum</h1>
+<p><a href="../Aero_pendulum_PID.pdf">Aangeleverde PDF openen</a></p>
+<p>Volg voor de opdrachten en codeverwijzingen deze webpagina. De aangeleverde PDF wijkt op enkele punten af van de Typst-bron waarop deze pagina is gebaseerd.</p>
 <h2 id="leerdoelen">Leerdoelen</h2>
 <ul>
 <li>
-<p>Je kunt uitleggen hoe terugkoppeling de hoek van een aeropendulum regelt.</p>
+<p>Je kunt uitleggen hoe terugkoppeling wordt gebruikt om de hoek van het aeropendulum te regelen.</p>
 </li>
 <li>
-<p>Je kunt de invloed van de P-, I- en D-term experimenteel onderzoeken.</p>
+<p>Je kunt de invloed van P, D en I op de beweging experimenteel onderzoeken.</p>
 </li>
 <li>
-<p>Je kunt een regelaar stapsgewijs afstellen en beoordelen op insteltijd, overshoot en stationaire fout.</p>
+<p>Je kunt verschillende vormen van demping herkennen en een PID-regelaar stapsgewijs afstellen.</p>
 </li>
 <li>
-<p>Je kunt meetgegevens uit de Arduino verwerken in Python en de beperkingen van de regeling herkennen.</p>
+<p>Je kunt meetgegevens in Python weergeven en de regeling beoordelen op overshoot, insteltijd en blijvende afwijking.</p>
+</li>
+<li>
+<p>Je kunt uitleggen wat softwarematige begrenzingen doen en waarom ook hardwarematige beveiliging nodig is.</p>
 </li>
 </ul>
 <div class="admonition veiligheid">
 <p class="admonition-title">Veiligheid</p>
 <ol>
 <li>
-<p>Gebruik dezelfde gecontroleerde opstelling en voedingsinstellingen als bij het open-looppracticum. Laat het toegestane hoekbereik en de maximale motoruitgang vaststellen door de practicumbegeleider.</p>
+<p>Houd voldoende afstand van de draaiende propeller. Zorg dat handen, haar en losse voorwerpen buiten het bewegingsbereik blijven.</p>
 </li>
 <li>
-<p>Schakel de motorvoeding uit voordat je bedrading, sensor of programma aanpast. De nieuwe CSV-sketch wacht na uploaden of resetten op een expliciet startcommando via Serial Monitor.</p>
+<p>Schakel de motorvoeding uit voordat je de bedrading, sensor of het Arduino-programma aanpast. Laat de opstelling en voedingsinstellingen controleren door de practicumbegeleider.</p>
 </li>
 <li>
-<p>Houd handen, haar en losse voorwerpen buiten het bewegingsbereik van arm en propeller. Pak de arm niet vast terwijl de motorvoeding is ingeschakeld.</p>
+<p>Houd de uitschakeling van de motorvoeding bereikbaar. Schakel direct uit als de uitslagen steeds groter worden of de arm richting een mechanische aanslag beweegt.</p>
 </li>
 <li>
-<p>Houd de uitschakeling van de motorvoeding bereikbaar. Schakel direct uit bij toenemende oscillaties, een onjuiste hoekmeting of beweging richting een mechanische aanslag. Wacht tot de propeller stilstaat voordat je de opstelling benadert.</p>
+<p>Wacht tot de propeller stilstaat voordat je de opstelling benadert. Twijfel je over een handeling? Vraag dit aan de practicumbegeleider.</p>
 </li>
 </ol>
 </div>
 <h2 id="introductie">Introductie</h2>
-<p>In het open-looppracticum heb je onderzocht welke hoek ontstaat bij een ingestelde motoruitgang. Die hoek kan veranderen door bijvoorbeeld wrijving of een verandering van de belasting. De besturing merkt zo'n afwijking niet op.</p>
-<p>In dit practicum koppelen we de gemeten hoek terug naar de Arduino. De Arduino vergelijkt de hoek met de gewenste waarde en past het PWM-signaal aan. Zo ontstaat een gesloten regelkring. Je onderzoekt eerst een proportionele regelaar, voegt vervolgens een integrerende term toe en onderzoekt ten slotte of een differentiërende term de respons verbetert.</p>
+<p>In het open-looppracticum heb je onderzocht hoe het aeropendulum reageert op een ingestelde motoruitgang. Je koos een PWM-waarde en mat welke hoek de arm aannam. Voor een andere gewenste hoek moest je zelf een nieuwe instelling kiezen. Ook als de arm door een verstoring van positie veranderde, bleef de ingestelde motoruitgang gelijk.</p>
+<p>Veel technische systemen moeten hun uitgang juist automatisch op een gewenste waarde houden. Denk aan de cruisecontrol van een auto. Wanneer de auto een helling oprijdt, is meer aandrijfkracht nodig om dezelfde snelheid te behouden. De cruisecontrol vergelijkt de gemeten snelheid met de ingestelde snelheid en past de aandrijving aan. Het steeds opnieuw meten, vergelijken en bijsturen noemen we <em>terugkoppeling</em>.</p>
+<p>Bij het aeropendulum kunnen we hetzelfde principe gebruiken. We kiezen nu een gewenste hoek. De hoeksensor meet waar de arm zich bevindt en de regelaar past de motoruitgang aan. Staat de arm te laag, dan moet de propeller meer stuwkracht leveren. Nadert de arm de gewenste hoek, dan moet de regelaar op tijd terugregelen. De arm en motor reageren immers niet onmiddellijk: te laat terugregelen kan ervoor zorgen dat de arm doorschiet.</p>
+<p>In dit practicum onderzoek je hoe je die correctie kunt verbeteren. Je begint met een eenvoudige P-regelaar, die reageert op het verschil tussen de gewenste en gemeten hoek. Daarna voeg je D toe om de beweging te dempen en I om een blijvende afwijking te verkleinen. Met je eigen metingen onderzoek je of de arm snel en rustig tot stilstand komt bij 30, 60 en 90 graden. Tot slot bekijk je hoe begrenzingen het regelgedrag en de veiligheid beïnvloeden.</p>
+<p><em>Leeswijzer.</em> Werk in <code>Arduino/Closed_loop/script.ipynb</code>: eerst de hoekmeting, daarna PID en meetdata, vervolgens de hoekgrens en PWM-stapbegrenzing. Alle proeven gebruiken <code>Stap_4_Closed_loop.ino</code>. Python verzorgt de instellingen en meetdata; de Arduino voert de regeling uit. De appendix bevat achtergrond en uitleg bij de Python-code.</p>
 <h2 id="theorie">Theorie</h2>
-<h3 id="terugkoppeling-en-regelfout">Terugkoppeling en regelfout</h3>
-<p>De gewenste hoek heet het <em>setpoint</em>, <span class="arithmatex">\(r(t)\)</span>. De gemeten hoek is <span class="arithmatex">\(\theta(t)\)</span>. De regelfout is</p>
-<p><span id="vergelijking-1"></span></p>
+<h3 id="van-open-loop-naar-terugkoppeling">Van open loop naar terugkoppeling</h3>
+<p>De opstelling blijft hetzelfde als bij open loop: een propeller beweegt de arm omhoog en de zwaartekracht trekt de arm naar beneden. Het verschil zit in de aansturing. De motoruitgang wordt nu voortdurend aangepast aan de gemeten hoek. <a href="#fig-aeropid-regelkring">Figuur 1</a> laat deze gesloten regelkring zien.</p>
+<figure id="fig-aeropid-regelkring">
+<p><img alt="Gesloten regelkring van het aeropendulum" src="../../assets/periode%202/pid-regelkring.svg" /></p>
+<figcaption>
+<p>Figuur 1. Gesloten regelkring van het aeropendulum. De gemeten hoek wordt teruggekoppeld en vergeleken met de gewenste hoek.</p>
+</figcaption>
+</figure>
+<p>De gewenste hoek noemen we het <em>setpoint</em>, <span class="arithmatex">\(r (t)\)</span>. De gemeten hoek schrijven we als <span class="arithmatex">\(\theta (t)\)</span>. Beide hoeken meten we vanaf de verticale ruststand. Het verschil is de <em>regelfout</em>:</p>
 <div class="arithmatex">\[
-e(t)=r(t)-\theta(t).
-\tag{1}
+e (t) = r (t) - \theta (t) .
 \]</div>
-<p>Bij een positieve fout staat de arm onder de gewenste hoek. Voor de gebruikte instelling <code>DIRECT</code> moet een grotere motoruitgang leiden tot een grotere gemeten hoek. Controle van dit teken is noodzakelijk voordat je de regeling inschakelt.</p>
-<p><span id="figuur-1"></span></p>
-<p><img alt="Gesloten regelkring van het aeropendulum. De sensor levert de gemeten hoek voor de terugkoppeling." src="../../assets/periode%202/pid-regelkring.svg" /></p>
-<p><em>Figuur 1: Gesloten regelkring van het aeropendulum. De sensor levert de gemeten hoek voor de terugkoppeling.</em></p>
-<h3 id="de-drie-bijdragen">De drie bijdragen</h3>
-<p>Een ideale PID-regelaar kan worden geschreven als</p>
-<p><span id="vergelijking-2"></span></p>
+<p>Bij een gewenste hoek van 60 graden en een gemeten hoek van 50 graden is de fout dus +10 graden. De arm staat nog te laag. Staat de arm op 65 graden, dan is de fout −5 graden en staat de arm te hoog.</p>
+<h3 id="p-reageren-op-de-afwijking">P: reageren op de afwijking</h3>
+<p>Een proportionele regelaar berekent een bijdrage die evenredig is met de fout:</p>
 <div class="arithmatex">\[
-u^*(t)=K_p e(t)+K_i\int_0^t e(\tau)\,\mathrm{d}\tau
-       +K_d\frac{\mathrm{d}e}{\mathrm{d}t}.
-\tag{2}
+u_{P} (t) = K_{p} e (t) .
 \]</div>
-<p>Hier is <span class="arithmatex">\(u^*\)</span> de berekende uitgang vóór begrenzing. In deze opstelling drukken we de uitgang uit in PWM-telwaarden en de hoek in graden. De eenheden van <span class="arithmatex">\(K_p\)</span>, <span class="arithmatex">\(K_i\)</span> en <span class="arithmatex">\(K_d\)</span> zijn daarom respectievelijk PWM-telwaarden per graad, per graad per seconde en maal seconde per graad.</p>
+<p>De factor <span class="arithmatex">\(K_{p}\)</span> bepaalt hoe sterk de regelaar corrigeert. Bij dezelfde fout geeft een grotere P-waarde meer motoruitgang. De arm kan daardoor sneller omhoog bewegen, maar ook verder doorschieten en gaan oscilleren.</p>
+<p>Met alleen P kan een blijvende afwijking ontstaan. Om de arm omhoog te houden is voortdurend stuwkracht nodig. Als de fout nul is, is de P-bijdrage ook nul. Een P-regelaar zonder extra basisuitgang heeft daarom een fout nodig om een niet-nul motoruitgang te leveren.</p>
+<h3 id="d-de-beweging-dempen">D: de beweging dempen</h3>
+<p>De D-term reageert op hoe snel de hoek verandert. Beweegt de arm snel omhoog, dan vermindert deze bijdrage de motoruitgang al voordat de gewenste hoek is bereikt. Dat kan het doorschieten verminderen. In de gebruikte regeling geldt:</p>
+<div class="arithmatex">\[
+u_{D} (t) = - K_{d} \frac{\mathrm{d} \theta}{\mathrm{d} t} .
+\]</div>
+<p>Een grotere D-waarde geeft meer tegenwerking bij dezelfde hoeksnelheid. Te veel D kan de respons traag maken en kleine schommelingen in de hoekmeting sterk laten doorwerken in de motoruitgang.</p>
+<h3 id="i-een-blijvende-afwijking-wegwerken">I: een blijvende afwijking wegwerken</h3>
+<p>De I-term telt de fout in de tijd op:</p>
+<div class="arithmatex">\[
+u_{I} (t) = K_{i} \int_{0}^{t} e (\tau) \, \mathrm{d} \tau .
+\]</div>
+<p>Blijft de arm onder het setpoint, dan groeit deze bijdrage totdat er voldoende motoruitgang is. De opgebouwde bijdrage kan daarna aanwezig blijven, ook wanneer de fout nul is. Zo kan I de blijvende afwijking van de P-regelaar verkleinen. Een te grote I-waarde kan echter opnieuw overshoot en oscillaties veroorzaken: een opgebouwde bijdrage verdwijnt niet meteen wanneer de arm het setpoint bereikt.</p>
+<p>De PID-regelaar combineert deze drie bijdragen: <span class="arithmatex">\(u (t) = u_{P} (t) + u_{D} (t) + u_{I} (t)\)</span>. De werkelijk toegepaste PWM is begrensd tussen nul en <code>max_pwm</code>. Een negatieve berekende uitgang kan de motor dus niet omgekeerd aandrijven. In het experiment stel je ze in die volgorde af. Zo kun je bij iedere stap zien wat de toegevoegde bijdrage verandert.</p>
+<h3 id="de-respons-beoordelen">De respons beoordelen</h3>
+<p>Een grafiek van de hoek tegen de tijd laat zien hoe de arm naar een nieuwe doelhoek beweegt. We noemen dit de <em>respons</em>. Om verschillende instellingen te vergelijken, kijken we naar drie eigenschappen:</p>
 <ul>
-<li>
-<p><strong>P: reactie op de huidige fout.</strong> Een grotere <span class="arithmatex">\(K_p\)</span> geeft bij dezelfde fout meer motoruitgang. Dit kan de respons versnellen, maar ook overshoot of oscillaties veroorzaken. Omdat een niet-nul motoruitgang nodig is om de arm omhoog te houden, kan een P-regelaar zonder extra basisuitgang een blijvende fout hebben.</p>
-</li>
-<li>
-<p><strong>I: reactie op de opgebouwde fout.</strong> Een aanhoudende fout bouwt een extra bijdrage op. Hiermee kan de stationaire fout afnemen. Te veel integrerende werking kan leiden tot overshoot en langzaam herstel.</p>
-</li>
-<li>
-<p><strong>D: reactie op snelle verandering.</strong> Deze bijdrage kan de beweging afremmen en overshoot verminderen, maar is gevoelig voor meetruis.</p>
-</li>
+<li><em>Overshoot:</em> hoeveel graden de arm maximaal boven de doelhoek uitkomt.</li>
+<li><em>Insteltijd:</em> de tijd die nodig is voordat de hoek binnen een afgesproken band rond het setpoint komt en daar gedurende de rest van de meting blijft.</li>
+<li><em>Stationaire fout:</em> het verschil tussen het setpoint en de gemiddelde hoek nadat de beweging tot rust is gekomen.</li>
 </ul>
-<p>De gebruikte bibliotheek <code>PID_v1</code> berekent de D-bijdrage uit de verandering van de <em>gemeten hoek</em>: <span class="arithmatex">\(-K_d\,\mathrm{d}\theta/\mathrm{d}t\)</span>. Bij een constant setpoint komt dit overeen met de ideale formule. Bij een setpointsprong wordt zo een directe D-piek door die sprong vermeden. De bibliotheek begrenst ook de opgebouwde integratorbijdrage; langdurige verzadiging kan desondanks de respons beïnvloeden. Zie de <a href="https://github.com/br3ttb/Arduino-PID-Library/blob/master/PID_v1.cpp">broncode van PID_v1</a> voor de implementatie.</p>
-<h3 id="begrenzing-en-bemonstering">Begrenzing en bemonstering</h3>
-<p>Voor een maximale PWM-uitgang <span class="arithmatex">\(u_{\max}\)</span> geldt</p>
-<p><span id="vergelijking-3"></span></p>
-<div class="arithmatex">\[
-u(t)=\min\bigl(u_{\max},\max(0,u^*(t))\bigr),
-  \qquad D\approx\frac{u}{255}.
-\tag{3}
-\]</div>
-<p>De motoruitgang is een PWM-instelling, geen gemeten spanning of stuwkracht. De regelaar kan in deze sketch geen negatieve stuwkracht vragen. Om de arm te laten zakken, vermindert hij de motoruitgang en werkt de zwaartekracht mee. Daarom hoeven opgaande en neergaande responsen niet gelijk te zijn.</p>
-<p>De ingestelde regelperiode is 20 ms, overeenkomend met een nominale frequentie van 50 Hz. Serieel versturen kost echter ook tijd. De nieuwe CSV-sketch verstuurt iedere 20 ms tekst op 115200 baud, in dezelfde ronde als de hoekmeting en regeling. Neem daarom niet zonder controle aan dat opeenvolgende meetpunten precies 20 ms uit elkaar liggen.</p>
-<h2 id="opstelling-en-arduino-programma">Opstelling en Arduino-programma</h2>
-<p>Gebruik dezelfde Arduino Uno R4 Minima, L298N, AS5600, motor, voeding en mechanische opstelling als bij het open-looppracticum. Houd de voedingsinstellingen tijdens de vergelijking van regelaars gelijk.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>Arduino-aansluiting</strong></th>
-<th style="text-align: left;"><strong>Component</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">D9</td>
-<td style="text-align: left;">ENA van de L298N (PWM)</td>
-</tr>
-<tr>
-<td style="text-align: left;">D10 en D11</td>
-<td style="text-align: left;">IN1 en IN2 van de L298N</td>
-</tr>
-<tr>
-<td style="text-align: left;">A4 en A5</td>
-<td style="text-align: left;">SDA en SCL van de AS5600</td>
-</tr>
-<tr>
-<td style="text-align: left;">GND</td>
-<td style="text-align: left;">Gemeenschappelijke massa volgens het aansluitschema</td>
-</tr>
-</tbody>
-</table>
-<p><span id="figuur-2"></span></p>
-<p><img alt="De aansluitingen blijven gelijk aan die van het open-looppracticum." src="../../assets/periode%202/aeropendulum_aansluitschema.png" /></p>
-<p><em>Figuur 2: De aansluitingen blijven gelijk aan die van het open-looppracticum.</em></p>
-<p>Open <code>Aero_pendulum_PID_CSV.ino</code> in de gelijknamige submap van <code>Arduino/PID</code>. Gebruik de bibliotheken die <code>Wire.h</code>, <code>PID_v1.h</code> en <code>AS5600.h</code> leveren. Bewaar een eigen kopie in een sketchmap met dezelfde naam als het hoofd-<code>.ino</code>-bestand. Zet daarin alleen de sketch die je wilt uploaden; meerdere complete sketches met elk een <code>setup()</code> en <code>loop()</code> horen niet in dezelfde sketchmap.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>Instelling</strong></th>
-<th style="text-align: left;"><strong>Beginwaarde in de code</strong></th>
-<th style="text-align: left;"><strong>Betekenis</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>setpoint</code></td>
-<td style="text-align: left;">40</td>
-<td style="text-align: left;">Gewenste hoek in graden</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>kp</code></td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">Proportionele versterking</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>ki</code></td>
-<td style="text-align: left;">0.5</td>
-<td style="text-align: left;">Integrerende versterking</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>kd</code></td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">Differentiërende versterking</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>SetSampleTime(20)</code></td>
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">Ingestelde regelperiode in ms</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>MAX_PWM</code></td>
-<td style="text-align: left;">120 (voorlopig)</td>
-<td style="text-align: left;">Grenzen van de motoruitgang</td>
-</tr>
-</tbody>
-</table>
-<p>De begininstelling is dus een <strong>PI-regelaar</strong>. Deze waarden zijn geen garantie voor een veilige of goede afstelling van iedere opstelling. Je geeft in Serial Monitor de commando's <code>S</code> (start) en <code>X</code> (stop). Wijzig het setpoint en de versterkingen in de code en upload opnieuw met uitgeschakelde motorvoeding. Bij iedere start wordt de integrator gewist; tijdens wachten staat de regelaar uit.</p>
-<p>De hoek wordt berekend als de ingestelde <code>ANGLE_OFFSET_DEG</code> minus de sensorhoek in graden. Dit veronderstelt een bepaalde montage en nulstand van de sensor. De ruwe sensorhoek loopt rond bij een volledige omwenteling. Controleer of de werkhoek correct is en binnen het gekozen bereik geen sprong vertoont.</p>
+<p>Gebruik voor alle proeven dezelfde tolerantieband en vermeld de meetduur. Neem de overshoot als nul wanneer de arm niet boven het setpoint komt. Een stabiele eindhoek buiten de band heeft wel een stationaire fout, maar geen bereikte insteltijd. Als de respons nog niet stationair is, rapporteer je de stationaire fout als niet bepaald en verleng je zo nodig de meting.</p>
+<p>Ook de vorm van de beweging is belangrijk. Een ondergedempte respons heeft uitdovende oscillaties. Bij een standaard tweedeordesysteem met vaste eigenfrequentie geeft kritische demping de snelste staprespons zonder overshoot. Een overgedempte respons nadert die eindwaarde langzamer, eveneens zonder oscillaties. Kritische demping is iets anders dan de grens van instabiliteit: bij die grens doven oscillaties juist niet meer uit.</p>
+<figure id="fig-ondergedempt">
+<p><img alt="Ondergedempte respons bij een doelhoek van 60 graden" src="../../assets/periode%202/pid-ondergedempt.png" width="85%" /></p>
+<figcaption>
+<p>Figuur 2. Ondergedempte respons bij een doelhoek van 60 graden. De arm schiet door en oscilleert met afnemende amplitude. De onderste grafiek laat zien hoe de PWM daarbij verandert.</p>
+</figcaption>
+</figure>
+<p>In <a href="#fig-ondergedempt">Figuur 2</a> blijft de arm lange tijd heen en weer bewegen. In <a href="#fig-bijna-kritisch">Figuur 3</a> nadert de arm dezelfde doelhoek veel rustiger. De tweede respons noemen we hier bijna kritisch gedempt: er is nog een kleine overshoot zichtbaar. De meting is daarmee een praktisch voorbeeld van rustig regelgedrag, geen bewijs van exact kritische demping. Het aeropendulum met motor en PID is bovendien ingewikkelder dan een ideaal tweedeordesysteem.</p>
+<figure id="fig-bijna-kritisch">
+<p><img alt="Bijna kritisch gedempte respons bij een doelhoek van 60 graden: weinig overshoot en een snelle benadering van de doelhoek" src="../../assets/periode%202/pid-bijna-kritisch.png" width="85%" /></p>
+<figcaption>
+<p>Figuur 3. Bijna kritisch gedempte respons bij een doelhoek van 60 graden: weinig overshoot en een snelle benadering van de doelhoek. Vergelijk zowel de hoek als de PWM met de ondergedempte respons.</p>
+</figcaption>
+</figure>
+<p>In opdracht 2 probeer je deze twee soorten respons zelf te maken. Het gaat om het herkennen en beïnvloeden van het gedrag; de precieze meetcurve hangt af van jouw opstelling en instellingen. De appendix geeft de verdere afleiding van de beweging en de invloed van motorvertraging op stabiliteit.</p>
 <div class="admonition voorbereiding">
 <p class="admonition-title">Voorbereiding</p>
 <ol>
 <li>
-<p>Teken de regelkring en benoem setpoint, meetwaarde, regelfout, regelaar, actuator en sensor.</p>
+<p>Installeer de Arduino IDE en de Python-omgeving op je laptop. Controleer of de Arduino Uno R4 Minima wordt herkend en dat de juiste poort kan worden geselecteerd <a href="https://www.arduino.cc/en/software/">Link naar Arduino IDE</a>.</p>
 </li>
 <li>
-<p>Bereken voor <span class="arithmatex">\(r=40^\circ\)</span>, <span class="arithmatex">\(\theta=30^\circ\)</span> en <span class="arithmatex">\(K_p=2\)</span> de P-bijdrage. Welke PWM-duty cycle hoort daarbij als de andere bijdragen nul zijn?</p>
+<p>Installeer de bibliotheken <code>AS5600</code> en <code>PID_v1</code> (PID) in de Arduino IDE. Controleer de installatie door de meegeleverde stap-4-sketch te compileren; upload met uitgeschakelde motorvoeding.</p>
 </li>
 <li>
-<p>Gebruik je open-loopmetingen om een haalbare doelhoek en de benodigde stationaire motoruitgang te kiezen. Waarom kan een P-regelaar zonder basisuitgang daarvoor een niet-nul fout nodig hebben?</p>
+<p>Clone of download de GitHub-repository van de practicumhandleiding. Controleer of de bestanden correct zijn gedownload en dat je toegang hebt tot de arduino- en pythonbestanden in de map. <a href="https://github.com/HvA-TN/Practica">Link naar github repository</a></p>
 </li>
 <li>
-<p>Voorspel wat er verandert wanneer je achtereenvolgens <span class="arithmatex">\(K_p\)</span>, <span class="arithmatex">\(K_i\)</span> en <span class="arithmatex">\(K_d\)</span> verhoogt. Beschrijf ook een mogelijk nadeel per term.</p>
+<p>Leg in eigen woorden <a href="#fig-aeropid-regelkring">Figuur 1</a> uit. Welke signalen worden gemeten en welke worden aangestuurd?</p>
 </li>
 <li>
-<p>Zoek in de sketch de hoekconversie, de uitgangsbegrenzing en het moment waarop de motor wordt aangestuurd. Wat gebeurt er na een reset?</p>
+<p>Leg in eigen woorden uit wat P, D en I doen en hoe ze elkaar beïnvloeden. Gebruik de bewegingsvergelijking en de drie bijdragen van de PID-regelaar om dit te onderbouwen.</p>
 </li>
 <li>
-<p>Maak een meetplan voor een eerlijke vergelijking van P, PI en PID. Leg beginhoek, doelhoek, meetduur, herhalingen en criteria voor een goede regeling vooraf vast.</p>
-</li>
-</ol>
-</div>
-<h2 id="uitvoering">Uitvoering</h2>
-<div class="admonition opdracht">
-<p class="admonition-title">Opdracht 1 — Controle en eerste instelling</p>
-<ol>
-<li>
-<p>Controleer met uitgeschakelde motorvoeding de bedrading en bewegingsvrijheid. Lees via USB de sensor uit en beweeg de stilstaande arm voorzichtig. Controleer nulstand, teken en continuïteit van de hoekmeting.</p>
-</li>
-<li>
-<p>Laat een eventuele correctie van de hoekconversie controleren. Een grotere motoruitgang moet binnen het werkgebied een grotere gemeten hoek geven, passend bij <code>DIRECT</code>.</p>
-</li>
-<li>
-<p>Kies met de begeleider een haalbaar setpoint uit de open-loopmetingen en een toegestane bovengrens voor PWM. Pas hiervoor <code>MAX_PWM</code> aan.</p>
-</li>
-<li>
-<p>Begin met een P-regelaar: zet <code>ki = 0</code> en <code>kd = 0</code>. Kies een kleine positieve <code>kp</code> in overleg met de begeleider. Gebruik niet automatisch de volledige oorspronkelijke PI-instelling.</p>
-</li>
-<li>
-<p>Leg de instellingen en voedingswaarden vast. Upload met uitgeschakelde motorvoeding. Houd bij het inschakelen afstand en controleer of de regeling de afwijking in de juiste richting corrigeert.</p>
+<p>Welke risico's voorzie je bij het experimenteren met een PID-regelaar? Beschrijf één concrete situatie waarbij actieve feedback gevaarlijk kan zijn. Welke voorzorgsmaatregelen kun je nemen? Welke rol hebben softwarematige en hardwarematige beveiliging hierbij? Onderbouw welke combinatie je zou gebruiken.</p>
 </li>
 </ol>
 </div>
-<h3 id="meten-vanuit-de-arduino-ide">Meten vanuit de Arduino IDE</h3>
-<p>Gebruik de CSV-sketch voor dit practicum in <code>Practicum/Na2.2/Arduino/Openloop</code> of <code>Practicum/Na2.2/Arduino/PID</code>. Open voor open-loopmetingen <code>Aero_pendulum_OL_CSV.ino</code> en voor PID-metingen <code>Aero_pendulum_PID_CSV.ino</code>, ieder in zijn eigen gelijknamige map. Het programma draait volledig op de Arduino. Python wordt pas achteraf gebruikt voor de analyse.</p>
-<ol>
-<li>
-<p>Selecteer in de Arduino IDE de Arduino Uno R4 Minima en de juiste poort. Installeer <code>AS5600</code> van Rob Tillaart. Alleen de PID-sketch heeft daarnaast de bibliotheek <code>PID</code> van Brett Beauregard nodig.</p>
-</li>
-<li>
-<p>Controleer met de motorvoeding uit de bedrading en hoekconversie. Stel met de begeleider <code>MAX_PWM</code>, <code>MIN_ANGLE_DEG</code> en <code>MAX_ANGLE_DEG</code> vast. De meegeleverde waarden zijn voorlopig.</p>
-</li>
-<li>
-<p>Wijzig voor open-loop <code>OPEN_LOOP_PWM</code>; wijzig voor PID <code>setpoint</code>, <code>kp</code>, <code>ki</code> en <code>kd</code>. De proefduur staat in <code>MEASUREMENT_MS</code> en is standaard 30000 ms. Upload met uitgeschakelde motorvoeding.</p>
-</li>
-<li>
-<p>Open Serial Monitor en kies 115200 baud. Schakel de weergave van extra tijdstempels uit: de sketch levert zelf de tijd. Sluit Serial Plotter en andere programma's op dezelfde poort.</p>
-</li>
-<li>
-<p>Verstuur de hoofdletter <code>C</code> voor tien seconden sensorcontrole zonder motoraansturing. Controleer de hoek met alleen USB aangesloten. De uitvoer stopt daarna vanzelf. Een ongeldige sensorstatus of werkhoek levert een foutregel en beëindigt de opname.</p>
-</li>
-<li>
-<p>Maak Serial Monitor leeg vóór de echte meting. Schakel de gecontroleerde motorvoeding in terwijl de sketch wacht. Houd afstand van arm en propeller en verstuur <code>S</code>. De Arduino start de motor en verstuurt een CSV-kop gevolgd door meetregels. Een eventuele regeleinde-instelling mag blijven staan; CR en LF worden genegeerd.</p>
-</li>
-<li>
-<p>Na de ingestelde proefduur stopt de Arduino de motor en de uitvoer automatisch. Verstuur <code>X</code> om eerder te stoppen. Bij een sensorfout of een hoek buiten het ingestelde bereik stopt de motor eveneens. Schakel na afloop de motorvoeding uit.</p>
-</li>
-</ol>
-<p>Het sluiten van Serial Monitor is geen stopcommando. Gebruik <code>X</code> of schakel de motorvoeding uit. Houd de fysieke uitschakeling bereikbaar: de softwarematige stop werkt alleen zolang de microcontroller zijn programma blijft uitvoeren.</p>
-<h3 id="csv-bestand-bewaren">CSV-bestand bewaren</h3>
-<p>De Arduino verstuurt CSV-tekst via USB; zonder opslagmodule schrijft hij geen bestand op de computer. Bewaar de meetgegevens als volgt:</p>
-<ol>
-<li>
-<p>Wacht totdat de uitvoer is gestopt. Selecteer en kopieer de volledige opname uit Serial Monitor, vanaf de regel die begint met <code>t_ms,setpoint_deg</code> tot en met de laatste volledige meetregel.</p>
-</li>
-<li>
-<p>Plak deze tekst in een leeg tekstbestand, bijvoorbeeld in Kladblok. Sla op als <code>pid_run1.csv</code> of <code>ol_pwm60_run1.csv</code>. Kies bij opslaan zo nodig "Alle bestanden", zodat de naam niet eindigt op <code>.csv.txt</code>.</p>
-</li>
-<li>
-<p>Gebruik een nieuwe bestandsnaam per proef. Neem geen meldingen van de IDE, geweigerde startmeldingen of een tweede CSV-kop op in hetzelfde bestand. Controleer bij langere proeven of het begin van de uitvoer nog aanwezig is; verkort de proef als de monitor oude regels niet bewaart.</p>
-</li>
-</ol>
-<p>De belangrijkste kolommen zijn <code>t_ms</code> (tijd sinds het startcommando), <code>angle_deg</code> (hoek), <code>pwm</code> (werkelijke PWM-telwaarde), <code>setpoint_deg</code> (leeg bij OL), <code>running</code> en <code>sensor_ok</code>. Noteer de gekozen PWM- of PID-instellingen en de maximale PWM zelf in het labjournaal. Een ongeldige hoek blijft leeg. Het scheidingsteken is een komma en het decimaalteken een punt. Noteer voedingsinstellingen en kalibratie apart in het labjournaal.</p>
-<p>Meten, regelen en CSV-uitvoer gebeuren in dezelfde ronde, nominaal iedere 20 ms (50 Hz). Gebruik de tijdstempels voor de tijdas, met <span class="arithmatex">\(t=0\)</span> bij het startcommando. De eerste meetregel volgt enkele milliseconden later. Controleer de werkelijke intervallen door opeenvolgende tijdstempels van elkaar af te trekken. Er is geen nulmeting vóór de motoraansturing; bepaal de beginhoek vooraf met <code>C</code>. Verdere instructies staan in <code>Arduino/README.md</code>.</p>
+<h2 id="experiment">Experiment</h2>
 <div class="admonition opdracht">
-<p class="admonition-title">Opdracht 2 — P-regeling</p>
+<p class="admonition-title">Opdracht 0: opstelling opbouwen en controleren</p>
 <ol>
 <li>
-<p>Onderzoek minimaal drie stapsgewijs gekozen waarden van <span class="arithmatex">\(K_p\)</span>, met <span class="arithmatex">\(K_i=K_d=0\)</span>. Verhoog niet verder bij toenemende oscillaties of overschrijding van het afgesproken bereik.</p>
+<p>Bouw de opstelling op volgens <a href="#tab-aansluitingen">Tabel 1</a>. Laat de bedrading en voedingsinstellingen controleren. Spreek de maximale voedingsspanning en PWM af en noteer deze.</p>
 </li>
 <li>
-<p>Gebruik per meting dezelfde ruststand en hetzelfde setpoint. Schakel de motorvoeding uit, wacht tot de arm stilstaat en upload of reset. Schakel de gecontroleerde motorvoeding in terwijl de sketch wacht. Verstuur <code>S</code> in Serial Monitor. De Arduino-tijd in de CSV begint bij dat startcommando.</p>
+<p>Upload <code>Stap_4_Closed_loop.ino</code> met uitgeschakelde motorvoeding. Open <code>script.ipynb</code>, stel de juiste poort in en sluit Serial Monitor en Serial Plotter.</p>
 </li>
 <li>
-<p>Meet tot een stationaire toestand zichtbaar is, of tot de vooraf afgesproken maximale meetduur. Registreer ook wanneer de arm het setpoint niet bereikt.</p>
+<p>Bepaal met <em>1. Hoek meten</em> de sensorhoek in de verticale ruststand. Gebruik deze als <code>beginhoek</code> en controleer de hoekmeting bij optillen.</p>
 </li>
 <li>
-<p>Herhaal iedere instelling minimaal drie keer. Bewaar per proef de CSV en noteer <span class="arithmatex">\(K_p\)</span>, <span class="arithmatex">\(K_i\)</span>, <span class="arithmatex">\(K_d\)</span>, setpoint, PWM-grens en voedingsinstellingen in je labjournaal.</p>
-</li>
-<li>
-<p>Vergelijk snelheid, oscillaties en blijvende fout. Kies een bruikbare P-instelling als uitgangspunt voor de volgende opdracht.</p>
+<p>Controleer in <em>2. PID instellen</em> de werkhoek met <code>max_pwm=0</code> en de motorvoeding uit. Deze moet in rust ongeveer nul zijn en toenemen bij optillen. Je zult dit moeten corrigeren als dit niet klopt. Controleer voor iedere meetcel je eigen instellingen: het uitvoeren van de cel start ook de proef.</p>
 </li>
 </ol>
 </div>
+<p><span id="tab-aansluitingen"></span></p>
+<p><strong>Tabel 1.</strong> Signaalaansluitingen van de Arduino naar de AS5600-hoeksensor en de L298N H-brug. Gebruik daarnaast de motor- en voedingsaansluitingen uit het <a href="../aeropendulum-openloop/#app-schema">open-looppracticum</a>, met een gemeenschappelijke GND.</p>
+<table>
+<thead>
+<tr>
+<th><em>Van Arduino</em></th>
+<th><em>Draadkleur</em></th>
+<th><em>Naar component</em></th>
+<th><em>Aansluiting</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GND (Analog)</td>
+<td>Zwart</td>
+<td>Hoeksensor</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>3.3 V</td>
+<td>Rood</td>
+<td>Hoeksensor</td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>Groen</td>
+<td>Hoeksensor</td>
+<td>SDA</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Wit</td>
+<td>Hoeksensor</td>
+<td>SCL</td>
+</tr>
+<tr>
+<td>D9 (digitaal, PWM)</td>
+<td>Paars</td>
+<td>H-brug</td>
+<td>ENA</td>
+</tr>
+<tr>
+<td>D10 (digitaal)</td>
+<td>Oranje</td>
+<td>H-brug</td>
+<td>IN1</td>
+</tr>
+<tr>
+<td>D11 (digitaal)</td>
+<td>Geel</td>
+<td>H-brug</td>
+<td>IN2</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition opdracht">
-<p class="admonition-title">Opdracht 3 — PI-regeling</p>
+<p class="admonition-title">Opdracht 1: P-regeling onderzoeken</p>
 <ol>
 <li>
-<p>Houd de gekozen <span class="arithmatex">\(K_p\)</span> gelijk en laat <span class="arithmatex">\(K_d=0\)</span>. Voeg een kleine positieve <span class="arithmatex">\(K_i\)</span> toe. Onderzoek minimaal drie waarden en herhaal het meetprotocol van opdracht 2.</p>
+<p>Kies een doelhoek van 30 graden en begin met een kleine P-waarde, met I en D op nul. Gebruik de afgesproken PWM-grens. Voorspel de respons.</p>
 </li>
 <li>
-<p>Start voor iedere proef een nieuwe registratie. Het startcommando wist de integrator en activeert de regeling direct. Daardoor neemt de integrator de geschiedenis van de vorige proef niet mee.</p>
+<p>Onderzoek minstens vijf P-waarden vanuit dezelfde beginstand. Houd de overige instellingen gelijk. Bewaar de meetdata en instellingen (<code>opslaan=True</code>).</p>
 </li>
 <li>
-<p>Onderzoek of de stationaire fout kleiner wordt en welke invloed <span class="arithmatex">\(K_i\)</span> heeft op overshoot en insteltijd. Bekijk daarbij ook of de PWM-uitgang tegen een grens blijft staan.</p>
+<p>Maak vergelijkbare grafieken van hoek, setpoint en PWM tegen de tijd. Bepaal overshoot, insteltijd en stationaire fout.</p>
 </li>
 <li>
-<p>Selecteer een PI-instelling en onderbouw de keuze met meetresultaten. Gebruik geen onhaalbaar setpoint om de integrator bewust te laten oplopen.</p>
+<p>Onderzoek binnen de veilige grenzen wanneer oscillaties niet meer uitdoven. Stop direct bij sterk toenemende uitslagen; vermeld wanneer de veilige grens verder onderzoek verhindert.</p>
+</li>
+<li>
+<p>Verklaar je waarnemingen met de theorie en vergelijk ze met je voorspelling. Betrek de stabiliteitsafleiding in de appendix bij je verklaring.</p>
 </li>
 </ol>
 </div>
 <div class="admonition opdracht">
-<p class="admonition-title">Opdracht 4 — PID-regeling</p>
+<p class="admonition-title">Opdracht 2: P, D en I afstellen en de voorbeeldfiguren namaken</p>
 <ol>
 <li>
-<p>Houd de gekozen <span class="arithmatex">\(K_p\)</span> en <span class="arithmatex">\(K_i\)</span> gelijk. Vergelijk <span class="arithmatex">\(K_d=0\)</span> met minimaal twee kleine positieve waarden van <span class="arithmatex">\(K_d\)</span> en herhaal iedere meting drie keer.</p>
+<p>Begin bij 60 graden met een P-instelling uit opdracht 1 en controleer opnieuw de stabiliteit. Onderzoek vervolgens de invloed van D en daarna van I. Verander telkens slechts een parameter.</p>
 </li>
 <li>
-<p>Bekijk zowel de hoek als de PWM-uitgang. Minder overshoot kan samengaan met een onrustiger stuursignaal. Verlaag <span class="arithmatex">\(K_d\)</span> wanneer meetruis de motoruitgang sterk laat fluctueren.</p>
+<p>Maak met eigen metingen de twee soorten respons uit <a href="#fig-ondergedempt">Figuur 2</a> en <a href="#fig-bijna-kritisch">Figuur 3</a> na. Onderbouw je keuze van de instellingen.</p>
 </li>
 <li>
-<p>Kies op basis van de resultaten een eindinstelling. Als PI beter presteert dan PID, is <span class="arithmatex">\(K_d=0\)</span> een geldige uitkomst; motiveer dit met je metingen.</p>
+<p>Vergelijk de responsen in grafieken met gelijke asschalen. Bepaal overshoot, insteltijd en stationaire fout en beoordeel de demping. Leg instellingen en resultaten vast in je labjournaal, inclusief doelhoek, P, I, D, regelinterval en ingestelde grenzen.</p>
 </li>
 <li>
-<p>Test deze instelling bij een tweede haalbare doelhoek met dezelfde begincondities. Onderzoek of de afstelling ook daar bruikbaar is.</p>
+<p>Onderzoek of je de arm ook op 90 graden kunt stabiliseren. Welke aanpassingen zijn nodig en hoe verklaar je die?</p>
+</li>
+</ol>
+</div>
+<h2 id="veiligheid-bij-pid-regeling">Veiligheid bij PID-regeling</h2>
+<p>Een regeling die uiteindelijk de juiste waarde bereikt, kan onderweg toch een gevaarlijke situatie veroorzaken. Denk aan een drukinstallatie: als een pomp te lang blijft toevoeren, kan de druk boven de toegestane waarde uitkomen. Het later herstellen van de druk maakt die overschrijding niet ongedaan. Ook bij het aeropendulum kan overshoot ongewenst zijn, bijvoorbeeld wanneer de arm een mechanische aanslag raakt.</p>
+<p><em>Softwarematige beveiliging</em> gebruikt metingen om in te grijpen. Je kunt bijvoorbeeld de motor uitschakelen wanneer een maximale hoek wordt gemeten, of voorkomen dat de motoruitgang te snel toeneemt. Dit werkt alleen als de sensor, het programma en de aansturing correct functioneren. Bovendien verdwijnt de beweging niet meteen als de motor wordt uitgeschakeld: de arm kan door zijn snelheid nog verder bewegen. Ook het meetinterval en de verwerking kosten tijd: een grensoverschrijding wordt niet onmiddellijk gedetecteerd. Een PWM-stapbegrenzing beïnvloedt de aansturing, maar garandeert op zichzelf geen veilige hoek.</p>
+<p><em>Hardwarematige beveiliging</em> kan onafhankelijk van het regelprogramma ingrijpen. Voorbeelden zijn een noodstop die de motorvoeding onderbreekt en een eindschakelaar die de aandrijving rechtstreeks uitschakelt. Afscherming beperkt de kans op contact met de propeller. Bij drukinstallaties kan een geschikt veiligheidsventiel overdruk afvoeren (overdrukventiel). Welke voorziening nodig is, hangt af van het gevaar en de opgeslagen energie. Beoordeel daarom naast het regelgedrag ook wat er bij een storing kan gebeuren.</p>
+<p>In de volgende opdrachten onderzoek je twee softwarematige maatregelen. Eerst test je een stop bij overschrijding van de hoekgrens, daarna een begrenzing van de PWM-toename. Beoordeel telkens zowel de invloed op de beweging als de beperkingen van de maatregel.</p>
+<div class="admonition opdracht">
+<p class="admonition-title">Opdracht 3: maximale hoek van 100 graden</p>
+<ol>
+<li>
+<p>Gebruik 4. Hoekgrens instellen met kies zelf een maximale hoek. Neem je eigen nulstand en PID-instellingen over en kies zelf een geschikte doelhoek.</p>
+</li>
+<li>
+<p>Test de hoekstop eerst met uitgeschakelde motorvoeding en <code>max_pwm=0</code>. Beweeg de arm alleen voorbij de grens als dit mechanisch mogelijk is. Noteer je voorspelling en waarneming.</p>
+</li>
+<li>
+<p>Herstel de afgesproken PWM-grens en vergelijk de respons bij 90 graden met opdracht 2. Onderzoek of je de regeling kunt verbeteren. Lok met draaiende propeller geen overschrijding uit.</p>
+</li>
+<li>
+<p>Beoordeel de beperkingen van deze beveiliging. Welke aanvullende hardwarematige voorziening zou je kiezen en waarom?</p>
 </li>
 </ol>
 </div>
 <div class="admonition opdracht">
-<p class="admonition-title">Verdieping — Setpointsprong tijdens de regeling</p>
-<p>Pas in een eigen kopie het setpoint na een vast tijdstip eenmalig aan naar een tweede goedgekeurde hoek. Dit vraagt een codewijziging; het kan niet via een commando in de oorspronkelijke sketch. Registreer het veranderende setpoint mee. Laat de wijziging vooraf controleren en test een opgaande en neergaande sprong. Raak de bewegende arm niet aan om een verstoring te maken. Vergelijk de responsen en verklaar de invloed van de eenzijdige aandrijving.</p>
-</div>
-<h2 id="verwerking-in-python">Verwerking in Python</h2>
-<p>Het onderstaande voorbeeld leest de uit Serial Monitor opgeslagen CSV in. Gebruik een apart bestand per proef en neem de door de Arduino verstuurde kolomkop mee.</p>
-<p><strong>Meetbestand inlezen en controleren</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'pid_meting.csv'</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">df</span><span class="p">[</span><span class="s1">'t_s'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'t_ms'</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'t_ms'</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="s1">'Meetinterval [ms]:'</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">if</span> <span class="p">(</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Controleer op reset of onjuiste tijdstempels.'</span><span class="p">)</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'t_s'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'angle_deg'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Gemeten hoek'</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'t_s'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'setpoint_deg'</span><span class="p">],</span> <span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Setpoint'</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Hoek [graden]'</span><span class="p">)</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'t_s'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'pwm'</span><span class="p">])</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'PWM [telwaarden]'</span><span class="p">)</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Tijd sinds startcommando [s]'</span><span class="p">)</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ax</span><span class="p">:</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">a</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-Gebruik de geregistreerde tijdstempels voor de tijdas. Het meet- en regelinterval hoort ongeveer 20 ms te zijn. De bibliotheek schaalt de I- en D-term met die ingestelde periode; afwijkingen daarvan zijn relevant voor de regeling. Vergelijk daarom ook de spreiding van de tijdsintervallen.</p>
-<h3 id="beoordelingscriteria">Beoordelingscriteria</h3>
-<p>Kies voor alle proeven dezelfde analysemethode. Neem <span class="arithmatex">\(t_0=0\)</span> bij het startcommando; bij de verdiepingsopdracht gebruik je het tijdstip van de setpointsprong. Een opstartrespons vanaf rust is niet hetzelfde experiment als een sprong vanuit een geregeld evenwicht.</p>
-<ul>
-<li>
-<p><strong>Stationaire fout:</strong> <span class="arithmatex">\(e_\mathrm{ss}=r-\overline{\theta}\)</span>, met de gemiddelde hoek over een aantoonbaar stabiel eindinterval, bijvoorbeeld de laatste vijf seconden. Geef ook de standaarddeviatie en de lengte van dit interval. Bij blijvende drift of oscillatie rapporteer je dat geen stationaire toestand is bereikt.</p>
-</li>
-<li>
-<p><strong>Overshoot bij een opgaande respons:</strong> <span class="arithmatex">\(O=\max(0,\theta_\mathrm{max}-r)\)</span> in graden. Eventueel normaliseer je als <span class="arithmatex">\(100\%\,O/|r-\theta_0|\)</span>, waarbij <span class="arithmatex">\(\theta_0\)</span> de beginhoek is en <span class="arithmatex">\(r\ne\theta_0\)</span>.</p>
-</li>
-<li>
-<p><strong>Insteltijd:</strong> tijd vanaf <span class="arithmatex">\(t_0\)</span> totdat de hoek binnen een vooraf gekozen band rond het setpoint blijft, bijvoorbeeld <span class="arithmatex">\(r\pm2^\circ\)</span>, tot het einde van de registratie. Vereis daarna nog minimaal vijf seconden meettijd. Als dit niet gebeurt, rapporteer je "niet bereikt binnen de meetduur".</p>
-</li>
-<li>
-<p><strong>Verzadiging:</strong> geef aan of en hoelang de uitgang nabij nul of de ingestelde bovengrens blijft. Gebruik voor de tijdsduur de tijdstempels en noteer de gebruikte tolerantie.</p>
-</li>
-</ul>
-<div class="admonition opdracht">
-<p class="admonition-title">Opdracht 5 — Vergelijken en verklaren</p>
+<p class="admonition-title">Opdracht 4: de PWM-toename per tijdstap verkleinen</p>
 <ol>
 <li>
-<p>Controleer meetinterval, ontbrekende waarden en eventuele resets. Leg uit welke gegevens bruikbaar zijn en waarom.</p>
+<p>Gebruik 5. PWM-stap begrenzen met dezelfde sketch en je eigen instellingen. Behoud de hoekgrens van 100 graden. Maak bij 60 graden een referentiemeting met <code>max_pwm_stap=0</code> (begrenzing uit).</p>
 </li>
 <li>
-<p>Maak voor de gekozen P-, PI- en PID-instelling grafieken van hoek, setpoint en PWM. Gebruik dezelfde asschalen en lijn de proeven uit op <span class="arithmatex">\(t_0\)</span>.</p>
+<p>Onderzoek verschillende positieve waarden van <code>max_pwm_stap</code>. Deze begrenst alleen de stijging per regelstap; dalen en stoppen gaan direct. Houd de overige instellingen gelijk en voorspel telkens de respons.</p>
 </li>
 <li>
-<p>Maak een tabel met per instelling <span class="arithmatex">\(K_p\)</span>, <span class="arithmatex">\(K_i\)</span>, <span class="arithmatex">\(K_d\)</span>, stationaire fout, overshoot en insteltijd. Rapporteer de spreiding over de drie herhalingen.</p>
+<p>Vergelijk hoek en PWM met de referentiemeting. Onderzoek ook welke rol <code>delta_t</code> speelt. Onderbouw je conclusie met de meetgegevens.</p>
 </li>
 <li>
-<p>Verklaar de verschillen tussen P, PI en PID aan de hand van de drie regelbijdragen. Betrek de PWM-grafieken bij je verklaring.</p>
-</li>
-<li>
-<p>Vergelijk de doelhoek en benodigde stationaire PWM met je open-loopmetingen. Bespreek waarom terugkoppeling kan corrigeren voor afwijkingen, maar geen onhaalbare hoek bereikbaar maakt.</p>
-</li>
-<li>
-<p>Formuleer een conclusie: welke instelling voldoet het best aan jouw vooraf gekozen criteria? Bespreek de invloed van meetruis, timing, wrijving en uitgangsbegrenzing.</p>
+<p>Stel de PID-regelaar opnieuw af voor een gekozen stapgrens en test bij 30, 60 en 90 graden. Herhaal je eindinstellingen minstens drie keer. Verklaar wanneer stabiliseren wel of niet lukt.</p>
 </li>
 </ol>
 </div>
@@ -1085,16 +1344,534 @@ Gebruik de geregistreerde tijdstempels voor de tijdas. Het meet- en regelinterva
 <p class="admonition-title">Afronding</p>
 <ol>
 <li>
-<p>Schakel de motorvoeding uit en wacht tot de propeller stilstaat.</p>
+<p>Schakel de motorvoeding uit en wacht tot de propeller stilstaat. Laat de meetresultaten controleren door de practicumbegeleider.</p>
 </li>
 <li>
-<p>Laat de gekozen afstelling en meetresultaten controleren door de practicumbegeleider.</p>
+<p>Voeg de grafieken en parametertabellen toe aan je digitale labjournaal. Geef iedere figuur een duidelijk onderschrift met de gebruikte instellingen.</p>
 </li>
 <li>
-<p>Bewaar de gebruikte sketch, ruwe meetbestanden, instellingen en Python-analyse bij elkaar in je practicum-map.</p>
+<p>Beschrijf in <em>Resultaten en Discussie</em> hoe P, D en I de respons beïnvloedden.</p>
 </li>
 <li>
-<p>Werk je labjournaal bij met de meetmethode, grafieken, vergelijkingstabel en onderbouwde conclusie.</p>
+<p>Bespreek de invloed en beperkingen van de hoekstop en de PWM-stapbegrenzing. Vergelijk je conclusies met je verwachtingen uit de voorbereiding.</p>
+</li>
+<li>
+<p>Doe eventueel eerst het onderdeel <em>Extra</em> hieronder. Breek daarna de opstelling af en ruim de werkplek op. Controleer of alle componenten compleet zijn.</p>
+</li>
+</ol>
+</div>
+<h2 id="extra-arduino-aanpassen-met-platformio">Extra: Arduino aanpassen met PlatformIO</h2>
+<p>Met de extensie <em>PlatformIO IDE</em> kun je de Arduino-code vanuit VS Code aanpassen, compileren en uploaden.</p>
+<ol>
+<li>Installeer de extensie en maak via <em>PlatformIO Home &gt; New Project</em> een project voor <em>Arduino Uno R4 Minima</em>, met framework <em>Arduino</em>.</li>
+<li>Verwijder de gegenereerde <code>src/main.cpp</code> en kopieer <code>Stap_4_Closed_loop.ino</code> naar <code>src</code>. Laat de extensie <code>.ino</code> behouden. Voeg via <em>Libraries &gt; Add to Project</em> de bibliotheken <em>AS5600</em> van Rob Tillaart en <em>PID</em> van Brett Beauregard toe.</li>
+<li>Kies <em>Project Tasks &gt; Build</em>. Los eventuele compilatiefouten op voordat je verdergaat.</li>
+<li>Pas in je kopie de precisie van de verzonden werkhoek aan: verander <code>Serial.print(werkhoek, 3)</code> naar <code>Serial.print(werkhoek, 1)</code>. Voorspel wat je in de meetdata terugziet.</li>
+<li>Schakel de motorvoeding uit, verbind de Arduino via USB en sluit actieve notebookmetingen en seriële monitors. Kies <em>Upload</em> in PlatformIO. Controleer daarna in de notebook de meting met <code>max_pwm=0</code>. Zet de wijziging terug en upload opnieuw.</li>
+</ol>
+<p>Lukt uploaden niet? Controleer eerst het gekozen board, de USB-verbinding en of een ander programma de poort gebruikt. De basisinstellingen in <code>platformio.ini</code> zijn:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[env:uno_r4_minima]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">platform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">renesas-ra</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">board</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">uno_r4_minima</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="na">framework</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">arduino</span>
+</code></pre></div>
+<p>Laat de door <em>Add to Project</em> toegevoegde <code>lib_deps</code> staan. Meer uitleg: <a href="https://docs.platformio.org/en/latest/integration/ide/vscode.html">PlatformIO in VS Code</a> en <a href="https://docs.platformio.org/en/latest/boards/renesas-ra/uno_r4_minima.html">Uno R4 Minima</a>.</p>
+<h2 id="appendix-materialenlijst">Appendix: Materialenlijst</h2>
+<ul>
+<li>Arduino Uno R4 Minima;</li>
+<li>L298N H-brug;</li>
+<li>AS5600 magnetische hoeksensor;</li>
+<li>Elektromotor met propeller;</li>
+<li>Externe voeding;</li>
+<li>USB-C kabel en koppelstuk;</li>
+<li>Platform met paal en 3D geprint aansluitstuk, arm met draaipunt en magneet;</li>
+<li>Diverse aansluitdraden (Male-Male, Male-Female, Female-Female);</li>
+<li>Laptop of computer met Arduino IDE en Python 3.11+;</li>
+</ul>
+<h2 id="appendix-python-aansturing-en-meetdata">Appendix: Python-aansturing en meetdata</h2>
+<p>De functies staan in <code>Arduino/Closed_loop/closed_loop/meting.py</code>. Je hoeft deze module niet aan te passen. <code>test_hoek</code> meet de ruwe sensorhoek met de motoruitgang op nul. <code>voer_pid_meting_uit</code> stuurt de instellingen naar de Arduino en retourneert twee resultaten: de meetpunten en het pad naar de CSV (of <code>None</code> als opslaan uitstaat). Elk PID-meetpunt bevat achtereenvolgens tijd in seconden, doelhoek, werkhoek in graden en toegepaste PWM.</p>
+<p>De werkhoek is de sensorhoek minus <code>beginhoek</code>, omgerekend naar het bereik van -180 tot 180 graden. De CSV bevat de kolommen <code>tijd</code>, <code>hoek</code> en <code>pwm</code>; de doelhoek en andere instellingen staan in de commentaarheader. Daarom gebruikt de notebook <code>pd.read_csv(bestand, comment="#")</code>. Zonder CSV maakt de notebook een DataFrame uit de vier waarden in het geheugen.</p>
+<p>Voor CSV-opslag in de hoekgrenscel moet ook <code>opslaan=opslaan</code> aan de functieaanroep worden toegevoegd en de variabele op <code>True</code> staan.</p>
+<p>Na de hoekgrensproef of de begrensde proef kun je met onderstaande cel de juiste meetreeks selecteren. De oorspronkelijke cel Meetdata bekijken verwijst alleen naar de eerste PID-meting.</p>
+<p><strong>Meetgegevens van de vervolgproeven bekijken</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Kies de hoekgrensproef:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">punten</span><span class="p">,</span> <span class="n">bestand</span> <span class="o">=</span> <span class="n">metingen_veiligheid</span><span class="p">,</span> <span class="n">csv_pad_veiligheid</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Of kies de proef met PWM-stapbegrenzing:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># punten, bestand = metingen_begrensd, csv_pad_begrensd</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">if</span> <span class="n">bestand</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">punten</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"tijd"</span><span class="p">,</span> <span class="s2">"doelhoek"</span><span class="p">,</span> <span class="s2">"hoek"</span><span class="p">,</span> <span class="s2">"pwm"</span><span class="p">]</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">bestand</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s2">"#"</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<p>Bij een fout, zoals de hoekstop, keert de functie niet normaal terug: de resultaatvariabelen worden dan niet bijgewerkt en kunnen nog data van een vorige proef bevatten. Met <code>opslaan=True</code> worden reeds ontvangen meetpunten wel bewaard; lees in dat geval het CSV-pad uit de uitvoer en laad dat bestand expliciet.</p>
+<h3 id="stoppen-en-communicatie">Stoppen en communicatie</h3>
+<p>Met <code>mode="fixed"</code> stopt de proef na <code>meetduur</code>; met <code>mode="continuous"</code> onderbreek je de notebookcel om te stoppen. Python verstuurt tijdens het meten ongeveer iedere halve seconde <code>PING</code>. De Arduino schakelt de motor uit als er langer dan drie seconden geen heartbeat is ontvangen. Daarnaast probeert Python bij afronding, onderbreking of een fout altijd <code>STOP</code> te versturen. De volgende ingekorte passage uit de meetfunctie laat dit zien:</p>
+<p><strong>Stopcommando bij afsluiten van de meting</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">_stuur</span><span class="p">(</span><span class="n">arduino</span><span class="p">,</span> <span class="s2">"STOP"</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="n">arduino</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">except</span> <span class="p">(</span><span class="n">serial</span><span class="o">.</span><span class="n">SerialException</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"STOP kon niet worden verzonden: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<p>Dit fragment hoort bij de functie in de module en is geen losse notebookcel. Blijf bij onverwacht gedrag de motorvoeding zelf uitschakelen. De hoekgrens stopt de motor bij een gemeten werkhoek boven <code>max_hoek</code>; de PWM-stapgrens beperkt uitsluitend de stijging van de uitgang. Geen van beide neemt de bewegingsenergie van de arm direct weg.</p>
+<h2 id="appendix-afleiding-bewegingsvergelijking">Appendix: Afleiding bewegingsvergelijking</h2>
+<h3 id="bewegingsvergelijking-van-het-aeropendulum-open-loop">Bewegingsvergelijking van het aeropendulum (open loop)</h3>
+<p>We beschouwen een aeropendulum bestaande uit een roterende arm met een propeller. De propeller levert een stuwkracht waardoor de arm om zijn draaipunt roteert.</p>
+<p>Volgens de tweede wet van Newton voor rotaties geldt:</p>
+<div class="arithmatex">\[
+\sum \tau = J \ddot{\theta} . \tag{1}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(J\)</span> het traagheidsmoment rond het draaipunt en <span class="arithmatex">\(\theta\)</span> de hoek van de arm ten opzichte van de verticale evenwichtspositie.</p>
+<p>Op de arm werken drie koppels:</p>
+<ul>
+<li>Het motorkoppel door de stuwkracht van de propeller.</li>
+<li>Het zwaartekrachtsmoment.</li>
+<li>Het dempende koppel door wrijving.</li>
+</ul>
+<p>Het motorkoppel schrijven we als <span class="arithmatex">\(\tau_{T} = l_{T} F_{T}\)</span>, waarbij <span class="arithmatex">\(l_{T}\)</span> de afstand tussen het draaipunt en de aangrijpingslijn van de stuwkracht is. Het zwaartekrachtsmoment is: <span class="arithmatex">\(\tau_{g} = - m g l \sin (\theta)\)</span>. Hierin is <span class="arithmatex">\(l\)</span> de afstand van het draaipunt tot het massamiddelpunt. We modelleren de wrijving als een krachtmoment dat evenredig is met de hoeksnelheid: <span class="arithmatex">\(\tau_{w} = - b \dot{\theta}\)</span>.</p>
+<p>De bewegingsvergelijking wordt daarmee:</p>
+<div class="arithmatex">\[
+J \ddot{\theta} = l_{T} F_{T} - b \dot{\theta} - m g l \sin (\theta) \tag{2}
+\]</div>
+<p>Of, na herschikken:</p>
+<div class="arithmatex">\[
+J \ddot{\theta} + b \dot{\theta} + m g l \sin (\theta) = l_{T} F_{T} \tag{3}
+\]</div>
+<h4 id="relatie-tussen-pwm-en-stuwkracht">Relatie tussen PWM en stuwkracht</h4>
+<p>We nemen aan dat de stuwkracht direct en lineair<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. afhangt van de PWM-waarde <span class="arithmatex">\(u\)</span>:</p>
+<div class="arithmatex">\[
+F_{T} = k_{u} u \tag{4}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(k_{u}\)</span> een evenredigheidsconstante. We defineren nu <span class="arithmatex">\(A = l_{T} k_{u}\)</span>, zodat het motorkoppel kan worden geschreven als <span class="arithmatex">\(\tau_{T} = A u\)</span>.
+Daarmee wordt de bewegingsvergelijking:</p>
+<div class="arithmatex">\[
+\boxed{J \ddot{\theta} + b \dot{\theta} + m g l \sin (\theta) = A u} \tag{5}
+\]</div>
+<p>Dit is een niet-lineaire differentiaalvergelijking van de tweede orde. In deze afleiding zijn hoeken in radialen; de notebook gebruikt graden. Numerieke regelversterkingen kun je daarom alleen vergelijken na omzetting naar dezelfde hoekeenheid.</p>
+<h3 id="de-p-regelaar">De P-regelaar</h3>
+<p>We willen de pendulum stabiliseren rond een gewenste hoek <span class="arithmatex">\(\theta_{r}\)</span>. De fout tussen de gewenste en de gemeten hoek is:</p>
+<div class="arithmatex">\[
+e (t) = \theta_{r} - \theta (t) \tag{6}
+\]</div>
+<p>Een proportionele regelaar past de PWM-waarde aan op basis van deze fout:</p>
+<div class="arithmatex">\[
+u (t) = u_{0} + K_{p} e (t) \tag{7}
+\]</div>
+<p>In deze afleiding nemen we een extra evenwichtsaansturing <span class="arithmatex">\(u_{0}\)</span> aan. De gebruikte sketch heeft geen afzonderlijke instelling voor deze basisuitgang: bij P-regeling ontstaat de benodigde uitgang door een blijvende fout, en bij PID kan de I-term deze leveren.</p>
+<p>Hierin zijn:</p>
+<ul>
+<li><span class="arithmatex">\(u_{0}\)</span>: de PWM-waarde die nodig is om de gewenste hoek vast te houden.</li>
+<li><span class="arithmatex">\(K_{p}\)</span>: de proportionele versterking.</li>
+</ul>
+<p>We nemen aan dat de gewenste hoek constant is.</p>
+<p>Bij de gewenste hoek <span class="arithmatex">\(\theta_{0} = \theta_{r}\)</span> is de pendulum in evenwicht. De hoeksnelheid en hoekversnelling zijn dan nul:</p>
+<div class="arithmatex">\[
+\dot{\theta} = 0 , \quad \ddot{\theta} = 0 \tag{8}
+\]</div>
+<p>Uit de bewegingsvergelijking volgt:</p>
+<div class="arithmatex">\[
+m g l \sin (\theta_{0}) = A u_{0} \tag{9}
+\]</div>
+<p>De PWM-waarde die nodig is om dit evenwicht te handhaven is dus:</p>
+<div class="arithmatex">\[
+u_{0} = (m g l \sin (\theta_{0})) / A \tag{10}
+\]</div>
+<p>We combineren deze evenwichtsaansturing met de P-regelaar:</p>
+<div class="arithmatex">\[
+u (t) = u_{0} + K_{p} (\theta_{r} - \theta (t)) \tag{11}
+\]</div>
+<h3 id="kleine-afwijkingen-rond-het-evenwicht">Kleine afwijkingen rond het evenwicht</h3>
+<p>We onderzoeken wat er gebeurt als de pendulum een kleine afwijking heeft ten opzichte van de gewenste hoek.</p>
+<p>Schrijf de werkelijke hoek als:</p>
+<div class="arithmatex">\[
+\theta (t) = \theta_{0} + \epsilon (t) \tag{12}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(\epsilon (t)\)</span> de kleine afwijking van de evenwichtshoek.</p>
+<p>Omdat <span class="arithmatex">\(\theta_{r} = \theta_{0}\)</span>, geldt:</p>
+<div class="arithmatex">\[
+e (t) = - \epsilon (t) \tag{13}
+\]</div>
+<p>De regelaar wordt daarmee:</p>
+<div class="arithmatex">\[
+u (t) = u_{0} - K_{p} \epsilon (t) \tag{14}
+\]</div>
+<p>Vul dit in bij de bewegingsvergelijking:</p>
+<div class="arithmatex">\[
+J \ddot{\theta} + b \dot{\theta} + m g l \sin (\theta) = A (u_{0} - K_{p} \epsilon) \tag{15}
+\]</div>
+<p>Omdat <span class="arithmatex">\(\theta = \theta_{0} + \epsilon\)</span> en <span class="arithmatex">\(\theta_{0}\)</span> constant is, geldt:</p>
+<div class="arithmatex">\[
+\begin{aligned} \dot{\theta} &amp; = \dot{\epsilon} \\ \ddot{\theta} &amp; = \ddot{\epsilon} \end{aligned} \tag{16}
+\]</div>
+<p>We krijgen:</p>
+<div class="arithmatex">\[
+J \ddot{\epsilon} + b \dot{\epsilon} + m g l \sin (\theta_{0} + \epsilon) = A u_{0} - A K_{p} \epsilon \tag{17}
+\]</div>
+<h4 id="linearisatie">Linearisatie</h4>
+<p>Voor kleine afwijkingen <span class="arithmatex">\(\epsilon\)</span> kunnen we de sinusfunctie benaderen met een Taylorontwikkeling:</p>
+<div class="arithmatex">\[
+\sin (\theta_{0} + \epsilon) \approx \sin (\theta_{0}) + \epsilon \cos (\theta_{0})
+\]</div>
+<p>Invullen geeft:</p>
+<div class="arithmatex">\[
+J \ddot{\epsilon} + b \dot{\epsilon} + m g l \sin (\theta_{0}) + m g l \cos (\theta_{0}) \epsilon = A u_{0} - A K_{p} \epsilon
+\]</div>
+<p>We weten dat in het evenwicht geldt:</p>
+<div class="arithmatex">\[
+m g l \sin (\theta_{0}) = A u_{0}
+\]</div>
+<p>Deze constante termen vallen dus tegen elkaar weg.</p>
+<p>Daarmee vinden we:</p>
+<div class="arithmatex">\[
+J \ddot{\epsilon} + b \dot{\epsilon} + m g l \cos (\theta_{0}) \epsilon = - A K_{p} \epsilon \tag{18}
+\]</div>
+<p>Breng alle termen naar de linkerkant:</p>
+<div class="arithmatex">\[
+\boxed{J \ddot{\epsilon} + b \dot{\epsilon} + (m g l \cos (\theta_{0}) + A K_{p}) \epsilon = 0} \tag{19}
+\]</div>
+<p>Dit is de gelineariseerde bewegingsvergelijking van de P-geregelde aeropendulum.</p>
+<h3 id="eigenfrequenties-van-aeropendulum">Eigenfrequenties van aeropendulum</h3>
+<p>Om het frequentiegedrag van het systeem te analyseren, herschrijven we de bewegingsvergelijking in de standaardvorm van een gedempte harmonische oscillator:</p>
+<div class="arithmatex">\[
+J \ddot{\epsilon} + b \dot{\epsilon} + (m g l \cos (\theta_{0}) + A K_{p}) \epsilon = 0 \tag{20}
+\]</div>
+<p>We noteren <span class="arithmatex">\(k_{\text{eff}} = m g l \cos (\theta_{0}) + A K_{p}\)</span> als de effectieve stijfheid van het systeem en delen we door <span class="arithmatex">\(J\)</span>. De bewegingsvergelijking wordt dan:</p>
+<div class="arithmatex">\[
+\ddot{x} + b / J \dot{x} + k_{\text{eff}} / J x = 0 .
+\]</div>
+<p>Dit lijkt al bijna op de standaardvorm van een gedempte harmonische oscillator. We vergelijken dit met de algemene vorm:</p>
+<div class="arithmatex">\[
+\ddot{x} + 2 \zeta \omega_{0} \dot{x} + \omega_{0}^{2} x = 0
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">De harmonische oscillator en stabiliteit</p>
+<p>Een gedempte harmonische oscillator beschrijft een systeem waarin een herstellende kracht en een dempende kracht werkzaam zijn. Een bekend voorbeeld is een massa aan een veer.</p>
+<p>De bewegingsvergelijking luidt:</p>
+<div class="arithmatex">\[
+m \ddot{x} + b \dot{x} + k x = 0
+\]</div>
+<p>Hierin is <span class="arithmatex">\(m\)</span> de massa, <span class="arithmatex">\(b\)</span> de dempingscoëfficiënt en <span class="arithmatex">\(k\)</span> de veerconstante.</p>
+<p>De herstellende kracht <span class="arithmatex">\(F = - k x\)</span> werkt de uitwijking tegen, terwijl de dempende kracht <span class="arithmatex">\(F = - b \dot{x}\)</span> de beweging tegenwerkt.</p>
+<h3 id="eigenfrequentie-en-demping">Eigenfrequentie en demping</h3>
+<p>De ongedempte eigenhoekfrequentie wordt gegeven door:</p>
+<div class="arithmatex">\[
+\omega_{0} = \sqrt{k / m}
+\]</div>
+<p>De dimensieloze dempingsratio is:</p>
+<div class="arithmatex">\[
+\zeta = b / (2 \sqrt{m k})
+\]</div>
+<p>Voor <span class="arithmatex">\(m &gt; 0\)</span> en <span class="arithmatex">\(k &gt; 0\)</span> onderscheiden we drie situaties:</p>
+<ul>
+<li><em>Ondergedempt</em> (<span class="arithmatex">\(0 &lt; \zeta &lt; 1\)</span>): het systeem oscilleert rond de evenwichtspositie, waarbij de amplitude geleidelijk afneemt.</li>
+<li><em>Kritisch gedempt</em> (<span class="arithmatex">\(\zeta = 1\)</span>): het systeem keert zonder oscillaties zo snel mogelijk terug naar de evenwichtspositie.</li>
+<li><em>Overgedempt</em> (<span class="arithmatex">\(\zeta &gt; 1\)</span>): het systeem keert zonder oscillaties terug naar de evenwichtspositie, maar langzamer dan bij kritische demping.</li>
+</ul>
+<h3 id="stabiliteit">Stabiliteit</h3>
+<p>Voor het ondergedempte geval is de oplossing:</p>
+<div class="arithmatex">\[
+x (t) = X_{0} e^{- b / (2 m) t} \cos (\omega_{d} t + \phi)
+\]</div>
+<p>met de gedempte eigenhoekfrequentie:</p>
+<div class="arithmatex">\[
+\omega_{d} = \sqrt{k / m - b^{2} / (4 m^{2})}
+\]</div>
+<p>De exponentiële factor bepaalt hoe de amplitude zich ontwikkelt:</p>
+<div class="arithmatex">\[
+X (t) = X_{0} e^{- b / (2 m) t}
+\]</div>
+<p>Hieruit volgt:</p>
+<ul>
+<li>Bij <span class="arithmatex">\(b &gt; 0\)</span> neemt de amplitude af: de oscillaties doven uit.</li>
+<li>Bij <span class="arithmatex">\(b = 0\)</span> blijft de amplitude constant: het systeem oscilleert zonder energieverlies.</li>
+<li>Bij <span class="arithmatex">\(b &lt; 0\)</span> neemt de amplitude toe: het systeem is instabiel.</li>
+</ul>
+<p>Deze uitspraken over de amplitude gelden voor oscillerende oplossingen. Voor <span class="arithmatex">\(k &gt; 0\)</span> is het evenwicht bij <span class="arithmatex">\(b &gt; 0\)</span> asymptotisch stabiel, ook wanneer het systeem niet oscilleert.</p>
+</div>
+<p>De frequentie van het P-geregelde aeropendulum wordt bepaald door de effectieve stijfheid <span class="arithmatex">\(k_{\text{eff}}\)</span> en het traagheidsmoment <span class="arithmatex">\(J\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\omega_{0}^{2} = (m g l \cos (\theta_{0}) + A K_{p}) / J}
+\]</div>
+<p>De relatieve demping hangt af van <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(J\)</span> en de effectieve stijfheid:</p>
+<div class="arithmatex">\[
+\boxed{\zeta = b / (2 \sqrt{J (m g l \cos (\theta_{0}) + A K_{p})}) .}
+\]</div>
+<h4 id="invloed-van-de-proportionele-versterking">Invloed van de proportionele versterking</h4>
+<p>Als we <span class="arithmatex">\(K_{p}\)</span> verhogen, neemt de effectieve stijfheid dus toe.</p>
+<p>Hierdoor:</p>
+<ul>
+<li>Neemt de eigenfrequentie <span class="arithmatex">\(\omega_{0}\)</span> toe.</li>
+<li>Neemt de relatieve demping <span class="arithmatex">\(\zeta\)</span> af.</li>
+<li>Worden de oscillaties sneller.</li>
+<li>Kan de overshoot bij een verandering van het setpoint toenemen.</li>
+</ul>
+<p>Een kleinere dempingsratio betekent echter niet automatisch dat het systeem instabiel wordt. Hoe kan het dan dat een te grote proportionele versterking in de praktijk toch instabiliteit kan veroorzaken?</p>
+<h4 id="invloed-van-een-vertraagde-kracht">Invloed van een vertraagde kracht</h4>
+<p>Tot nu toe hebben we aangenomen dat de stuwkracht van de motor onmiddellijk verandert wanneer de proportionele regelaar de PWM-waarde aanpast. In werkelijkheid heeft de motor echter een eindige reactietijd. Wanneer de regelaar de PWM-waarde verhoogt, duurt het enige tijd voordat de motor versnelt en de stuwkracht toeneemt.</p>
+<p>Dit betekent dat de motor nog een relatief grote kracht kan leveren op het moment dat de pendulum de gewenste hoek al heeft bereikt. De regelaar probeert de motor dan af te remmen, maar de stuwkracht reageert vertraagd. Hierdoor kan de pendulum doorschieten.</p>
+<p>Om dit effect te beschrijven, introduceren we een tijdconstante <span class="arithmatex">\(\tau_{m}\)</span> voor de motor. We nemen aan dat de werkelijke stuwkracht <span class="arithmatex">\(F_{T}\)</span> de gewenste stuwkracht <span class="arithmatex">\(F_{\text{gewenst}}\)</span> volgt volgens:</p>
+<div class="arithmatex">\[
+\tau_{m} \dot{F_{T}} + F_{T} = F_{\text{gewenst}} \tag{21}
+\]</div>
+<p>Dit is een eersteorde-differentiaalvergelijking. De tijdconstante <span class="arithmatex">\(\tau_{m}\)</span> bepaalt hoe snel de motor reageert. Na één tijdconstante heeft de stuwkracht ongeveer 63% van een opgelegde stapverandering bereikt.</p>
+<p>Bij een P-regelaar is de gewenste stuwkracht afhankelijk van de afwijking <span class="arithmatex">\(\epsilon\)</span> ten opzichte van de evenwichtshoek:</p>
+<div class="arithmatex">\[
+F_{\text{gewenst}} = F_{0} - k_{u} K_{p} \epsilon \tag{22}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(F_{0}\)</span> de stuwkracht die nodig is om de pendulum in evenwicht te houden.</p>
+<p>We schrijven de werkelijke stuwkracht als:</p>
+<div class="arithmatex">\[
+F_{T} = F_{0} + f
+\]</div>
+<p>waarbij <span class="arithmatex">\(f\)</span> de afwijking van de evenwichtsstuwkracht is.</p>
+<p>Invullen in het motormodel geeft:</p>
+<div class="arithmatex">\[
+\tau_{m} \dot{f} + f = - k_{u} K_{p} \epsilon \tag{23}
+\]</div>
+<p>Vermenigvuldig met de motorarm <span class="arithmatex">\(l_{T}\)</span> en gebruik <span class="arithmatex">\(A = l_{T} k_{u}\)</span>. We definiëren bovendien het afwijkende motorkoppel <span class="arithmatex">\(q = l_{T} f\)</span>.</p>
+<p>Daarmee wordt:</p>
+<div class="arithmatex">\[
+\tau_{m} \dot{q} + q = - A K_{p} \epsilon \tag{24}
+\]</div>
+<h4 id="de-nieuwe-bewegingsvergelijking">De nieuwe bewegingsvergelijking</h4>
+<p>De bewegingsvergelijking van de gelineariseerde pendulum is:</p>
+<div class="arithmatex">\[
+J \ddot{\epsilon} + b \dot{\epsilon} + m g l \cos (\theta_{0}) \epsilon = q \tag{25}
+\]</div>
+<p>Voor het gemak definiëren we:</p>
+<div class="arithmatex">\[
+B = m g l \cos (\theta_{0})
+\]</div>
+<p>We hebben nu twee gekoppelde differentiaalvergelijkingen die samen de beweging van de pendulum en de respons van de motor beschrijven:</p>
+<div class="arithmatex">\[
+J \ddot{\epsilon} + b \dot{\epsilon} + B \epsilon = q \tag{26}
+\]</div>
+<div class="arithmatex">\[
+\tau_{m} \dot{q} + q = - A K_{p} \epsilon \tag{27}
+\]</div>
+<p>Om deze vergelijkingen samen te voegen, gebruiken we eliminatie door substitutie. Uit de eerste vergelijking drukken we het motorkoppel <span class="arithmatex">\(q\)</span> uit in termen van de hoek <span class="arithmatex">\(\epsilon\)</span> en haar afgeleiden. Door deze uitdrukking naar de tijd te differentiëren, vinden we ook een uitdrukking voor <span class="arithmatex">\(\dot{q}\)</span>.</p>
+<p>Vervolgens substitueren we beide uitdrukkingen in de tweede vergelijking. Hiermee elimineren we de variabele <span class="arithmatex">\(q\)</span> en verkrijgen we één differentiaalvergelijking voor de hoekafwijking <span class="arithmatex">\(\epsilon\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\tau_{m} J \dddot{\epsilon} + (J + \tau_{m} b) \ddot{\epsilon} + (b + \tau_{m} B) \dot{\epsilon} + (B + A K_{p}) \epsilon = 0} \tag{28}
+\]</div>
+<p>De resulterende vergelijking is van de derde orde, terwijl de oorspronkelijke bewegingsvergelijking van de pendulum van de tweede orde was. De extra orde ontstaat doordat de motor een eigen dynamische toestand heeft: de stuwkracht kan niet onmiddellijk veranderen, maar ontwikkelt zich in de tijd.</p>
+<h4 id="wanneer-ontstaat-instabiliteit">Wanneer ontstaat instabiliteit?</h4>
+<p>Om de stabiliteit te onderzoeken, gebruiken we het Routh-Hurwitz-criterium. Deze wiskundige methode bepaalt of een lineair systeem stabiel is aan de hand van de coëfficiënten van zijn karakteristieke vergelijking. We hoeven hiervoor de differentiaalvergelijking niet volledig op te lossen.</p>
+<p>We zoeken oplossingen van de vorm:</p>
+<div class="arithmatex">\[
+\epsilon (t) = C e^{\lambda t} \tag{29}
+\]</div>
+<p>Hierin bepaalt de exponent <span class="arithmatex">\(\lambda\)</span> het gedrag van de beweging. In het algemeen kan <span class="arithmatex">\(\lambda\)</span> complex zijn:</p>
+<ul>
+<li>Als alle oplossingen voor <span class="arithmatex">\(\lambda\)</span> een negatief reëel deel hebben, doven verstoringen uit en is het systeem asymptotisch stabiel.</li>
+<li>Als minstens één oplossing een positief reëel deel heeft, groeit een verstoring en is het systeem instabiel.</li>
+<li>Als een oplossing een reëel deel gelijk aan nul heeft, bevindt het systeem zich mogelijk op een stabiliteitsgrens.</li>
+</ul>
+<p>Door de exponentiële oplossing in de bewegingsvergelijking te substitueren en de gemeenschappelijke factor <span class="arithmatex">\(C e^{\lambda t}\)</span> weg te delen, vinden we de karakteristieke vergelijking:</p>
+<div class="arithmatex">\[
+\tau_{m} J \lambda^{3} + (J + \tau_{m} b) \lambda^{2} + (b + \tau_{m} B) \lambda + (B + A K_{p}) = 0 \tag{30}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Het Routh-Hurwitz-criterium</p>
+<p>Het Routh-Hurwitz-criterium is een wiskundige methode waarmee we de stabiliteit van een lineair dynamisch systeem kunnen bepalen, zonder de bijbehorende differentiaalvergelijking expliciet op te lossen.</p>
+<p>We beschouwen een differentiaalvergelijking van de derde orde:</p>
+<div class="arithmatex">\[
+a_{3} \dddot{x} + a_{2} \ddot{x} + a_{1} \dot{x} + a_{0} x = 0 \tag{31}
+\]</div>
+<p>We zoeken oplossingen van de vorm <span class="arithmatex">\(x (t) = C e^{\lambda t}\)</span>. Substitutie levert de karakteristieke vergelijking:</p>
+<div class="arithmatex">\[
+a_{3} \lambda^{3} + a_{2} \lambda^{2} + a_{1} \lambda + a_{0} = 0 \tag{32}
+\]</div>
+<p>De oplossingen voor <span class="arithmatex">\(\lambda\)</span> bepalen het gedrag van het systeem. Een systeem is asymptotisch stabiel wanneer alle oplossingen een negatief reëel deel hebben. In dat geval doven kleine verstoringen uiteindelijk uit.</p>
+<p>Het Routh-Hurwitz-criterium stelt dat voor een derdeorde-systeem met <span class="arithmatex">\(a_{3} &gt; 0\)</span> aan de volgende voorwaarden moet worden voldaan:</p>
+<div class="arithmatex">\[
+a_{2} &gt; 0 , \quad a_{1} &gt; 0 , \quad a_{0} &gt; 0 \tag{33}
+\]</div>
+<p>Daarnaast geldt de aanvullende voorwaarde:</p>
+<div class="arithmatex">\[
+\boxed{a_{2} a_{1} &gt; a_{3} a_{0}} \tag{34}
+\]</div>
+<p>Wanneer aan al deze voorwaarden wordt voldaan, liggen alle wortels van de karakteristieke vergelijking in het linkerhalfvlak van het complexe vlak. Het systeem is dan asymptotisch stabiel.</p>
+<p><em>Conclusie:</em> we kunnen de stabiliteit rechtstreeks uit de coëfficiënten bepalen, zonder de drie wortels van de karakteristieke vergelijking te berekenen.</p>
+</div>
+<h4 id="toepassing-op-de-aeropendulum">Toepassing op de aeropendulum</h4>
+<p>Voor onze bewegingsvergelijking identificeren we de coëfficiënten:</p>
+<div class="arithmatex">\[
+a_{3} = \tau_{m} J , \quad a_{2} = J + \tau_{m} b
+\]</div>
+<div class="arithmatex">\[
+a_{1} = b + \tau_{m} B , \quad a_{0} = B + A K_{p}
+\]</div>
+<p>We nemen <span class="arithmatex">\(J\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(A\)</span> en <span class="arithmatex">\(\tau_{m}\)</span> positief en <span class="arithmatex">\(K_{p} \ge 0\)</span>. Voor evenwichtshoeken onder 90 graden is <span class="arithmatex">\(B &gt; 0\)</span> en zijn alle coëfficiënten positief. Bij 90 graden is <span class="arithmatex">\(B = 0\)</span>; dan is bovendien <span class="arithmatex">\(K_{p} &gt; 0\)</span> nodig.</p>
+<p>De stabiliteit wordt dus volledig bepaald door de aanvullende voorwaarde van het Routh-Hurwitz-criterium:</p>
+<div class="arithmatex">\[
+\boxed{(J + \tau_{m} b) (b + \tau_{m} B) &gt; \tau_{m} J (B + A K_{p})} \tag{35}
+\]</div>
+<p>Deze ongelijkheid laat zien dat een grotere proportionele versterking <span class="arithmatex">\(K_{p}\)</span> de stabiliteit kan verminderen. De rechterkant neemt immers toe met <span class="arithmatex">\(K_{p}\)</span>, terwijl de linkerkant constant blijft.</p>
+<p>Er bestaat daarom een kritische versterking waarbij de ongelijkheid overgaat in een gelijkheid. Dit is de grens tussen asymptotische stabiliteit en instabiliteit.</p>
+<h4 id="kritische-proportionele-versterking">Kritische proportionele versterking</h4>
+<p>De stabiliteitsvoorwaarde laat zien dat een grotere proportionele versterking <span class="arithmatex">\(K_{p}\)</span> uiteindelijk tot instabiliteit kan leiden. De grens tussen stabiliteit en instabiliteit vinden we door de ongelijkheid te vervangen door een gelijkheid:</p>
+<div class="arithmatex">\[
+(J + \tau_{m} b) (b + \tau_{m} B) = \tau_{m} J (B + A K_{p , \text{krit}}) \tag{36}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(K_{p , \text{krit}}\)</span> de kritische proportionele versterking: de waarde waarbij het systeem zich precies op de stabiliteitsgrens bevindt.</p>
+<p>Door de vergelijking op te lossen naar <span class="arithmatex">\(K_{p , \text{krit}}\)</span> vinden we:</p>
+<div class="arithmatex">\[
+K_{p , \text{krit}} = 1 / A (((J + \tau_{m} b) (b + \tau_{m} B)) / (\tau_{m} J) - B) \tag{37}
+\]</div>
+<p>Na vereenvoudiging volgt:</p>
+<p><span id="eq-kritische-versterking"></span></p>
+<div class="arithmatex">\[
+\boxed{K_{p , \text{krit}} = b / A (1 / \tau_{m} + b / J + (\tau_{m} B) / J)} \tag{38}
+\]</div>
+<p>Onder de bovenstaande voorwaarden onderscheiden we drie situaties:</p>
+<ul>
+<li><em><span class="arithmatex">\(K_{p} &lt; K_{p , \text{krit}}\)</span></em>: het systeem is asymptotisch stabiel. Kleine verstoringen doven uiteindelijk uit.</li>
+<li><em><span class="arithmatex">\(K_{p} = K_{p , \text{krit}}\)</span></em>: het systeem bevindt zich op de stabiliteitsgrens. Er kunnen oscillaties met constante amplitude optreden.</li>
+<li><em><span class="arithmatex">\(K_{p} &gt; K_{p , \text{krit}}\)</span></em>: het systeem is instabiel. Kleine verstoringen kunnen in de tijd groeien.</li>
+</ul>
+<h4 id="fysische-interpretatie">Fysische interpretatie</h4>
+<p>De kritische versterking hangt af van zowel de mechanische eigenschappen van de pendulum als de responstijd van de motor. Zonder gemeten modelparameters kun je <a href="#eq-kritische-versterking">vergelijking (38)</a> niet betrouwbaar numeriek invullen. De belangrijkste conclusie is: als de motor te traag reageert, kan een te grote proportionele versterking leiden tot instabiliteit. De motor kan dan op het verkeerde moment energie aan de beweging toevoegen, waardoor de oscillaties toenemen in plaats van afnemen.</p>
+<h3 id="pid-regeling-en-integral-windup">PID-regeling en integral windup</h3>
+<p><em>Integral windup</em> ontstaat wanneer de integrator fout blijft optellen terwijl de actuator de gevraagde aansturing niet kan uitvoeren. De opgebouwde I-bijdrage kan dan groter worden dan nodig is. Ook als de fout later klein of nul wordt, is die bijdrage niet direct verdwenen. Dit kan de terugkeer naar het setpoint vertragen en overshoot veroorzaken.</p>
+<p>We leiden dit hieronder af met Laplace. Eerst beschrijven we de lineaire integrator; daarna voegen we de uitgangsbegrenzing toe. Voor de regels van de Laplacetransformatie, zie Brightspace.</p>
+<h4 id="de-integrator-onthoudt-de-fout">De integrator onthoudt de fout</h4>
+<p>De regelfout is <span class="arithmatex">\(e (t) = r (t) - \theta (t)\)</span>. We schrijven de I-bijdrage direct in PWM-telwaarden als <span class="arithmatex">\(i (t)\)</span>:</p>
+<div class="arithmatex">\[
+i (t) = i_{0} + K_{i} \int_{0}^{t} e (\tau) \mathrm{d} \tau , \quad \dot{i} (t) = K_{i} e (t) . \tag{39}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(i_{0} = i (0)\)</span> de al aanwezige I-bijdrage. Een positieve fout laat <span class="arithmatex">\(i\)</span> toenemen, een negatieve fout laat <span class="arithmatex">\(i\)</span> afnemen. Bij nul fout blijft <span class="arithmatex">\(i\)</span> gelijk: de integrator wordt niet vanzelf gereset.</p>
+<p>Noem de Laplacetransformaties van <span class="arithmatex">\(e (t)\)</span> en <span class="arithmatex">\(i (t)\)</span> respectievelijk <span class="arithmatex">\(E (s)\)</span> en <span class="arithmatex">\(I (s)\)</span>. De transformatieregel voor een afgeleide geeft:</p>
+<div class="arithmatex">\[
+s I (s) - i_{0} = K_{i} E (s) . \tag{40}
+\]</div>
+<p>Dus:</p>
+<div class="arithmatex">\[
+\boxed{I (s) = K_{i} / s E (s) + i_{0} / s} . \tag{41}
+\]</div>
+<p>De factor <span class="arithmatex">\(K_{i} / s\)</span> is de overdrachtsfunctie van de integrator bij nulbeginvoorwaarde. De term <span class="arithmatex">\(i_{0} / s\)</span> beschrijft het geheugen waarmee een nieuw tijdsinterval begint. Juist die beginvoorwaarde is belangrijk wanneer we na een periode van begrenzing verder rekenen.</p>
+<h4 id="van-een-constante-fout-naar-een-groeiende-i-bijdrage">Van een constante fout naar een groeiende I-bijdrage</h4>
+<p>Neem gedurende een interval een constante positieve fout <span class="arithmatex">\(e (t) = e_{0}\)</span> aan. Dan is <span class="arithmatex">\(E (s) = e_{0} / s\)</span>. Invullen levert:</p>
+<div class="arithmatex">\[
+I (s) = (K_{i} e_{0}) / s^{2} + i_{0} / s . \tag{42}
+\]</div>
+<p>Met de transformatieparen <span class="arithmatex">\(1 / s \leftrightarrow 1\)</span> en <span class="arithmatex">\(1 / s^{2} \leftrightarrow t\)</span> vinden we:</p>
+<div class="arithmatex">\[
+\boxed{i (t) = i_{0} + K_{i} e_{0} t} . \tag{43}
+\]</div>
+<p>Een constante fout veroorzaakt dus een <em>lineair groeiende</em> I-bijdrage. De groeisnelheid is <span class="arithmatex">\(K_{i} e_{0}\)</span>, in PWM-telwaarden per seconde. In de notebook gebruiken we graden; <span class="arithmatex">\(K_{i}\)</span> heeft daar de eenheid PWM-telwaarden per graad per seconde.</p>
+<p>Dit is op zichzelf gewenst gedrag: de I-term bouwt de aansturing op die nodig is om een blijvende fout weg te werken. Het wordt windup wanneer die opbouw doorgaat terwijl de actuator de gevraagde correctie niet kan volgen en de bijdrage daardoor te groot wordt.</p>
+<h4 id="waarom-nul-fout-de-integrator-niet-leegt">Waarom nul fout de integrator niet leegt</h4>
+<p>Neem eerst een fout die alleen tussen <span class="arithmatex">\(t = 0\)</span> en <span class="arithmatex">\(t = T\)</span> gelijk is aan <span class="arithmatex">\(e_{0}\)</span> en daarna nul wordt. Dit is het verschil van twee stappen. Bij <span class="arithmatex">\(i_{0} = 0\)</span> geldt:</p>
+<div class="arithmatex">\[
+E (s) = e_{0} / s (1 - e^{- T s}) , \quad I (s) = (K_{i} e_{0}) / s^{2} (1 - e^{- T s}) . \tag{44}
+\]</div>
+<p>De inverse Laplacetransformatie is het verschil van twee hellingen:</p>
+<div class="arithmatex">\[
+i (t) = K_{i} e_{0} (t - (t - T) H (t - T)) . \tag{45}
+\]</div>
+<p>Hierin is <span class="arithmatex">\(H (t - T)\)</span> nul voor <span class="arithmatex">\(t &lt; T\)</span> en een voor <span class="arithmatex">\(t &gt; T\)</span>. Voor <span class="arithmatex">\(t \ge T\)</span> volgt dus:</p>
+<div class="arithmatex">\[
+\boxed{i (t) = K_{i} e_{0} T} . \tag{46}
+\]</div>
+<p>De fout is verdwenen, maar de <em>oppervlakte onder de eerdere foutcurve blijft opgeslagen</em>. Alleen een negatieve fout of een extra ingreep in de integrator kan deze bijdrage weer verlagen. Een niet-nul I-bijdrage is overigens normaal: er is motorvermogen nodig om de arm op hoogte te houden. Het probleem is een bijdrage die groter is dan daarvoor nodig is.</p>
+<h4 id="windup-bij-een-maximale-pwm">Windup bij een maximale PWM</h4>
+<p>Maak onderscheid tussen de <em>gevraagde</em> uitgang <span class="arithmatex">\(v (t)\)</span> en de <em>toegepaste</em> PWM <span class="arithmatex">\(u (t)\)</span>. Voor D op de gemeten hoek, zoals in de sketch, schrijven we:</p>
+<div class="arithmatex">\[
+v (t) = K_{p} e (t) + i (t) - K_{d} \dot{\theta} (t) . \tag{47}
+\]</div>
+<p>Een uitgangsbegrenzing geeft:</p>
+<div class="arithmatex">\[
+u (t) = \min (u_{\text{max}} , \max (0 , v (t))) . \tag{48}
+\]</div>
+<p>Zolang <span class="arithmatex">\(v &gt; u_{\text{max}}\)</span> is de toegepaste uitgang constant: <span class="arithmatex">\(u = u_{\text{max}}\)</span>. Als de fout positief blijft, groeit de ideale integrator toch door. De regelaar vraagt dan steeds meer PWM, zonder dat de motor meer krijgt. Dit noemen we <em>verzadiging met integral windup</em>.</p>
+<p>Om dit afzonderlijk te bekijken, nemen we tijdens zo'n interval een constante fout en constante overige regelbijdragen <span class="arithmatex">\(C\)</span> aan. Kies het begin van dit interval als <span class="arithmatex">\(t = 0\)</span>. Dan geldt:</p>
+<div class="arithmatex">\[
+V (s) = (C + i_{0}) / s + (K_{i} e_{0}) / s^{2} , \quad U (s) = u_{\text{max}} / s . \tag{49}
+\]</div>
+<p>Voor het verschil <span class="arithmatex">\(w (t) = v (t) - u (t)\)</span> vinden we:</p>
+<div class="arithmatex">\[
+W (s) = (C + i_{0} - u_{\text{max}}) / s + (K_{i} e_{0}) / s^{2} . \tag{50}
+\]</div>
+<p>Dus <span class="arithmatex">\(w (t) = C + i_{0} - u_{\text{max}} + K_{i} e_{0} t\)</span>: de niet-uitgevoerde aansturing groeit zolang deze aannames gelden. Een grotere I-bijdrage helpt de actuator tijdens verzadiging niet, maar moet later wel weer worden afgebouwd.</p>
+<p><em>Grens van de Laplace-aanpak.</em> Verzadiging is niet-lineair en heeft geen vaste overdrachtsfunctie <span class="arithmatex">\(U (s) / V (s)\)</span>. We gebruiken Laplace hier voor de integrator en voor een afzonderlijk interval waarvan het begrenzingsgedrag bekend is. We beschrijven daarmee niet de volledige begrensde regelkring als een lineair systeem.</p>
+<h4 id="rekenvoorbeeld-opbouwen-vasthouden-en-afbouwen">Rekenvoorbeeld: opbouwen, vasthouden en afbouwen</h4>
+<p>Neem <span class="arithmatex">\(K_{i} = 2\)</span>, <span class="arithmatex">\(i_{0} = 0\)</span> en gedurende vier seconden een fout van 10 graden. De I-bijdrage groeit dan met 20 PWM-telwaarden per seconde tot <span class="arithmatex">\(i (4) = 80\)</span>. Als de fout vervolgens nul wordt, blijft deze bijdrage 80.</p>
+<p>Stel ter illustratie de overige bijdrage constant op <span class="arithmatex">\(C = 40\)</span> en de maximale uitgang op <span class="arithmatex">\(u_{\text{max}} = 60\)</span>. De gevraagde uitgang is dan <span class="arithmatex">\(40 + 80 = 120\)</span>, terwijl slechts 60 wordt toegepast. Deze getallen zijn een rekenvoorbeeld, geen aanbevolen proefinstellingen.</p>
+<p>Vanaf <span class="arithmatex">\(t = 6\)</span> nemen we een fout van -5 graden aan. Met <span class="arithmatex">\(q = t - 6\)</span> als nieuwe tijd en de opgeslagen beginwaarde <span class="arithmatex">\(i (6) = 80\)</span> geeft Laplace:</p>
+<div class="arithmatex">\[
+I_{\text{nieuw}} (s) = 80 / s - 10 / s^{2} \quad \to \quad i (6 + q) = 80 - 10 q . \tag{51}
+\]</div>
+<p>De uitgang komt pas uit verzadiging wanneer <span class="arithmatex">\(40 + i &lt; 60\)</span>, dus nadat de I-bijdrage tot onder 20 is afgenomen. Dat duurt hier zes seconden na het negatief worden van de fout. De fout vraagt al om minder aansturing, maar de eerder opgebouwde bijdrage houdt de uitgang nog op het maximum.</p>
+<figure id="fig-windup">
+<p><img alt="Voorgeschreven foutverloop met een ideale, onbegrensde integrator en begrensde uitgang" src="../Figuren/integral_windup.png" /></p>
+<figcaption>
+<p>Figuur 4. Voorgeschreven foutverloop met een ideale, onbegrensde integrator en begrensde uitgang. De I-bijdrage groeit bij positieve fout, blijft staan bij nul fout en neemt pas af bij negatieve fout. De toegepaste PWM blijft tot t = 12 s op het maximum. Dit is een illustratie van het mechanisme, geen simulatie of meting van het aeropendulum; C is hier bewust constant gehouden.</p>
+</figcaption>
+</figure>
+<h4 id="windup-bij-een-beperkte-pwm-stijgsnelheid">Windup bij een beperkte PWM-stijgsnelheid</h4>
+<p>In opdracht 4 beperk je niet alleen de maximale uitgang, maar ook de stijging per regelstap. Noem de op het PWM-bereik begrensde vraag <span class="arithmatex">\(v_{\text{begr} , k}\)</span>. Bij een ingeschakelde stapbegrenzer geldt, afgezien van afronding:</p>
+<div class="arithmatex">\[
+u_{k} = \min (v_{\text{begr} , k} , u_{k - 1} + \Delta u_{\text{max}}) , \quad R_{u} = (\Delta u_{\text{max}}) / (\Delta t) . \tag{52}
+\]</div>
+<p>Dalingen worden direct uitgevoerd. <code>max_pwm_stap=0</code> schakelt deze begrenzer uit; het betekent niet dat de uitgang constant wordt gehouden.</p>
+<p>Tijdens een interval waarin de uitgang met de maximaal toegestane snelheid stijgt, benaderen we de trapvormige PWM door <span class="arithmatex">\(u (t) = u_{a} + R_{u} t\)</span>. Neem opnieuw een constante fout <span class="arithmatex">\(e_{0}\)</span> en constante overige bijdrage <span class="arithmatex">\(C\)</span> aan, voordat de interne grenzen zijn bereikt. In het Laplacedomein is dan:</p>
+<div class="arithmatex">\[
+V (s) = (C + i_{0}) / s + (K_{i} e_{0}) / s^{2} , \quad U (s) = u_{a} / s + R_{u} / s^{2} . \tag{53}
+\]</div>
+<p>Aftrekken en terugtransformeren geeft:</p>
+<div class="arithmatex">\[
+\boxed{v (t) - u (t) = C + i_{0} - u_{a} + (K_{i} e_{0} - R_{u}) t} . \tag{54}
+\]</div>
+<p>Als <span class="arithmatex">\(K_{i} e_{0} &gt; R_{u}\)</span>, groeit in dit interval het verschil tussen gevraagde en toegepaste aansturing. De integrator bouwt sneller op dan de uitgang kan volgen. Deze ongelijkheid illustreert het windupmechanisme onder de genoemde aannames; het is geen algemene stabiliteitsgrens voor het aeropendulum.</p>
+<p>Bij <code>max_pwm_stap=1</code> en <code>delta_t=0.02</code> s is <span class="arithmatex">\(R_{u} = 50\)</span> PWM-telwaarden per seconde. Als bijvoorbeeld <span class="arithmatex">\(K_{i} = 3\)</span> en <span class="arithmatex">\(e_{0} = 20\)</span> graden, groeit de I-bijdrage met 60 telwaarden per seconde. Bij constante P- en D-bijdragen loopt de vraag dan 10 telwaarden per seconde verder voor op de uitgang. In de echte proef veranderen de fout en de andere bijdragen, en worden uiteindelijk grenzen bereikt.</p>
+<h4 id="wat-doet-de-gebruikte-arduino-code">Wat doet de gebruikte Arduino-code?</h4>
+<p>De sketch gebruikt <code>PID_v1</code>. Deze bibliotheek begrenst zowel de I-bijdrage als de PID-uitgang op het ingestelde uitgangsbereik. De integrator in de echte proef groeit dus niet onbeperkt door zoals in het ideale rekenvoorbeeld.</p>
+<p>De extra PWM-stapbegrenzer wordt echter <em>na</em> de PID-berekening toegepast. De werkelijk toegepaste PWM wordt niet gebruikt om de integrator voor deze extra begrenzing te corrigeren. De I-bijdrage kan daardoor toch te groot worden voor de actuele toestand, ook al blijft zij binnen de interne grens. Zie de <a href="https://github.com/br3ttb/Arduino-PID-Library/blob/master/PID_v1.cpp">implementatie van PID_v1</a>.</p>
+<p>Overshoot alleen bewijst geen windup: ook P, D en motorvertraging kunnen overshoot veroorzaken. De notebook slaat de toegepaste PWM op, maar niet de interne I-bijdrage of de onbeperkte vraag. Gebruik een vergelijking van proeven met en zonder I en met verschillende stapgrenzen om het mechanisme te onderzoeken; een directe controle van de integrator vraagt extra logging in de firmware.</p>
+<h4 id="waarom-een-lineair-stabiele-pid-toch-windup-kan-vertonen">Waarom een lineair stabiele PID toch windup kan vertonen</h4>
+<p>Voor kleine afwijkingen rond een evenwicht en zonder motorvertraging is de overdrachtsfunctie van het aeropendulum:</p>
+<div class="arithmatex">\[
+G_{p} (s) = A / (J s^{2} + b s + B) , \quad B = m g l \cos (\theta_{0}) . \tag{55}
+\]</div>
+<p>Hierin geldt <span class="arithmatex">\(A = l_{T} k_{u}\)</span>. We gebruiken afwijkingen ten opzichte van het evenwicht en nulbeginvoorwaarden. Voor een ideaal PID-model met D op de fout is:</p>
+<div class="arithmatex">\[
+G_{c} (s) = K_{p} + K_{i} / s + K_{d} s . \tag{56}
+\]</div>
+<p>Zonder begrenzing is de toegepaste uitgang gelijk aan de gevraagde uitgang. De gesloten overdrachtsfunctie van setpointafwijking naar hoekafwijking wordt dan:</p>
+<div class="arithmatex">\[
+T (s) = (G_{c} (s) G_{p} (s)) / (1 + G_{c} (s) G_{p} (s)) = (A (K_{d} s^{2} + K_{p} s + K_{i})) / (J s^{3} + (b + A K_{d}) s^{2} + (B + A K_{p}) s + A K_{i}) . \tag{57}
+\]</div>
+<p>De Arduino gebruikt D op de gemeten hoek. Daarvoor wordt de teller <span class="arithmatex">\(A (K_{p} s + K_{i})\)</span>; de noemer blijft gelijk in dit vereenvoudigde model. Voor <span class="arithmatex">\(K_{i} &gt; 0\)</span> en positieve noemercoefficienten geeft Routh-Hurwitz de stabiliteitsvoorwaarde:</p>
+<div class="arithmatex">\[
+(b + A K_{d}) (B + A K_{p}) &gt; J A K_{i} . \tag{58}
+\]</div>
+<p>Deze voorwaarde gaat over het <em>onbegrensde lineaire model</em>. Zodra de toegepaste uitgang afwijkt van de gevraagde uitgang, beschrijft deze overdrachtsfunctie de proef niet meer volledig. Een lineair stabiele regelaar kan daarom bij begrenzing toch windup en traag herstel vertonen. Andersom is niet iedere oscillatie het gevolg van windup. Bij <span class="arithmatex">\(K_{i} = 0\)</span> is er geen integrerende actie en valt de gemeenschappelijke factor <span class="arithmatex">\(s\)</span> uit de overdrachtsfunctie weg.</p>
+<h4 id="anti-windup-de-integrator-laten-volgen-wat-werkelijk-gebeurt">Anti-windup: de integrator laten volgen wat werkelijk gebeurt</h4>
+<p>Een mogelijke verbetering is <em>back-calculation</em>: gebruik het verschil tussen toegepaste en gevraagde uitgang om de integrator bij te sturen. In een continu model:</p>
+<div class="arithmatex">\[
+\dot{i} = K_{i} e + K_{b} (u - v) , \quad K_{b} &gt; 0 . \tag{59}
+\]</div>
+<p>Zonder begrenzing is <span class="arithmatex">\(u = v\)</span> en verdwijnt de extra term. Als de regelaar meer vraagt dan wordt toegepast, is <span class="arithmatex">\(u - v &lt; 0\)</span>: de extra term remt de opbouw af of bouwt de integrator af. <span class="arithmatex">\(K_{b}\)</span> heeft de eenheid per seconde.</p>
+<p>Dit zie je ook met Laplace. Schrijf <span class="arithmatex">\(v = c + i\)</span>, met <span class="arithmatex">\(c\)</span> de som van de overige bijdragen en <span class="arithmatex">\(C (s)\)</span> de transformatie daarvan. Dan volgt:</p>
+<div class="arithmatex">\[
+s I (s) - i_{0} = K_{i} E (s) + K_{b} (U (s) - C (s) - I (s)) . \tag{60}
+\]</div>
+<p>Dus:</p>
+<div class="arithmatex">\[
+\boxed{I (s) = (K_{i} E (s) + K_{b} (U (s) - C (s)) + i_{0}) / (s + K_{b})} . \tag{61}
+\]</div>
+<p>Bij een vastgehouden uitgang en constante overige bijdrage krijgt deze integratordynamica een hersteltijd <span class="arithmatex">\(1 / K_{b}\)</span>. Dit is geen overdrachtsfunctie van de volledige niet-lineaire regelkring. De extra terugkoppeling reageert juist op het verschil dat door de begrenzing ontstaat. Deze anti-windupmethode is niet in de huidige sketch ingebouwd; implementatie en afstelling vallen buiten de reguliere opdrachten. Zie ook de <a href="https://www.mathworks.com/help/simulink/slref/anti-windup-control-using-a-pid-controller.html">uitleg over anti-windup en back-calculation</a>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>De stuwkracht is in werkelijkheid een niet-lineaire functie van de PWM-waarde. Voor kleine afwijkingen rond het evenwicht kan deze relatie echter worden benaderd als lineair.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
