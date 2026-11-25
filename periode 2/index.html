@@ -805,10 +805,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#week-1-en-2-aeropendulum-open-loop" class="md-nav__link">
+  <a href="#rooster" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Week 1 en 2 — Aeropendulum: open-loop
+        Rooster
       
     </span>
   </a>
@@ -816,10 +816,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#week-3-en-4-aeropendulum-pid-regeling" class="md-nav__link">
+  <a href="#week-3-en-4-aeropendulum-open-loop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Week 3 en 4 — Aeropendulum: PID-regeling
+        Week 3 en 4 — Aeropendulum: open-loop
       
     </span>
   </a>
@@ -827,10 +827,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#week-5-en-6-zonnecel" class="md-nav__link">
+  <a href="#week-5-en-6-aeropendulum-pid-regeling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Week 5 en 6 — Zonnecel
+        Week 5 en 6 — Aeropendulum: PID-regeling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-en-8-zonnecel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 7 en 8 — Zonnecel
       
     </span>
   </a>
@@ -855,25 +866,79 @@
 
 
 <h1 id="periode-2">Periode 2</h1>
-<p>In periode 2 staan <strong>modelleren, meten, regelen en energieomzetting</strong> centraal. In de eerste vier weken werk je met de <strong>aeropendulum</strong>. Je onderzoekt eerst het gedrag van het systeem zonder terugkoppeling en gaat daarna aan de slag met een <strong>PID-regelaar</strong> om de hoek van de pendulum actief te regelen.</p>
-<p>In week 5 en 6 staat het <strong>zonnecelpracticum</strong> centraal. Hier onderzoek je experimenteel de eigenschappen van een zonnecel en analyseer je de verkregen meetgegevens met Python.</p>
+<p>In periode 2 staan <strong>modelleren, meten, regelen en energieomzetting</strong> centraal. In week 3 tot en met 6 werk je met de <strong>aeropendulum</strong>. Je onderzoekt eerst het gedrag van het systeem zonder terugkoppeling en gaat daarna aan de slag met een <strong>PID-regelaar</strong> om de hoek van de pendulum actief te regelen.</p>
+<p>In week 7 en 8 staat het <strong>zonnecelpracticum</strong> centraal. Hier onderzoek je experimenteel de eigenschappen van een zonnecel en analyseer je de verkregen meetgegevens met Python.</p>
+<h2 id="rooster">Rooster</h2>
+<p><button class="rooster-open" onclick="document.getElementById('rooster-modal').showModal()">
+  Bekijk rooster Periode 2
+</button></p>
+<p><dialog id="rooster-modal" class="rooster-modal" aria-labelledby="rooster-titel">
+<br />
+<div class="rooster-modal-header">
+    <h2 id="rooster-titel">Rooster Periode 2</h2>
+
+    <button class="rooster-close" onclick="document.getElementById('rooster-modal').close()" aria-label="Sluiten">×</button>
+  </div>
+</p>
+<div class="rooster-modal-content">
+
+    <table class="rooster">
+      <thead>
+        <tr><th>Kalender-<br>week</th><th>Periode-<br>week</th><th>Ma<br>12:00–14:30</th><th>Ma<br>14:30–17:00</th><th>Vr<br>15:20–17:50</th><th>Activiteit bijeenkomst 1</th><th>Activiteit bijeenkomst 2</th><th>Activiteit bijeenkomst 3</th></tr>
+      </thead>
+
+      <tbody>
+        <tr class="blok"><td colspan="8"><strong>Blok 2</strong></td></tr>
+
+        <tr><td>46</td><td>1</td><td>9 nov</td><td>9 nov</td><td>13 nov</td><td colspan="3">—</td></tr>
+
+        <tr><td>47</td><td>2</td><td>16 nov</td><td>16 nov</td><td>20 nov</td><td colspan="3">—</td></tr>
+
+        <tr><td>48</td><td>3</td><td>23 nov</td><td>23 nov</td><td>27 nov</td><td colspan="2">Aeropendulum (open-loop) · Groep 1</td><td>—</td></tr>
+
+        <tr><td>49</td><td>4</td><td>30 nov</td><td>30 nov</td><td>4 dec</td><td colspan="2">Aeropendulum (open-loop) · Groep 2</td><td>—</td></tr>
+
+        <tr><td>50</td><td>5</td><td>7 dec</td><td>7 dec</td><td>11 dec</td><td colspan="2">Aeropendulum (PID) · Groep 1</td><td>—</td></tr>
+
+        <tr><td>51</td><td>6</td><td>14 dec</td><td>14 dec</td><td>18 dec</td><td colspan="2">Aeropendulum (PID) · Groep 2</td><td>—</td></tr>
+
+        <tr class="vakantie"><td>52</td><td>—</td><td colspan="6"><strong>Kerstvakantie (22–28 dec)</strong></td></tr>
+
+        <tr class="vakantie"><td>1</td><td>—</td><td colspan="6"><strong>Kerstvakantie (29 dec–4 jan)</strong></td></tr>
+
+        <tr><td>2</td><td>7</td><td>4 jan</td><td>4 jan</td><td>8 jan</td><td colspan="2">Zonnecelpracticum · Groep 1</td><td>—</td></tr>
+
+        <tr><td>3</td><td>8</td><td>11 jan</td><td>11 jan</td><td>15 jan</td><td colspan="2">Zonnecelpracticum · Groep 2</td><td>—</td></tr>
+
+        <tr><td>4</td><td>9</td><td colspan="6"><strong>Herkansing op afspraak</strong></td></tr>
+
+        <tr class="tentamens"><td>5</td><td>10</td><td colspan="6"><strong>Geen practicum / tentamens</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p class="rooster-footnote">
+      Voor alle practica word je geacht de volledige practicumdag (12:00–17:00) aanwezig te zijn.
+    </p>
+  </div>
+<p></dialog></p>
+<p><a href="P2.pdf">Rooster openen als PDF</a></p>
 <hr />
-<h2 id="week-1-en-2-aeropendulum-open-loop">Week 1 en 2 — Aeropendulum: open-loop</h2>
-<p>In de eerste twee weken maak je kennis met de <strong>aeropendulum</strong>: een pendulum waarvan de hoek wordt beïnvloed door de stuwkracht van een elektromotor met propeller.</p>
+<h2 id="week-3-en-4-aeropendulum-open-loop">Week 3 en 4 — Aeropendulum: open-loop</h2>
+<p>In deze weken maak je kennis met de <strong>aeropendulum</strong>: een pendulum waarvan de hoek wordt beïnvloed door de stuwkracht van een elektromotor met propeller.</p>
 <p>Je onderzoekt het systeem eerst <strong>open-loop</strong>. Dit betekent dat de motor wordt aangestuurd zonder dat de gemeten hoek automatisch wordt teruggekoppeld naar de aansturing.</p>
 <p>Je brengt experimenteel het gedrag van het systeem in kaart en vergelijkt de metingen met een theoretisch model. Daarbij werk je onder andere met de motoraansturing, de hoeksensor en het uitlezen en verwerken van meetgegevens.</p>
-<p>De resultaten uit deze weken vormen de basis voor het regelen van de aeropendulum in week 3 en 4.</p>
+<p>De resultaten uit deze weken vormen de basis voor het regelen van de aeropendulum in week 5 en 6.</p>
 <p><a href="aeropendulum-openloop/">Naar Aeropendulum – open-loop →</a></p>
 <hr />
-<h2 id="week-3-en-4-aeropendulum-pid-regeling">Week 3 en 4 — Aeropendulum: PID-regeling</h2>
-<p>In week 3 en 4 wordt de gemeten hoek van de aeropendulum gebruikt om de motor automatisch aan te sturen. Het systeem wordt daarmee <strong>closed-loop</strong> geregeld.</p>
+<h2 id="week-5-en-6-aeropendulum-pid-regeling">Week 5 en 6 — Aeropendulum: PID-regeling</h2>
+<p>In week 5 en 6 wordt de gemeten hoek van de aeropendulum gebruikt om de motor automatisch aan te sturen. Het systeem wordt daarmee <strong>closed-loop</strong> geregeld.</p>
 <p>Hiervoor maak je gebruik van een <strong>PID-regelaar</strong>. De regelaar vergelijkt continu de gewenste hoek met de gemeten hoek en past op basis van het verschil de motoraansturing aan.</p>
 <p>Je onderzoekt de invloed van de verschillende onderdelen van de PID-regelaar en stelt de regelparameters zo in dat de aeropendulum de gewenste hoek zo goed mogelijk volgt.</p>
 <p>Hierbij komen theorie, programmeren en experimenteren samen: je gebruikt de hoeksensor als terugkoppeling, implementeert de regelaar en analyseert het dynamische gedrag van het systeem.</p>
 <p><a href="aeropendulum-pid/">Naar Aeropendulum – PID-regeling →</a></p>
 <hr />
-<h2 id="week-5-en-6-zonnecel">Week 5 en 6 — Zonnecel</h2>
-<p>In week 5 en 6 onderzoek je de eigenschappen van een <strong>zonnecel</strong>. Een zonnecel zet invallende stralingsenergie om in elektrische energie.</p>
+<h2 id="week-7-en-8-zonnecel">Week 7 en 8 — Zonnecel</h2>
+<p>In week 7 en 8 onderzoek je de eigenschappen van een <strong>zonnecel</strong>. Een zonnecel zet invallende stralingsenergie om in elektrische energie.</p>
 <p>Tijdens het practicum voer je metingen uit aan de zonnecel en onderzoek je hoe spanning, stroom en geleverd vermogen van elkaar afhangen.</p>
 <p>De meetgegevens worden verwerkt en geanalyseerd met Python. Op basis daarvan bepaal je karakteristieke eigenschappen van de zonnecel en onderzoek je onder welke omstandigheden het elektrisch vermogen maximaal is.</p>
 <p><a href="zonnecel/">Naar het practicum Zonnecel →</a></p>
